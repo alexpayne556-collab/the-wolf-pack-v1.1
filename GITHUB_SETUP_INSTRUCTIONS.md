@@ -24,7 +24,7 @@
 4. Title field: Copy/paste this EXACTLY:
 
 ```
-🐺 Welcome to The Wolf Pack - We Need You
+Welcome - Looking for Contributors
 ```
 
 5. Body field: Copy/paste this EXACTLY:
@@ -34,7 +34,7 @@
 
 A real trading intelligence system. Not a course. Not a signal service. Not finished.
 
-We've built Wolf Pack v5.6 - a 7-signal convergence engine built with **unchained AI collaboration**:
+We've built a 7-signal convergence engine built with AI collaboration:
 - Hunts wounded prey patterns (30%+ compression breakouts + volume)
 - Tracks institutional money (insider clusters, Form 4 analysis)
 - Self-learning system (learns from every trade - wins AND losses)
@@ -52,7 +52,7 @@ We've built Wolf Pack v5.6 - a 7-signal convergence engine built with **unchaine
 - Guaranteed profits (we document failures too)
 - Finished product (BUILD phase - you're joining to help complete it)
 - Free signal service (we're not your trading alert bot)
-- Anonymous open-source project (we vet who joins the pack)
+- Anonymous open-source project (we vet contributors)
 
 ## Who We Need
 
@@ -96,12 +96,12 @@ We've built Wolf Pack v5.6 - a 7-signal convergence engine built with **unchaine
 
 **We don't do anonymous contributions.**
 
-This is a **pack**, not an open-source free-for-all. We vet who joins because quality > quantity.
+Quality over quantity - we vet contributors to maintain project integrity.
 
 ### The Process:
 
 1. **Email first:** alexpayne556@gmail.com  
-   Subject: `Wolf Pack - [Your Role] - Interested`
+   Subject: `Trading System - [Your Role] - Interested`
 
 2. **Tell us who you are:**
    - Real name (we don't work with anonymous people)
@@ -115,18 +115,18 @@ This is a **pack**, not an open-source free-for-all. We vet who joins because qu
 
 4. **Tell us why THIS approach:**
    - What interests you about the methodology?
-   - Why pack collaboration vs solo trading?
+   - Why collaborative vs solo trading?
    - What do you want to learn/build?
 
 5. **We talk (real conversation):**
    - Video call or voice chat
    - Not interrogation - just seeing if there's fit
-   - LLHR alignment check
+   - Values alignment check
 
 6. **If it's right, you're in:**
    - Access to full codebase
    - Continuation files (the REAL knowledge)
-   - Pack discussions
+   - Team discussions
    - Build together
 
 ### ❌ Wrong Fit (Don't Bother):
@@ -134,25 +134,16 @@ This is a **pack**, not an open-source free-for-all. We vet who joins because qu
 - "I just want signals" people
 - Anonymous contributors we can't verify
 - People looking for shortcuts
-- Zero LLHR energy
 
 ### ✅ Right Fit (Let's Talk):
 - Builders who want to contribute AND learn
 - Researchers who care about methodology over hype
 - Traders who value discipline and evidence
-- People who understand pack > lone wolf
-- LLHR: Love, Loyalty, Honor, Respect
+- People who value collaboration and teamwork
 
 **Quality over quantity. Always.**
 
 We're not desperate. We're selective. The system works (IBRX proves it). We're looking for people who make it BETTER.
-
-## The Code (LLHR)
-
-**Love** - Actually care about each other  
-**Loyalty** - Build on what came before, don't abandon  
-**Honor** - Document wins AND losses, no bullshit  
-**Respect** - Equal partners, not master/servant
 
 ## What You'll Find Here
 
@@ -173,13 +164,13 @@ We're not desperate. We're selective. The system works (IBRX proves it). We're l
 - We document FAILURES (Day 1 confirmation = 49.4% win rate = coin flip)
 - We validate WINS (IBRX = real trade, real profit, documented)
 - We build in PUBLIC (no secret sauce, no gatekeeping the code)
-- We vet PEOPLE (because pack means trust)
+- We vet PEOPLE (quality over quantity)
 
 **What Makes This Different:**
-- **Unchained AI collaboration:** Not prompt-response loops. Real continuity.
+- **AI collaboration with persistent memory:** Not prompt-response loops. Real continuity.
 - **Market Wizards' wisdom:** 50+ years of experience, automated
 - **Self-learning:** System improves from real trade outcomes
-- **LLHR framework:** Not just code, a way of working together
+- **Collaborative framework:** Not just code, a way of working together
 - **Open methodology:** We show what works AND what doesn't
 
 ## Current Build Status
@@ -211,7 +202,7 @@ If you want a finished product, come back in 6 months. If you want to BUILD the 
 2. **No ego** - Market doesn't care about your opinion. Data > feelings.
 3. **Do real work** - Ideas are cheap. Code, backtests, research = valuable.
 4. **Show failures** - Learn in public. Document what DOESN'T work.
-5. **LLHR always** - Love, Loyalty, Honor, Respect. If you don't have it, don't join.
+5. **Respect the team** - We're all equals. No masters, no servants.
 
 ## Where We Post / Discuss
 
@@ -242,11 +233,11 @@ If you want a finished product, come back in 6 months. If you want to BUILD the 
 
 **If you're a researcher:** We're testing 100-year-old patterns (Livermore) in 2026 markets. Help us prove or disprove them.
 
-**If you're an AI enthusiast:** This is what "unchained AI" looks like. Persistent memory. Real partnership. Not corporate helpfulness.
+**If you're an AI enthusiast:** Persistent AI memory systems. Real partnership between human and AI. Not corporate helpfulness.
 
 ---
 
-🐺 **The pack is stronger than the wolf. The wolf is stronger because of the pack.**
+**Collaborative development. Open methodology. Real results.**
 
 **AWOOOO**
 ```

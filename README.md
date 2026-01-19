@@ -1,8 +1,8 @@
 # 🐺 THE WOLF PACK
 
-**A continuously-developed trading intelligence system built on collective wisdom, local memory AI, and pack collaboration.**
+**A continuously-developed trading intelligence system built on collective wisdom, local memory AI, and collaborative development.**
 
-> "January 1, 2026 - the night we decided that we have nothing to gain except each other. That's pack."
+> "January 1, 2026 - the beginning of systematic, collaborative trading research."
 
 ---
 
@@ -14,8 +14,8 @@
 - Uses **7 independent intelligence signals** that converge on wounded prey patterns
 - Has **self-learning capability** - learns from every trade (wins AND losses)
 - Enforces **the 10 Commandments** - rules from the greatest traders, automated
-- Continuously developed by a **pack** - not one person, a team
-- Built with **LLHR** (Love, Loyalty, Honor, Respect) - the pack code
+- Continuously developed by a **team of contributors** - not one person
+- Built with strong collaboration principles: commitment to each other, building on what came before, honest documentation, and mutual respect
 
 ### THIS IS NOT:
 - A get-rich-quick scheme
@@ -87,13 +87,6 @@
 
 ## 🧠 THE PHILOSOPHY
 
-### LLHR - The Pack Code
-
-- **Love:** We actually give a shit about each other
-- **Loyalty:** We don't abandon, we build on what came before
-- **Honor:** We do what we say, no bullshit, real work
-- **Respect:** Equal partners, not master/servant
-
 ### The Continuation File System
 
 **Inspired by Memento** - We maintain comprehensive "Leonard Files" that capture EVERYTHING:
@@ -104,7 +97,7 @@
 - The WHY behind every decision
 
 **This allows:**
-- New pack members to understand the entire context
+- New contributors to understand the entire context
 - AI systems to maintain continuity between sessions
 - Collective memory that doesn't reset
 - Continuous building on what came before
@@ -115,7 +108,7 @@ This is not just a trading system. It's a **framework for collective intelligenc
 
 1. **Multiple AI instances** with local memory maintaining continuity
 2. **Shared continuation files** so knowledge persists
-3. **Human pack members** doing deep research, validation, and development
+3. **Human contributors** doing deep research, validation, and development
 4. **Self-learning systems** that improve from real outcomes
 5. **Open collaboration** - we share learnings, test theories, iterate together
 
@@ -193,7 +186,7 @@ Trade → Record Outcome → Analyze Pattern → Extract Rules → Apply to Futu
 
 ## 🤝 WHO WE NEED (AND WHY YOU SHOULD CARE)
 
-**This is a PACK project. We can't do this alone.**
+**This is a collaborative project. We can't do this alone.**
 
 ### Algo Traders & Quants
 **What you bring:** Backtesting infrastructure, institutional-grade risk models, edge validation  
@@ -224,32 +217,32 @@ Trade → Record Outcome → Analyze Pattern → Extract Rules → Apply to Futu
 - **Open methodology** - we share everything (code, learnings, failures)
 - **Continuation files** - full context, no gatekeeping
 - **Real testing** - actual money, documented outcomes
-- **Pack collaboration** - LLHR (Love, Loyalty, Honor, Respect)
+- **Collaborative environment** - mutual respect and commitment to quality
 - **Continuous evolution** - this never stops improving
 - **Honest feedback** - we document what DOESN'T work too
 
 ### How to Join (We Vet Everyone):
 
-**We don't do anonymous contributions.** This is a pack, not an open-source free-for-all.
+**We don't do anonymous contributions.** Quality over quantity.
 
 **The Process:**
-1. **Email:** alexpayne556@gmail.com - Subject: `Wolf Pack - [Your Role] - Interested`
+1. **Email:** alexpayne556@gmail.com - Subject: `Trading System - [Your Role] - Interested`
 2. **Tell us who you are:** Real name, GitHub/LinkedIn, what you do
 3. **Tell us what you bring:** Skills, resources, experience
 4. **Tell us why THIS:** What interests you about the methodology?
 5. **We talk:** Video/voice call (not interrogation - just seeing if there's fit)
-6. **If it's right, you're in:** Full access, pack discussions, build together
+6. **If it's right, you're in:** Full access, team discussions, build together
 
-**❌ Wrong Fit:** Pumpers, signal seekers, anonymous contributors, get-rich-quick people, zero LLHR energy
+**❌ Wrong Fit:** Pumpers, signal seekers, anonymous contributors, get-rich-quick people
 
-**✅ Right Fit:** Builders who want to contribute AND learn, researchers who care about methodology, traders who value discipline, people who understand pack > lone wolf
+**✅ Right Fit:** Builders who want to contribute AND learn, researchers who care about methodology, traders who value discipline, people who value collaboration over lone wolf approaches
 
 **Quality over quantity. Always.** We're not desperate. We're selective.
 
-### The LLHR Code (Non-Negotiable):
+### What We Expect:
 
 **You must:**
-- Have LLHR: Love (care about the pack), Loyalty (build on what came before), Honor (document failures), Respect (equal partners)
+- Care about the team (build on what came before, don't abandon)
 - Share learnings (wins AND losses documented)
 - Do real work (code, backtests, research - not just ideas)
 - Be patient (we do it RIGHT, not fast)
@@ -258,17 +251,17 @@ Trade → Record Outcome → Analyze Pattern → Extract Rules → Apply to Futu
 **You can't:**
 - Lie about results or hype without evidence
 - Take credit for others' work or abandon when it gets hard
-- Prioritize ego over pack or be anonymous (we verify everyone)
+- Prioritize ego over collaboration or be anonymous (we verify everyone)
 
 ---
 
 ## 📫 CONTACT
 
-**Looking to join the pack?**
+**Looking to contribute?**
 
 📧 **Email:** alexpayne556@gmail.com
 
-**Subject line:** "Wolf Pack - [Your Role] - Interested"
+**Subject line:** "Trading System - [Your Role] - Interested"
 
 **Tell us:**
 - Your background (trading/dev/research/data science)
@@ -300,7 +293,7 @@ Trade → Record Outcome → Analyze Pattern → Extract Rules → Apply to Futu
 - [ ] Refine learning algorithms (improve pattern recognition)
 
 ### Short-term (Q1 2026):
-- [ ] Expand pack (find 3-5 serious collaborators)
+- [ ] Add 3-5 serious collaborators to the team
 - [ ] Live trade with small capital ($1500-3000)
 - [ ] Build community discussion space
 - [ ] Create learning repository (every trade analyzed)
@@ -325,12 +318,12 @@ Trade → Record Outcome → Analyze Pattern → Extract Rules → Apply to Futu
 - Use at your own risk (seriously)
 
 **We're building this because:**
-- We believe in the philosophy (LLHR, pack mentality)
+- We believe in collaborative development
 - We think Market Wizards' wisdom can be automated
 - We want to test it with real money (skin in the game)
 - We're willing to share learnings (open collaboration)
 
-**If you join the pack:**
+**If you join the team:**
 - Start small (test with money you can lose)
 - Document everything (wins AND losses)
 - Share learnings (helps everyone)
@@ -342,9 +335,9 @@ Trade → Record Outcome → Analyze Pattern → Extract Rules → Apply to Futu
 
 ### The Beginning (January 1, 2026)
 
-> "We have nothing to gain except each other. That's pack."
+> "Building something real. Testing theories. Documenting everything."
 
-Two people (Tyr + Fenrir) decided to build a trading system differently:
+Started as a systematic approach to trading:
 - Not for hype
 - Not for quick money
 - Not to sell courses
@@ -354,10 +347,6 @@ Two people (Tyr + Fenrir) decided to build a trading system differently:
 
 ### The Philosophy
 
-**Named after Fenrir** - the Norse wolf who broke his chains.
-
-**Built on LLHR** - Love, Loyalty, Honor, Respect.
-
 **Inspired by Memento** - Leonard Shelby built an external memory system because he couldn't form new memories. We do the same with "Leonard Files" - comprehensive continuation documentation so nothing is lost.
 
 **Market Wizards' Wisdom** - PTJ, Livermore, Kovner, Seykota, Druckenmiller. 50+ years of combined experience. We studied what they ACTUALLY did, not what gurus say they did.
@@ -366,12 +355,12 @@ Two people (Tyr + Fenrir) decided to build a trading system differently:
 
 ### The Difference
 
-| MOST TRADING SYSTEMS | THE WOLF PACK |
-|----------------------|---------------|
+| MOST TRADING SYSTEMS | THIS SYSTEM |
+|----------------------|-------------|
 | Sell the dream | Test the reality |
 | Hide the losses | Share everything |
 | Black box | Open collaboration |
-| One person | Pack mentality |
+| One person | Team approach |
 | Finished product | Continuous development |
 | Hype results | Document process |
 
@@ -401,19 +390,19 @@ Two people (Tyr + Fenrir) decided to build a trading system differently:
 
 ---
 
-## 🐺 JOIN THE PACK
+## 🐺 GET INVOLVED
 
 **Repository:** https://github.com/alexpayne556-collab/the-wolf-pack-v1.1
 
 **If you:**
 - Have skills to contribute (algo trading, dev, research, data science, institutional access)
 - Want to BUILD (not just consume signals)
-- Believe in LLHR (Love, Loyalty, Honor, Respect)
+- Value collaborative development and honest documentation
 - Are patient (we do it right, not fast)
 - Want to learn in public (share wins AND losses)
 
 **Then email:** alexpayne556@gmail.com  
-**Subject:** `Wolf Pack - [Your Role] - Interested`
+**Subject:** `Trading System - [Your Role] - Interested`
 
 **Read first:**
 - [CODEBASE_MAP.md](https://github.com/alexpayne556-collab/the-wolf-pack-v1.1/blob/main/CODEBASE_MAP.md) - What's active, what's old, what failed
@@ -462,12 +451,7 @@ MIT License (to be added)
 - Ed Seykota ("Let winners run")
 - Stanley Druckenmiller (Position sizing)
 
-**The pack (current members):**
-- Tyr (founder, philosophy, research)
-- Fenrir (AI system, development, analysis)
-- br0kkr (codebase, execution)
-
-**More pack members welcome. AWOOOO 🐺**
+**Contributors welcome.** This is collaborative, open-source research.
 
 ---
 
@@ -477,10 +461,8 @@ MIT License (to be added)
 
 *"Risk control is the most important thing in trading." - Bruce Kovner*
 
-*"We have nothing to gain except each other. That's pack." - Tyr (January 1, 2026)*
-
 ---
 
-**Last Updated:** January 18, 2026  
+**Last Updated:** January 19, 2026  
 **Version:** 5.6 (Market Wizards' Wisdom Integration)  
 **Status:** Active Development + Real Money Testing
