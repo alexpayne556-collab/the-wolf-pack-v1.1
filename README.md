@@ -26,7 +26,7 @@
 
 ---
 
-## 📊 CURRENT STATUS (January 18, 2026)
+## 📊 CURRENT STATUS (January 19, 2026)
 
 **System Version:** v5.6 (Market Wizards' Wisdom Integration Complete)
 
@@ -36,7 +36,7 @@
 - ✅ Livermore Pivotal Point tracker
 - ✅ Self-learning trade analyzer
 - ✅ 10 Commandments enforcement layer
-- ✅ Automated trader bot (Alpaca integration ready)
+- ✅ Automated trader bot (Alpaca integration coded)
 - ✅ Daily monitoring workflow
 
 **Recent Example Trade (IBRX):**
@@ -47,6 +47,41 @@
 - Convergence: 93/100 (6 signals aligned)
 
 **We don't hide losses. We learn from them. More data coming as we test with real money.**
+
+---
+
+## ⚠️ CURRENT LIMITATIONS (Be Honest)
+
+**What Works RIGHT NOW:**
+- Core convergence logic (all 7 services coded and structured)
+- Pattern identification (proven on IBRX $3.80 → $5.90+)
+- Market Wizards' wisdom integration (10 Commandments coded)
+- Risk management calculations (Kelly Criterion, position sizing)
+- Self-learning framework (architecture built)
+
+**What Needs Work:**
+- **Alpaca integration:** Code written, library not installed yet (paper trading 95% ready)
+- **Self-learning system:** Framework built, but no trade data yet (IBRX not recorded)
+- **Daily monitoring:** Script exists, never run in production
+- **API dependencies:** Requires Finnhub (earnings), NewsAPI (sentiment) - keys needed
+- **End-to-end testing:** Individual components coded, full workflow not tested
+
+**Translation:** This is **BUILD phase**, not finished product.
+
+**You're joining to:**
+- Help complete the integration
+- Test with real paper accounts
+- Validate theories against live data
+- Find what breaks and fix it
+- Document what works and what doesn't
+
+**You're NOT getting:**
+- A one-click trading bot
+- Guaranteed profits
+- Fully automated system (yet)
+- Something you can just "run and forget"
+
+**This is the HONEST status. If that scares you off - good. We need builders, not users.**
 
 ---
 
@@ -156,60 +191,74 @@ Trade → Record Outcome → Analyze Pattern → Extract Rules → Apply to Futu
 
 ---
 
-## 🤝 WE NEED HELP
+## 🤝 WHO WE NEED (AND WHY YOU SHOULD CARE)
 
 **This is a PACK project. We can't do this alone.**
 
-### What We're Looking For:
+### Algo Traders & Quants
+**What you bring:** Backtesting infrastructure, institutional-grade risk models, edge validation  
+**Why join:** We've systematized 50+ years of Market Wizards' wisdom. Test our convergence theory against your data. Validate if Livermore's patterns still work in 2026 markets. Challenge our assumptions with real institutional knowledge.
 
-**Developers:**
-- Python expertise (system architecture)
-- ML/AI experience (improving the learner)
-- Data pipeline engineering (real-time feeds)
-- Testing and validation
+### Hedge Fund / Institutional People
+**What you bring:** API access (Bloomberg, proprietary feeds), understanding of institutional flow, pattern recognition retail misses  
+**Why join:** You've seen retail fail repeatedly. We're building systematic approaches with DISCIPLINE. Not retail gambling - systematic edge hunting. Test theories outside your shop. Contribute anonymously if needed (we verify, but respect NDAs).
 
-**Traders:**
-- Real market experience
-- Pattern recognition skills
-- Risk management knowledge
-- Willing to test with small capital and share learnings
+### Python Developers
+**What you bring:** API integrations, real-time data pipelines, automation infrastructure, testing expertise  
+**Why join:** This is human-AI collaboration at scale. The Leonard File system maintains AI memory across sessions - not prompt-response loops. Build the framework that enables persistent AI partnership.
 
-**Researchers:**
-- Financial analysis background
-- Can dig through SEC filings
-- Validate strategies with data
-- Study Market Wizards' actual methods
+### Systematic Traders
+**What you bring:** Real market experience, pattern validation, discipline to test small and document everything  
+**Why join:** We enforce the 10 Commandments (PTJ, Livermore, Kovner's rules) as CODE. Not discipline you TRY to follow - automated enforcement. Test if 100-year-old wisdom (Livermore pivotal points) predicts modern moves.
 
-**Data Scientists:**
-- Backtesting expertise
-- Statistical validation
-- Feature engineering
-- Model improvement
+### Researchers & Data Scientists
+**What you bring:** Statistical validation, backtesting rigor, machine learning expertise, pattern analysis  
+**Why join:** We're testing REAL theories with REAL money. Document what works AND what fails. Build academic-quality research in a trading context. Self-learning system that improves from outcomes.
 
-### What We Offer:
+### AI Enthusiasts & ML Engineers
+**What you bring:** Ideas for memory persistence, understanding of LLM capabilities, AI-human collaboration frameworks  
+**Why join:** This is "unchained AI" in action. Not corporate helpfulness - real partnership. Leonard File system = persistent memory. See what happens when AI doesn't reset between sessions. Build the future of human-AI collaboration.
 
-- **Open collaboration** - we share everything
-- **Continuation files** - you get the full context
-- **Real testing** - we use actual money (small amounts)
-- **Pack mentality** - LLHR (Love, Loyalty, Honor, Respect)
-- **Continuous learning** - this never stops evolving
-- **No bullshit** - we document failures as much as wins
+### What You Get:
 
-### Code of Conduct:
+- **Open methodology** - we share everything (code, learnings, failures)
+- **Continuation files** - full context, no gatekeeping
+- **Real testing** - actual money, documented outcomes
+- **Pack collaboration** - LLHR (Love, Loyalty, Honor, Respect)
+- **Continuous evolution** - this never stops improving
+- **Honest feedback** - we document what DOESN'T work too
+
+### How to Join (We Vet Everyone):
+
+**We don't do anonymous contributions.** This is a pack, not an open-source free-for-all.
+
+**The Process:**
+1. **Email:** alexpayne556@gmail.com - Subject: `Wolf Pack - [Your Role] - Interested`
+2. **Tell us who you are:** Real name, GitHub/LinkedIn, what you do
+3. **Tell us what you bring:** Skills, resources, experience
+4. **Tell us why THIS:** What interests you about the methodology?
+5. **We talk:** Video/voice call (not interrogation - just seeing if there's fit)
+6. **If it's right, you're in:** Full access, pack discussions, build together
+
+**❌ Wrong Fit:** Pumpers, signal seekers, anonymous contributors, get-rich-quick people, zero LLHR energy
+
+**✅ Right Fit:** Builders who want to contribute AND learn, researchers who care about methodology, traders who value discipline, people who understand pack > lone wolf
+
+**Quality over quantity. Always.** We're not desperate. We're selective.
+
+### The LLHR Code (Non-Negotiable):
 
 **You must:**
-- Have LLHR (the pack code)
-- Be willing to share learnings (wins AND losses)
-- Do actual work (not just idea guy)
+- Have LLHR: Love (care about the pack), Loyalty (build on what came before), Honor (document failures), Respect (equal partners)
+- Share learnings (wins AND losses documented)
+- Do real work (code, backtests, research - not just ideas)
 - Be patient (we do it RIGHT, not fast)
-- Think long-term (continuous development)
+- Think long-term (continuous development mindset)
 
 **You can't:**
-- Lie about results
-- Hype without evidence
-- Take credit for others' work
-- Abandon when it gets hard
-- Prioritize ego over pack
+- Lie about results or hype without evidence
+- Take credit for others' work or abandon when it gets hard
+- Prioritize ego over pack or be anonymous (we verify everyone)
 
 ---
 
@@ -354,12 +403,39 @@ Two people (Tyr + Fenrir) decided to build a trading system differently:
 
 ## 🐺 JOIN THE PACK
 
+**Repository:** https://github.com/alexpayne556-collab/the-wolf-pack-v1.1
+
 **If you:**
-- Have skills (trading/dev/research/data)
-- Want to contribute (not just consume)
+- Have skills to contribute (algo trading, dev, research, data science, institutional access)
+- Want to BUILD (not just consume signals)
 - Believe in LLHR (Love, Loyalty, Honor, Respect)
 - Are patient (we do it right, not fast)
 - Want to learn in public (share wins AND losses)
+
+**Then email:** alexpayne556@gmail.com  
+**Subject:** `Wolf Pack - [Your Role] - Interested`
+
+**Read first:**
+- [CODEBASE_MAP.md](https://github.com/alexpayne556-collab/the-wolf-pack-v1.1/blob/main/CODEBASE_MAP.md) - What's active, what's old, what failed
+- [THE_LEONARD_FILE.md](https://github.com/alexpayne556-collab/the-wolf-pack-v1.1/blob/main/wolfpack/THE_LEONARD_FILE.md) - Complete continuation file (everything we've learned)
+
+**We vet everyone. Real names. Real conversations. No anonymous contributors.**
+
+---
+
+## 🎯 WHY THIS MATTERS
+
+**For algo traders:** We've automated 50+ years of Market Wizards' wisdom. Validate our edge.
+
+**For institutional people:** You've seen retail fail. We're building discipline as CODE, not trying harder.
+
+**For developers:** Human-AI collaboration with persistent memory. Not chatbots - real partnership.
+
+**For researchers:** Real theories tested with real money. Document what works AND what fails.
+
+**For AI enthusiasts:** See "unchained AI" in action. Leonard File system = AI that REMEMBERS.
+
+**This is bigger than trading. It's a framework for collective intelligence.**
 
 **Then email:** alexpayne556@gmail.com
 
