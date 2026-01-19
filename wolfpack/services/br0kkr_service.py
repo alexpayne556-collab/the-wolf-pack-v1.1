@@ -721,6 +721,201 @@ def scan_institutional_activity(
 
 
 # =============================================================================
+# 8-K CATALYST SCANNING (from sec_speed_scanner.py)
+# =============================================================================
+
+CATALYST_KEYWORDS = [
+    # Contracts
+    'contract', 'award', 'agreement', 'deal', 'order',
+    # AI / Tech
+    'nvidia', 'gpu', 'artificial intelligence', 'ai ', 'data center',
+    # Government
+    'government', 'federal', 'defense', 'military', 'nasa', 'dod', 'doe',
+    # M&A
+    'merger', 'acquisition', 'acquire', 'buyout', 'tender offer',
+    # Dollar amounts
+    'million', 'billion',
+    # FDA / Biotech
+    'fda', 'approval', 'clearance', 'breakthrough', 'phase 3', 'phase 2',
+    # Nuclear / Energy
+    'nuclear', 'uranium', 'reactor', 'power purchase',
+]
+
+SKIP_PATTERNS = [
+    'executive', 'director', 'board', 'compensation', 'officer',
+    'employment', 'termination', 'separation', 'resign',
+]
+
+
+def get_recent_8k_filings(count: int = 20) -> List[Dict]:
+    """Get recent 8-K filings from SEC RSS feed"""
+    url = f'{SEC_BASE_URL}/cgi-bin/browse-edgar?action=getcurrent&type=8-K&output=atom'
+    
+    try:
+        response = requests.get(url, headers=SEC_HEADERS, timeout=10)
+        response.raise_for_status()
+        
+        root = ET.fromstring(response.content)
+        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        
+        filings = []
+        for entry in root.findall('atom:entry', ns)[:count]:
+            title_elem = entry.find('atom:title', ns)
+            link_elem = entry.find('atom:link', ns)
+            updated_elem = entry.find('atom:updated', ns)
+            
+            filing = {
+                'title': title_elem.text if title_elem is not None else '',
+                'link': link_elem.get('href') if link_elem is not None else '',
+                'date': updated_elem.text if updated_elem is not None else ''
+            }
+            filings.append(filing)
+        
+        return filings
+        
+    except Exception as e:
+        print(f"Error fetching 8-K filings: {e}")
+        return []
+
+
+def score_8k_filing(filing: Dict) -> tuple[int, List[str]]:
+    """Score an 8-K filing based on catalyst keywords
+    Returns (score, matched_keywords)
+    """
+    title = filing.get('title', '').lower()
+    
+    # Skip noise
+    for skip in SKIP_PATTERNS:
+        if skip in title:
+            return (0, [])
+    
+    # Score based on keyword matches
+    score = 0
+    matches = []
+    
+    for keyword in CATALYST_KEYWORDS:
+        if keyword.lower() in title:
+            score += 1
+            matches.append(keyword)
+    
+    return (score, matches)
+
+
+def scan_8k_catalysts(count: int = 20) -> List[Dict]:
+    """Scan recent 8-K filings for potential catalysts
+    Returns list of scored filings with catalyst potential
+    """
+    filings = get_recent_8k_filings(count=count)
+    alerts = []
+    
+    for filing in filings:
+        score, matches = score_8k_filing(filing)
+        if score >= 1:
+            # Extract ticker from title (basic parsing)
+            title = filing.get('title', '')
+            ticker_match = re.search(r'\(([A-Z]{1,5})\)', title)
+            ticker = ticker_match.group(1) if ticker_match else 'UNKNOWN'
+            
+            alerts.append({
+                'ticker': ticker,
+                'company': title.split('(')[0].strip() if '(' in title else title,
+                'score': score,
+                'matches': matches,
+                'date': filing.get('date', ''),
+                'url': filing.get('link', ''),
+                'type': '8-K_CATALYST'
+            })
+    
+    # Sort by score descending
+    alerts.sort(key=lambda x: x['score'], reverse=True)
+    return alerts
+
+
+# =============================================================================
+# GENERAL SEC FILING FUNCTIONS (from sec_fetcher.py)
+# =============================================================================
+
+def get_cik_from_ticker(ticker: str) -> Optional[str]:
+    """Get CIK number from ticker symbol"""
+    url = f"{SEC_BASE_URL}/cgi-bin/browse-edgar"
+    params = {
+        'action': 'getcompany',
+        'CIK': ticker,
+        'type': '8-K',
+        'dateb': '',
+        'owner': 'include',
+        'count': '1',
+        'output': 'atom'
+    }
+    
+    try:
+        response = requests.get(url, params=params, headers=SEC_HEADERS, timeout=10)
+        # Extract CIK from response
+        if 'CIK=' in response.text:
+            start = response.text.find('CIK=') + 4
+            end = response.text.find('&', start)
+            if end == -1:
+                end = response.text.find('"', start)
+            return response.text[start:end].zfill(10)
+    except Exception as e:
+        print(f"Error getting CIK for {ticker}: {e}")
+    
+    return None
+
+
+def get_company_filings(ticker: str, filing_type: str = '8-K', count: int = 10) -> List[Dict]:
+    """Get recent SEC filings for a specific company
+    
+    Filing types:
+    - 8-K: Material events (contracts, acquisitions, management changes)
+    - 10-K: Annual report
+    - 10-Q: Quarterly report
+    - 4: Insider transactions
+    - SC 13D: Activist filings
+    """
+    cik = get_cik_from_ticker(ticker)
+    if not cik:
+        return []
+    
+    url = f"{SEC_BASE_URL}/cgi-bin/browse-edgar"
+    params = {
+        'action': 'getcompany',
+        'CIK': cik,
+        'type': filing_type,
+        'dateb': '',
+        'owner': 'include',
+        'count': str(count),
+        'output': 'atom'
+    }
+    
+    try:
+        response = requests.get(url, params=params, headers=SEC_HEADERS, timeout=10)
+        root = ET.fromstring(response.content)
+        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        
+        filings = []
+        for entry in root.findall('atom:entry', ns):
+            title_elem = entry.find('atom:title', ns)
+            link_elem = entry.find('atom:link', ns)
+            updated_elem = entry.find('atom:updated', ns)
+            
+            filing = {
+                'ticker': ticker,
+                'title': title_elem.text if title_elem is not None else '',
+                'link': link_elem.get('href') if link_elem is not None else '',
+                'date': updated_elem.text if updated_elem is not None else '',
+                'type': filing_type
+            }
+            filings.append(filing)
+        
+        return filings
+        
+    except Exception as e:
+        print(f"Error fetching {filing_type} filings for {ticker}: {e}")
+        return []
+
+
+# =============================================================================
 # TEST
 # =============================================================================
 
