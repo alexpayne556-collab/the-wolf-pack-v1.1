@@ -1,0 +1,48 @@
+# Wolf Pack .gitignore
+
+# Environment and secrets
+.env
+*.env.local
+*.env.production
+
+# Database
+data/wolfpack.db
+data/wolfpack.db-journal
+
+# Data files
+data/
+reports/
+*.csv
+*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache
+.cache/
+*.cache

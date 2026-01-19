@@ -1,0 +1,82 @@
+# Wolf Pack - Git Ignore File
+
+# Environment variables (API keys, secrets)
+.env
+.env.local
+.env.production
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs and data
+logs/
+*.log
+trade_log.json
+learning_data.json
+*.pkl
+*.pickle
+
+# Data files (don't commit live trading data)
+data/live/
+data/private/
+backtest_results/
+trade_history/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Personal notes (keep private)
+PRIVATE_NOTES.md
+personal/
+
+# API keys and credentials (CRITICAL - NEVER COMMIT)
+*_keys.py
+credentials.json
+secrets.yaml
+
+# Trading account info (NEVER commit account numbers or sensitive info)
+account_info.txt
+positions.json

@@ -1,0 +1,24 @@
+# 🐺 FENRIR V2 - Dependencies
+# Install with: pip install -r requirements.txt
+
+# Market data
+yfinance>=0.2.36
+
+# News API
+requests>=2.31.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Windows notifications
+win10toast>=0.9
+
+# Data processing (optional but useful)
+pandas>=2.0.0
+
+# For future fine-tuning (install separately if needed)
+# torch>=2.0.0
+# transformers>=4.36.0
+# peft>=0.7.0
+# accelerate>=0.25.0
+# bitsandbytes>=0.41.0

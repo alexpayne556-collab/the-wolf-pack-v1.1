@@ -1,0 +1,25 @@
+# Wolf Pack Trading System - Python Dependencies
+
+# Core data fetching
+yfinance>=0.2.35
+finnhub-python>=2.4.19
+requests>=2.31.0
+
+# Trading API
+alpaca-py>=0.13.2
+
+# Data processing
+pandas>=2.1.4
+numpy>=1.26.3
+
+# Environment management
+python-dotenv>=1.0.0
+
+# Optional: ML/Data Science (for future enhancements)
+# scikit-learn>=1.4.0
+# matplotlib>=3.8.2
+# seaborn>=0.13.1
+
+# Optional: Jupyter (for analysis notebooks)
+# jupyter>=1.0.0
+# ipykernel>=6.29.0
