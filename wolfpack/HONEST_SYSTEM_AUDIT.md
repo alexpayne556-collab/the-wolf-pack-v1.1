@@ -101,7 +101,7 @@ if portfolio_heat > 50%:
 ---
 
 #### **2. BACKTESTING ENGINE** 🔴 MISSING - CRITICAL
-**Current State:** We THINK wounded prey has 68.8% win rate, but we haven't PROVEN it
+**Current State:** We have pattern framework, 3 days live trading (+0.24%), need 30+ trades to prove edge
 
 **What we DON'T have:**
 - No historical price data storage
@@ -117,7 +117,7 @@ if portfolio_heat > 50%:
 **Reality Check:** 
 ```python
 # What we SAY:
-"Wounded prey pattern has 68.8% win rate"
+"Paper trading shows +0.24% across 6 positions in 3 days"
 
 # What we've PROVEN:
 NOTHING. We recorded 100 historical patterns manually, but:
@@ -429,7 +429,7 @@ Build the missing CRITICAL modules before ANY trading:
 
 3. **Validate ONE Edge** ← DO THIS THIRD
    - Run wounded prey backtest on 2020-2025 data
-   - Measure REAL win rate (not assumed 68.8%)
+   - Measure REAL win rate (need 30+ trades minimum)
    - Calculate confidence intervals
    - **If it's fake, we stop here and redesign**
 

@@ -1,0 +1,299 @@
+{
+  "last_updated": "2026-01-19T19:38:15.215298",
+  "criteria": {
+    "price_min": 1.0,
+    "price_max": 50.0,
+    "market_cap_min": 50000000,
+    "market_cap_max": 10000000000,
+    "avg_volume_min": 500000,
+    "pct_from_52w_high": -30,
+    "exchanges": [
+      "NYSE",
+      "NASDAQ",
+      "AMEX"
+    ]
+  },
+  "count": 28,
+  "wounded_prey": [
+    {
+      "ticker": "AI",
+      "price": 13.04,
+      "market_cap": 1835422720,
+      "avg_volume": 6569998,
+      "high_52w": 35.98,
+      "pct_from_high": -63.8,
+      "wounded_score": 95,
+      "last_updated": "2026-01-19T19:38:13.403458"
+    },
+    {
+      "ticker": "BITF",
+      "price": 2.95,
+      "market_cap": 1763874176,
+      "avg_volume": 45597543,
+      "high_52w": 6.6,
+      "pct_from_high": -55.3,
+      "wounded_score": 90,
+      "last_updated": "2026-01-19T19:38:08.435207"
+    },
+    {
+      "ticker": "SRPT",
+      "price": 21.13,
+      "market_cap": 2214153216,
+      "avg_volume": 6000175,
+      "high_52w": 120.05,
+      "pct_from_high": -82.4,
+      "wounded_score": 90,
+      "last_updated": "2026-01-19T19:38:12.914193"
+    },
+    {
+      "ticker": "NTLA",
+      "price": 12.5,
+      "market_cap": 1447874048,
+      "avg_volume": 5131607,
+      "high_52w": 28.25,
+      "pct_from_high": -55.8,
+      "wounded_score": 90,
+      "last_updated": "2026-01-19T19:38:13.477958"
+    },
+    {
+      "ticker": "HIVE",
+      "price": 3.47,
+      "market_cap": 825745472,
+      "avg_volume": 19291163,
+      "high_52w": 7.84,
+      "pct_from_high": -55.7,
+      "wounded_score": 90,
+      "last_updated": "2026-01-19T19:38:14.791374"
+    },
+    {
+      "ticker": "BTBT",
+      "price": 2.37,
+      "market_cap": 767109248,
+      "avg_volume": 28648905,
+      "high_52w": 4.55,
+      "pct_from_high": -47.9,
+      "wounded_score": 80,
+      "last_updated": "2026-01-19T19:38:08.925620"
+    },
+    {
+      "ticker": "QUBT",
+      "price": 12.7,
+      "market_cap": 2846365696,
+      "avg_volume": 25515743,
+      "high_52w": 25.84,
+      "pct_from_high": -50.9,
+      "wounded_score": 80,
+      "last_updated": "2026-01-19T19:38:12.638859"
+    },
+    {
+      "ticker": "MARA",
+      "price": 11.36,
+      "market_cap": 4296174080,
+      "avg_volume": 45970357,
+      "high_52w": 23.45,
+      "pct_from_high": -51.6,
+      "wounded_score": 80,
+      "last_updated": "2026-01-19T19:38:12.960925"
+    },
+    {
+      "ticker": "UPST",
+      "price": 48.12,
+      "market_cap": 4681425408,
+      "avg_volume": 6368403,
+      "high_52w": 96.43,
+      "pct_from_high": -50.1,
+      "wounded_score": 80,
+      "last_updated": "2026-01-19T19:38:14.456965"
+    },
+    {
+      "ticker": "SMR",
+      "price": 20.19,
+      "market_cap": 5710609920,
+      "avg_volume": 16502701,
+      "high_52w": 57.42,
+      "pct_from_high": -64.8,
+      "wounded_score": 75,
+      "last_updated": "2026-01-19T19:38:11.139065"
+    },
+    {
+      "ticker": "SPCE",
+      "price": 3.1,
+      "market_cap": 226700960,
+      "avg_volume": 3954727,
+      "high_52w": 6.64,
+      "pct_from_high": -53.3,
+      "wounded_score": 75,
+      "last_updated": "2026-01-19T19:38:12.308235"
+    },
+    {
+      "ticker": "WOLF",
+      "price": 20.35,
+      "market_cap": 526911296,
+      "avg_volume": 3169553,
+      "high_52w": 36.6,
+      "pct_from_high": -44.4,
+      "wounded_score": 75,
+      "last_updated": "2026-01-19T19:38:14.813948"
+    },
+    {
+      "ticker": "S",
+      "price": 13.9,
+      "market_cap": 4724178944,
+      "avg_volume": 6401900,
+      "high_52w": 25.24,
+      "pct_from_high": -44.9,
+      "wounded_score": 70,
+      "last_updated": "2026-01-19T19:38:08.807321"
+    },
+    {
+      "ticker": "RARE",
+      "price": 22.49,
+      "market_cap": 2169780480,
+      "avg_volume": 1577658,
+      "high_52w": 46.5,
+      "pct_from_high": -51.6,
+      "wounded_score": 70,
+      "last_updated": "2026-01-19T19:38:09.363660"
+    },
+    {
+      "ticker": "RGTI",
+      "price": 25.62,
+      "market_cap": 8455268352,
+      "avg_volume": 61541716,
+      "high_52w": 58.15,
+      "pct_from_high": -55.9,
+      "wounded_score": 70,
+      "last_updated": "2026-01-19T19:38:09.967500"
+    },
+    {
+      "ticker": "SOUN",
+      "price": 11.1,
+      "market_cap": 4663064576,
+      "avg_volume": 41375580,
+      "high_52w": 22.17,
+      "pct_from_high": -49.9,
+      "wounded_score": 70,
+      "last_updated": "2026-01-19T19:38:11.122312"
+    },
+    {
+      "ticker": "BBAI",
+      "price": 6.12,
+      "market_cap": 2671693568,
+      "avg_volume": 97087760,
+      "high_52w": 10.36,
+      "pct_from_high": -40.9,
+      "wounded_score": 70,
+      "last_updated": "2026-01-19T19:38:12.085399"
+    },
+    {
+      "ticker": "CLSK",
+      "price": 13.37,
+      "market_cap": 3574279168,
+      "avg_volume": 27774439,
+      "high_52w": 23.61,
+      "pct_from_high": -43.4,
+      "wounded_score": 70,
+      "last_updated": "2026-01-19T19:38:12.790997"
+    },
+    {
+      "ticker": "EDIT",
+      "price": 2.03,
+      "market_cap": 198165872,
+      "avg_volume": 2627841,
+      "high_52w": 4.54,
+      "pct_from_high": -55.3,
+      "wounded_score": 65,
+      "last_updated": "2026-01-19T19:38:08.420537"
+    },
+    {
+      "ticker": "GTLB",
+      "price": 34.14,
+      "market_cap": 5749175808,
+      "avg_volume": 4078199,
+      "high_52w": 74.18,
+      "pct_from_high": -54.0,
+      "wounded_score": 65,
+      "last_updated": "2026-01-19T19:38:08.816685"
+    },
+    {
+      "ticker": "DOMO",
+      "price": 6.15,
+      "market_cap": 257060736,
+      "avg_volume": 654579,
+      "high_52w": 18.49,
+      "pct_from_high": -66.7,
+      "wounded_score": 65,
+      "last_updated": "2026-01-19T19:38:08.955564"
+    },
+    {
+      "ticker": "ARCT",
+      "price": 7.29,
+      "market_cap": 207140096,
+      "avg_volume": 701699,
+      "high_52w": 24.17,
+      "pct_from_high": -69.8,
+      "wounded_score": 65,
+      "last_updated": "2026-01-19T19:38:14.095206"
+    },
+    {
+      "ticker": "ABCL",
+      "price": 4.12,
+      "market_cap": 1233260288,
+      "avg_volume": 4979646,
+      "high_52w": 6.51,
+      "pct_from_high": -36.8,
+      "wounded_score": 65,
+      "last_updated": "2026-01-19T19:38:14.445445"
+    },
+    {
+      "ticker": "OMER",
+      "price": 12.01,
+      "market_cap": 851514496,
+      "avg_volume": 1894097,
+      "high_52w": 17.65,
+      "pct_from_high": -32.0,
+      "wounded_score": 60,
+      "last_updated": "2026-01-19T19:38:08.925620"
+    },
+    {
+      "ticker": "ARQQ",
+      "price": 26.6,
+      "market_cap": 416339456,
+      "avg_volume": 650117,
+      "high_52w": 62.0,
+      "pct_from_high": -57.1,
+      "wounded_score": 60,
+      "last_updated": "2026-01-19T19:38:13.275764"
+    },
+    {
+      "ticker": "APLS",
+      "price": 19.94,
+      "market_cap": 2522912768,
+      "avg_volume": 2402298,
+      "high_52w": 31.17,
+      "pct_from_high": -36.0,
+      "wounded_score": 55,
+      "last_updated": "2026-01-19T19:38:15.147461"
+    },
+    {
+      "ticker": "ACHR",
+      "price": 8.86,
+      "market_cap": 6504207360,
+      "avg_volume": 39742106,
+      "high_52w": 14.62,
+      "pct_from_high": -39.4,
+      "wounded_score": 50,
+      "last_updated": "2026-01-19T19:38:08.440248"
+    },
+    {
+      "ticker": "FATE",
+      "price": 1.19,
+      "market_cap": 137269232,
+      "avg_volume": 1942034,
+      "high_52w": 1.94,
+      "pct_from_high": -38.7,
+      "wounded_score": 40,
+      "last_updated": "2026-01-19T19:38:08.941915"
+    }
+  ]
+}

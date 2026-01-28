@@ -21,14 +21,15 @@ NOW WITH SELF-LEARNING:
 """
 
 import os
+import sys
 from datetime import datetime
 from dataclasses import dataclass
 from typing import List, Optional, Dict
 from enum import Enum
 import json
 
-# Import trade learner
-from services.trade_learner import TradeLearner, TradeRecord, TradeOutcome
+# Import learning engine (unified)
+from services.learning_engine import UnifiedLearningEngine, TradeRecord, TradeOutcome
 from services.trading_rules import TenCommandments, format_commandments_report
 
 # Alpaca imports (will be installed)
@@ -91,8 +92,13 @@ class WolfPackTrader:
         self.paper_trading = paper_trading
         self.client = None
         
-        # Initialize learning system
-        self.learner = TradeLearner()
+        # Initialize learning system (old)
+        self.learner = UnifiedLearningEngine()
+        
+        # Initialize unified learning engine
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from services.learning_engine import LearningEngine
+        self.learning_engine = LearningEngine()
         
         # Initialize the 10 Commandments enforcer
         self.commandments = TenCommandments(account_value=100000)  # Will be updated with real account value
@@ -197,6 +203,19 @@ class WolfPackTrader:
             stop_loss = result.get('stop_loss', price * 0.92)  # Default -8% stop
             target = result.get('target', price * 1.40)  # Default +40% target
             
+            # LEARNING ENGINE FILTER: Does history say this setup works?
+            learned_filter = self.learning_engine.should_take_trade(
+                ticker=ticker,
+                setup_type="convergence",
+                score=score
+            )
+            
+            if not learned_filter['should_take']:
+                print(f"\n🧠 LEARNING ENGINE BLOCKED {ticker}:")
+                print(f"   Reason: {learned_filter['reason']}")
+                print(f"   Historical win rate: {learned_filter.get('historical_winrate', 'N/A')}")
+                continue
+            
             # ASK THE COMMANDMENTS: Can we take this trade?
             can_proceed, checks = self.commandments.check_all_commandments(
                 ticker=ticker,
@@ -212,7 +231,8 @@ class WolfPackTrader:
                 continue
             
             # All checks passed
-            print(f"\n✅ ALL COMMANDMENTS PASSED for {ticker}:")
+            print(f"\n✅ ALL CHECKS PASSED for {ticker}:")
+            print(f"   🧠 Learning engine: {learned_filter['reason']}")
             print(format_commandments_report(checks))
             
             signals.append(TradeSignal(
@@ -342,6 +362,7 @@ class WolfPackTrader:
         """
         Monitor all open positions and check if we should exit
         Uses learner to decide when to cut losers
+        Logs exits to learning engine for pattern tracking
         """
         
         if not self.client:
@@ -497,6 +518,18 @@ class WolfPackTrader:
             
             if execution.success:
                 print(f"   ✅ Order submitted: {execution.order_id}")
+                
+                # LOG TO LEARNING ENGINE with full context
+                if signal.action in [TradeAction.BUY, TradeAction.ADD]:
+                    trade_id = self.learning_engine.log_entry(
+                        ticker=signal.ticker,
+                        shares=signal.shares,
+                        entry_price=signal.price,
+                        setup_type="convergence",
+                        thesis=signal.reasoning,
+                        quality_score=signal.convergence_score
+                    )
+                    print(f"   📝 Logged to learning engine (ID: {trade_id})")
             else:
                 print(f"   ❌ Order failed: {execution.error}")
             

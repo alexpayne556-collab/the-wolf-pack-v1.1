@@ -54,7 +54,7 @@ health_checker.analyze(positions)
 
 **What it does:**
 - **WOUNDED_PREY:** Stocks down 30-70% from highs, showing first bounce
-  - Validated edge: 68.8% win rate (from documented trades)
+  - Pattern research: Testing edge through live paper trading
   - Entry: First green candle after capitulation
   - Stop: Below recent low
   
@@ -724,7 +724,7 @@ Right now we have:
 - Real-time scanning and institutional tracking
 - Proper signal weighting and convergence detection
 - Clean terminal output showing all intelligence
-- Validated pattern edges (68.8% wounded prey)
+- Pattern research (validation through live testing)
 
 **What We're Missing:**
 - Risk management (CRITICAL - can't trade without it)

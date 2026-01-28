@@ -1,0 +1,13 @@
+{
+  "name": "AI Infrastructure",
+  "description": "AI/ML chips, data centers, power infrastructure, and computing backbone",
+  "created": "2026-01-27",
+  "tickers": [
+    "MU", "MRVL", "NVDA", "AMD", "INTC", "TSM", "AVGO", "AMAT", "LRCX", "KLAC",
+    "ASML", "QCOM", "ARM", "ON", "STX", "WDC", "COHR", "CRDO", "ANET", "CSCO",
+    "ALAB", "CDNS", "SNPS", "CEVA", "SYNA", "FN", "AMKR", "CAMT", "ONTO", "LITE",
+    "IREN", "CORZ", "APLD", "CIFR", "VRT", "MOD", "ETN", "GEV", "PWR", "FIX",
+    "STRL", "WLDN", "DLR", "EQIX", "AMT", "NVT", "PSTG"
+  ],
+  "sectors": ["Semiconductors", "Data Centers", "Power Infrastructure", "Networking", "Storage"]
+}

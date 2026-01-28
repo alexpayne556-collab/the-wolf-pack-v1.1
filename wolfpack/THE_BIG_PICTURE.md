@@ -194,13 +194,13 @@ CONVERGENCE SCORE: 88/100 ← THE MAGIC NUMBER
 |-----------|----------------|--------|
 | **Trade Journal** | Track every setup, outcome, lesson | Can't measure what works |
 | **Scanner Backtester** | Did wounded prey signals work? | Don't know if scanner is useful |
-| **Pattern Database** | Store validated edges (68.8% wounded prey) | System can't access past learnings |
+| **Pattern Database** | Store researched patterns (validation in progress) | System can't access past learnings |
 | **Win Rate Tracker** | Real stats on strategies | Trading blind |
 
 **The Edge We're Missing:**
-- We validated wounded prey = 68.8% win rate (manual research)
+- We researched wounded prey pattern (validation requires 30+ live trades)
 - System doesn't KNOW that
-- Should store: "Wounded prey + 30% compression + volume = 68.8% win rate at 20 days"
+- Should store: "Wounded prey + 30% compression + volume = pattern hypothesis (testing)"
 
 **Right now:** The Leonard File has this, but CODE doesn't use it.
 
@@ -381,7 +381,7 @@ CONVERGENCE SCORE: 88/100 ← THE MAGIC NUMBER
 
 | EDGE | STATUS | VALIDATION |
 |------|--------|------------|
-| Wounded Prey | ✅ PROVEN | 68.8% win rate (72 instances) |
+| Wounded Prey | ⏳ TESTING | Early stage (3 days paper trading, +0.24%) |
 | Strong Thesis = Hold Volatility | ✅ PROVEN | MU down but thesis 8/10 = held |
 | Dead Money Detection | ✅ WORKING | BBAI caught, cut at -5 |
 | Discipline | ✅ PROVEN | Avoided IVF trap, VERO trap |

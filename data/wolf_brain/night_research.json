@@ -1,0 +1,889 @@
+[
+  {
+    "ticker": "AQST",
+    "price": {
+      "price": 3.4800000190734863,
+      "change": 5.135954055370448,
+      "volume": 5200900,
+      "avg_volume": 6268460,
+      "rel_volume": 0.829693417522007,
+      "float": 111904915,
+      "short_pct": 22.690001000000002
+    },
+    "news": [
+      {
+        "headline": "Undercovered Dozen: Dell, Brighthouse, UnitedHealth, And More",
+        "source": "Finnhub",
+        "time": "2026-01-20 02:18"
+      },
+      {
+        "headline": "Aquestive Therapeutics Announces Regulatory Development for Anaphylm\u2122 (dibutepinephrine) Sublingual Film and Provides Business Update",
+        "source": "Polygon",
+        "time": "2026-01-09T12:00"
+      },
+      {
+        "headline": "Food Allergy Market Valued at USD 3 Billion across the 7MM, Projected to Grow at CAGR of 11.3% by 2034 | DelveInsight",
+        "source": "Polygon",
+        "time": "2025-11-10T18:00"
+      },
+      {
+        "headline": "Aquestive Therapeutics Broadens Patent Estate for Anaphylm\u2122",
+        "source": "Polygon",
+        "time": "2025-10-08T11:00"
+      },
+      {
+        "headline": "Aquestive Therapeutics Announces that FDA Will Not Require an Advisory Committee Meeting to Discuss New Drug Application for Anaphylm\u2122",
+        "source": "Polygon",
+        "time": "2025-09-04T11:00"
+      },
+      {
+        "headline": "Aquestive Therapeutics Announces $75M Strategic Funding Agreement with RTW to Support the Potential Launch of Anaphylm\u2122 (epinephrine) Sublingual Film",
+        "source": "Polygon",
+        "time": "2025-08-14T10:00"
+      }
+    ],
+    "insider": {
+      "buys": 0,
+      "sells": 8,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "IRON",
+    "price": {
+      "price": 74.0,
+      "change": 4.3282104632955996,
+      "volume": 469900,
+      "avg_volume": 776160,
+      "rel_volume": 0.6054164089878376,
+      "float": 32322821,
+      "short_pct": 11.09
+    },
+    "news": [
+      {
+        "headline": "FDA Shows Caution, Delays Trump-Backed Fast-Track Drugs Over Risks (UPDATED)",
+        "source": "Polygon",
+        "time": "2026-01-16T13:32"
+      },
+      {
+        "headline": "Disc Medicine Presents Positive Initial Data from RALLY-MF Phase 2 Trial in Patients with Myelofibrosis (MF) and Anemia at the 67th American Society of Hematology (ASH) Annual Meeting",
+        "source": "Polygon",
+        "time": "2025-12-06T13:00"
+      },
+      {
+        "headline": "Portfolio Adjustment: Institutional Heavyweight Exits Biotech Stock",
+        "source": "Polygon",
+        "time": "2025-11-19T15:24"
+      },
+      {
+        "headline": "Disc Medicine Announces Pricing of $250 Million Upsized Public Offering of Common Stock and Pre-Funded Warrants",
+        "source": "Polygon",
+        "time": "2025-10-21T04:14"
+      },
+      {
+        "headline": "Disc Medicine Announces Pricing of $250 Million Upsized Public Offering of Common Stock and Pre-Funded Warrants",
+        "source": "Polygon",
+        "time": "2025-10-21T04:14"
+      }
+    ],
+    "insider": {
+      "buys": 0,
+      "sells": 140,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "VKTX",
+    "price": {
+      "price": 33.52000045776367,
+      "change": -1.1792385989803782,
+      "volume": 2166400,
+      "avg_volume": 4401360,
+      "rel_volume": 0.4922114982641729,
+      "float": 110212696,
+      "short_pct": 25.81
+    },
+    "news": [
+      {
+        "headline": "What Happened to Viking Therapeutics in 2025, And Is it a Buy for 2026?",
+        "source": "Polygon",
+        "time": "2026-01-20T20:05"
+      },
+      {
+        "headline": "3 Biotech Stocks to Keep an Eye on in 2026",
+        "source": "Polygon",
+        "time": "2026-01-20T13:41"
+      },
+      {
+        "headline": "Stocks Drop, Energy Sector Rises As Crude Eyes 6th Day Of Gains: What's Moving Markets Wednesday?",
+        "source": "Polygon",
+        "time": "2026-01-14T18:25"
+      },
+      {
+        "headline": "Viking Therapeutics to Present at the 44th Annual J.P. Morgan Healthcare Conference",
+        "source": "Polygon",
+        "time": "2026-01-05T21:03"
+      },
+      {
+        "headline": "1 Bold Prediction for Viking Therapeutics in 2026",
+        "source": "Polygon",
+        "time": "2025-12-16T18:15"
+      }
+    ],
+    "insider": {
+      "buys": 2,
+      "sells": 20,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "SRPT",
+    "price": {
+      "price": 21.040000915527344,
+      "change": -0.42592640233684065,
+      "volume": 1738400,
+      "avg_volume": 2689980,
+      "rel_volume": 0.6462501579937397,
+      "float": 99257567,
+      "short_pct": 22.629999
+    },
+    "news": [
+      {
+        "headline": "Has Sarepta Therapeutics (SRPT) Fallen Too Far After 82% One-Year Share Price Drop?",
+        "source": "Finnhub",
+        "time": "2026-01-17 06:10"
+      },
+      {
+        "headline": "Silver Breaks Above $70, Novo Nordisk Soars 9% On Obesity Pill Approval: What's Moving Markets Tuesday? (CORRECTED)",
+        "source": "Polygon",
+        "time": "2025-12-24T14:14"
+      },
+      {
+        "headline": "Sarepta Stock Dumps: Pharma Bro Martin Shkreli Still Likes It",
+        "source": "Polygon",
+        "time": "2025-11-04T17:11"
+      },
+      {
+        "headline": "AAV Gene Therapy Market Size to Skyrocket at 40.1% CAGR by 2034",
+        "source": "Polygon",
+        "time": "2025-10-07T15:00"
+      },
+      {
+        "headline": "2 Beaten-Down Stocks to Avoid Right Now",
+        "source": "Polygon",
+        "time": "2025-09-05T13:30"
+      },
+      {
+        "headline": "SRPT Stock Alert: Investors with Large Losses Should Contact Robbins LLP for Information About the Pending Lead Plaintiff Deadline in the Sarepta Therapeutics, Inc. Class Action",
+        "source": "Polygon",
+        "time": "2025-08-29T19:13"
+      }
+    ],
+    "insider": {
+      "buys": 0,
+      "sells": 2,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "MDGL",
+    "price": {
+      "price": 504.95001220703125,
+      "change": 0.6518138213582902,
+      "volume": 222800,
+      "avg_volume": 298700,
+      "rel_volume": 0.7458988952125879,
+      "float": 12048408,
+      "short_pct": 18.87
+    },
+    "news": [
+      {
+        "headline": "Roblox, First Solar, And League Enterprise Are Among Top 10 Large Cap Losers Last Week (Jan. 5-Jan. 9): Are the Others in Your Portfolio?",
+        "source": "Polygon",
+        "time": "2026-01-11T17:01"
+      },
+      {
+        "headline": "Madrigal Expands its MASH Pipeline with Exclusive Global License Agreement for Ervogastat, a Phase 2 Oral DGAT-2 Inhibitor",
+        "source": "Polygon",
+        "time": "2026-01-09T13:00"
+      },
+      {
+        "headline": "Gene Therapy: 5 Biotech Stocks Chasing the $36B Prize",
+        "source": "Polygon",
+        "time": "2026-01-02T18:29"
+      },
+      {
+        "headline": "2 Predictions for Novo Nordisk in 2026",
+        "source": "Polygon",
+        "time": "2025-12-14T14:30"
+      },
+      {
+        "headline": "Madrigal Pharmaceuticals Announces Participation at Three Upcoming Investor Conferences",
+        "source": "Polygon",
+        "time": "2025-11-17T13:00"
+      }
+    ],
+    "insider": {
+      "buys": 54,
+      "sells": 263,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "IONS",
+    "price": {
+      "price": 77.52999877929688,
+      "change": 1.5721170174975307,
+      "volume": 4894300,
+      "avg_volume": 2662100,
+      "rel_volume": 1.8385109500018781,
+      "float": 160767684,
+      "short_pct": 12.1300004
+    },
+    "news": [
+      {
+        "headline": "Ionis: Expected 2026 Launch Of Olezarsen In SHTG To Spur Leap In Revenue Growth",
+        "source": "Finnhub",
+        "time": "2026-01-20 06:09"
+      },
+      {
+        "headline": "Why Markets And The Economy In 2026 May End Up Looking A Lot Like 2025",
+        "source": "Finnhub",
+        "time": "2026-01-20 00:45"
+      }
+    ],
+    "insider": {
+      "buys": 1,
+      "sells": 121,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "BBIO",
+    "price": {
+      "price": 77.19000244140625,
+      "change": 1.2195125611384505,
+      "volume": 2905700,
+      "avg_volume": 4195500,
+      "rel_volume": 0.6925753783815993,
+      "float": 155458199,
+      "short_pct": 14.91
+    },
+    "news": [],
+    "insider": {
+      "buys": 0,
+      "sells": 130,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "SAVA",
+    "price": {
+      "price": 1.9900000095367432,
+      "change": -2.4509781005518687,
+      "volume": 852100,
+      "avg_volume": 772980,
+      "rel_volume": 1.102357111438847,
+      "float": 42984366,
+      "short_pct": 15.100000999999999
+    },
+    "news": [],
+    "insider": {
+      "buys": 9,
+      "sells": 0,
+      "net": "BUYING"
+    }
+  },
+  {
+    "ticker": "IMVT",
+    "price": {
+      "price": 26.139999389648438,
+      "change": -0.49486511553072576,
+      "volume": 1328000,
+      "avg_volume": 1648400,
+      "rel_volume": 0.8056297015287551,
+      "float": 76247042,
+      "short_pct": 18.56
+    },
+    "news": [],
+    "insider": {
+      "buys": 1,
+      "sells": 34,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "NVAX",
+    "price": {
+      "price": 8.199999809265137,
+      "change": 2.3720296498646163,
+      "volume": 11853000,
+      "avg_volume": 8380240,
+      "rel_volume": 1.414398632974712,
+      "float": 133709048,
+      "short_pct": 33.800000000000004
+    },
+    "news": [
+      {
+        "headline": "Robert F. Kennedy Jr. Faces Impeachment Push From Haley Stevens Over 'Health Care Chaos' And Rising Costs: 'Enough Is Enough'",
+        "source": "Polygon",
+        "time": "2025-09-26T04:08"
+      },
+      {
+        "headline": "FDA Moves To Publicize Data On Pregnant Women's Covid Vaccine Side Effects",
+        "source": "Polygon",
+        "time": "2025-09-10T17:21"
+      },
+      {
+        "headline": "CDC Shooting Linked To Suspect's COVID-19 Vaccine Beliefs, Former Staff Blame RFK Jr. Hostility Toward Agency",
+        "source": "Polygon",
+        "time": "2025-08-12T17:41"
+      },
+      {
+        "headline": "Moderna's mRNA Flu Vaccine Outperforms Standard Shots",
+        "source": "Polygon",
+        "time": "2025-06-30T13:51"
+      },
+      {
+        "headline": "Vaccine Adjuvants Market to Reach USD 5.43 Billion by 2032 Due to Increasing Demand for Enhanced Vaccine Efficacy and Global Immunization Programs \u2013 SNS Insider",
+        "source": "Polygon",
+        "time": "2025-06-29T18:08"
+      }
+    ],
+    "insider": {
+      "buys": 0,
+      "sells": 0,
+      "net": "NEUTRAL"
+    }
+  },
+  {
+    "ticker": "MRNA",
+    "price": {
+      "price": 43.0,
+      "change": 2.7970311205597493,
+      "volume": 12591200,
+      "avg_volume": 15781220,
+      "rel_volume": 0.797859734545238,
+      "float": 364148466,
+      "short_pct": 21.260001
+    },
+    "news": [
+      {
+        "headline": "Stock Market Today, Jan. 20: ImmunityBio Soars Again After FDA Outlines Resubmission Path for ANKTIVA in Bladder Cancer",
+        "source": "Finnhub",
+        "time": "2026-01-20 18:07"
+      },
+      {
+        "headline": "Moderna (MRNA) Increases Despite Market Slip: Here's What You Need to Know",
+        "source": "Finnhub",
+        "time": "2026-01-20 18:00"
+      },
+      {
+        "headline": "Moderna, Merck Report Positive Results From Cancer-Vaccine Study",
+        "source": "Finnhub",
+        "time": "2026-01-20 06:58"
+      },
+      {
+        "headline": "Moderna & Merck Announce 5-Year Data for Intismeran Autogene in Combination With KEYTRUDA(R) (pembrolizumab) Demonstrated Sustained Improvement in the Primary Endpoint of Recurrence-Free Survival in Patients With High-Risk Stage III/IV Melanoma Following Complete Resection",
+        "source": "Finnhub",
+        "time": "2026-01-20 06:00"
+      },
+      {
+        "headline": "CytomX Stock Rises 31% in a Month: Here's What You Should Know",
+        "source": "Finnhub",
+        "time": "2026-01-19 09:17"
+      }
+    ],
+    "insider": {
+      "buys": 3,
+      "sells": 3,
+      "net": "NEUTRAL"
+    }
+  },
+  {
+    "ticker": "BNTX",
+    "price": {
+      "price": 105.55999755859375,
+      "change": -3.155965542574541,
+      "volume": 926000,
+      "avg_volume": 1160580,
+      "rel_volume": 0.7978769236071619,
+      "float": 99988590,
+      "short_pct": 4.8299997999999995
+    },
+    "news": [
+      {
+        "headline": "Nanobiotechnology Market to Hit USD 420.2 Billion by 2034, Fueled by 2025 Traffic Growth and Strategic Material & Product Innovations",
+        "source": "Polygon",
+        "time": "2025-12-17T15:00"
+      },
+      {
+        "headline": "Pfizer Sees Slower 2026 Growth Despite Pipeline Push, Cost Cuts",
+        "source": "Polygon",
+        "time": "2025-12-16T14:28"
+      },
+      {
+        "headline": "BioNTech-Bristol Drug Shows Hope For Breast Cancer Patients With Few Options",
+        "source": "Polygon",
+        "time": "2025-12-09T17:38"
+      },
+      {
+        "headline": "BioNTechs und OncoC4s selektiver Treg-Modulatorkandidat Gotistobart erzielte klinisch relevanten Gesamt\u00fcberlebensvorteil bei Patientinnen und Patienten mit zuvor behandeltem Plattenepithelkarzinom der Lunge",
+        "source": "Polygon",
+        "time": "2025-12-06T20:30"
+      },
+      {
+        "headline": "BioNTech and OncoC4 Announce Clinically Meaningful Overall Survival Benefit for Selective Treg Modulator Gotistobart in Patients with Previously Treated Squamous Non-Small Cell Lung Cancer",
+        "source": "Polygon",
+        "time": "2025-12-06T20:30"
+      }
+    ],
+    "insider": {
+      "buys": 0,
+      "sells": 0,
+      "net": "NEUTRAL"
+    }
+  },
+  {
+    "ticker": "NTLA",
+    "price": {
+      "price": 12.829999923706055,
+      "change": 2.6399993896484375,
+      "volume": 9582600,
+      "avg_volume": 6838940,
+      "rel_volume": 1.4011820545289182,
+      "float": 110019897,
+      "short_pct": 40.26
+    },
+    "news": [
+      {
+        "headline": "Gene Editing Market Size to Surpass USD 42.13 Billion by 2034",
+        "source": "Polygon",
+        "time": "2025-11-04T08:35"
+      },
+      {
+        "headline": "Meet the Beaten-Down Biotech Stock Cathie Wood Loves and Wall Street Says May Soar More Than 130%",
+        "source": "Polygon",
+        "time": "2025-11-02T14:25"
+      },
+      {
+        "headline": "CRISPR Therapies Clinical Trial Pipeline Shows Potential with Active Contributions from 25+ Key Companies | DelveInsight",
+        "source": "Polygon",
+        "time": "2025-10-02T17:00"
+      },
+      {
+        "headline": "Intellia Therapeutics Announces Positive Longer-Term Phase 1 Data for Nexiguran Ziclumeran (nex-z) in Patients with Hereditary Transthyretin (ATTR) Amyloidosis with Polyneuropathy",
+        "source": "Polygon",
+        "time": "2025-09-25T13:52"
+      },
+      {
+        "headline": "Russell 2000 Hits All-Time Highs: 8 Stocks Power Small-Cap Comeback",
+        "source": "Polygon",
+        "time": "2025-09-18T19:08"
+      }
+    ],
+    "insider": {
+      "buys": 2,
+      "sells": 21,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "UUUU",
+    "price": {
+      "price": 23.520000457763672,
+      "change": 7.2014580002102075,
+      "volume": 26369700,
+      "avg_volume": 17665480,
+      "rel_volume": 1.4927247943446766,
+      "float": 234569835,
+      "short_pct": 16.08
+    },
+    "news": [
+      {
+        "headline": "Valuation Implications of Domestic Rare Earth Supply Chain Reshoring Corporate Analysis Report 2025: MP Materials and Lynas Positioned for Growth Via Governmental Backing and Strategic Offtake Agreements",
+        "source": "Polygon",
+        "time": "2026-01-12T12:46"
+      },
+      {
+        "headline": "Do You Own Energy Fuels Inc. Stock? Take a Look at This Stock Instead.",
+        "source": "Polygon",
+        "time": "2026-01-11T15:32"
+      },
+      {
+        "headline": "Nuclear Stocks Rip Higher As Meta Goes Atomic",
+        "source": "Polygon",
+        "time": "2026-01-09T15:23"
+      },
+      {
+        "headline": "Nuclear Stocks Rally As Trump Opens the Federal Vault",
+        "source": "Polygon",
+        "time": "2026-01-06T16:22"
+      },
+      {
+        "headline": "Uncle Sam Wants More Rare Earth Stocks \u2014 Trump White House Plans Stakes",
+        "source": "Polygon",
+        "time": "2025-12-05T19:38"
+      }
+    ],
+    "insider": {
+      "buys": 4,
+      "sells": 40,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "VRCA",
+    "price": {
+      "price": 7.940000057220459,
+      "change": 9.366388524802494,
+      "volume": 392700,
+      "avg_volume": 269300,
+      "rel_volume": 1.4582250278499815,
+      "float": 3980880,
+      "short_pct": 2.4600001
+    },
+    "news": [
+      {
+        "headline": "Verrica Pharmaceuticals Announces First Patient Dosed in Phase 3 Program Evaluating YCANTH\u00ae (VP-102) for the Treatment of Common Warts",
+        "source": "Polygon",
+        "time": "2026-01-07T13:00"
+      },
+      {
+        "headline": "Verrica Posts Profit in Fiscal Q2",
+        "source": "Polygon",
+        "time": "2025-08-13T02:23"
+      },
+      {
+        "headline": "Verrica Pharmaceuticals Announces Acceptance of Two Abstracts Featuring Positive Preliminary Topline Results of VP-315 for the Treatment of Basal Cell Carcinoma at the 2024 Fall Clinical Dermatology Conference",
+        "source": "Polygon",
+        "time": "2024-10-24T11:00"
+      },
+      {
+        "headline": "Verrica Pharmaceuticals Reports Second Quarter 2024 Financial Results",
+        "source": "Polygon",
+        "time": "2024-08-14T11:45"
+      },
+      {
+        "headline": "Verrica Pharmaceuticals Announces Litigation Settlement with Dormer Laboratories, Inc.",
+        "source": "Polygon",
+        "time": "2024-07-01T11:30"
+      }
+    ],
+    "insider": {
+      "buys": 12,
+      "sells": 1,
+      "net": "BUYING"
+    }
+  },
+  {
+    "ticker": "LUNR",
+    "price": {
+      "price": 21.190000534057617,
+      "change": -1.8072260937314253,
+      "volume": 12414100,
+      "avg_volume": 15138900,
+      "rel_volume": 0.8200133431094729,
+      "float": 112463669,
+      "short_pct": 23.040001
+    },
+    "news": [],
+    "insider": {
+      "buys": 2,
+      "sells": 30,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "INTC",
+    "price": {
+      "price": 48.560001373291016,
+      "change": 3.4071599659536633,
+      "volume": 149589300,
+      "avg_volume": 145223020,
+      "rel_volume": 1.0300660322309783,
+      "float": 4762034100,
+      "short_pct": 2.4300002000000003
+    },
+    "news": [
+      {
+        "headline": "Stock Market Today, Jan. 20: Intel Rises on Analyst Upgrades Highlighting AI Server CPU Growth",
+        "source": "Finnhub",
+        "time": "2026-01-20 18:01"
+      },
+      {
+        "headline": "Stocks to Watch Tuesday Recap: Netflix, Intel, 3M, United Airlines",
+        "source": "Finnhub",
+        "time": "2026-01-20 17:07"
+      },
+      {
+        "headline": "Wall Street Logs Worst Day Since October, Gold Shines Amid Trump's Tariff Threat",
+        "source": "Finnhub",
+        "time": "2026-01-20 17:00"
+      },
+      {
+        "headline": "Earnings live: Netflix stock sinks, United Airlines pops as earnings pick up",
+        "source": "Finnhub",
+        "time": "2026-01-20 16:28"
+      },
+      {
+        "headline": "Intel Stock Is Already Up 19% in 2026. Can Q4 Earnings Propel It Higher in 2026?",
+        "source": "Finnhub",
+        "time": "2026-01-20 16:05"
+      }
+    ],
+    "insider": {
+      "buys": 0,
+      "sells": 0,
+      "net": "NEUTRAL"
+    }
+  },
+  {
+    "ticker": "PLTR",
+    "price": {
+      "price": 168.52999877929688,
+      "change": -1.4213897046912116,
+      "volume": 36555300,
+      "avg_volume": 37713780,
+      "rel_volume": 0.9692823153765017,
+      "float": 2200030912,
+      "short_pct": 2.16
+    },
+    "news": [
+      {
+        "headline": "Palantir CEO says AI \u2018will destroy\u2019 humanities jobs but there will be \u2018more than enough jobs\u2019 for people with vocational training",
+        "source": "Finnhub",
+        "time": "2026-01-20 17:35"
+      },
+      {
+        "headline": "Will Palantir Stock Crash in 2026?",
+        "source": "Finnhub",
+        "time": "2026-01-20 16:35"
+      },
+      {
+        "headline": "Assessing Palantir Technologies (PLTR) Valuation After Strong Long Term Returns And Recent Share Price Weakness",
+        "source": "Finnhub",
+        "time": "2026-01-20 14:47"
+      },
+      {
+        "headline": "Palantir Secures Multi Year, $Hundreds-of-Millions Deal With HD Hyundai",
+        "source": "Finnhub",
+        "time": "2026-01-20 13:20"
+      },
+      {
+        "headline": "Palantir CEO suggests AI 'bolsters civil liberties,' warns Europe falling behind US and China",
+        "source": "Finnhub",
+        "time": "2026-01-20 12:51"
+      }
+    ],
+    "insider": {
+      "buys": 1,
+      "sells": 568,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "IONQ",
+    "price": {
+      "price": 50.65999984741211,
+      "change": -0.2755893538405854,
+      "volume": 24490600,
+      "avg_volume": 19973880,
+      "rel_volume": 1.2261313275137329,
+      "float": 347753761,
+      "short_pct": 22.32
+    },
+    "news": [],
+    "insider": {
+      "buys": 2,
+      "sells": 38,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "RGTI",
+    "price": {
+      "price": 24.989999771118164,
+      "change": -2.4590204819606294,
+      "volume": 45821500,
+      "avg_volume": 34003040,
+      "rel_volume": 1.3475706877973264,
+      "float": 324900773,
+      "short_pct": 13.74
+    },
+    "news": [
+      {
+        "headline": "Rigetti: Not The Quantum Computing Stock To Own - There Are Better Alternatives",
+        "source": "Finnhub",
+        "time": "2026-01-20 11:23"
+      },
+      {
+        "headline": "Rigetti Computing: Too Much Hype, Waiting For Better Entry",
+        "source": "Finnhub",
+        "time": "2026-01-20 05:53"
+      },
+      {
+        "headline": "Rigetti: What Everybody's Missing",
+        "source": "Finnhub",
+        "time": "2026-01-20 05:38"
+      }
+    ],
+    "insider": {
+      "buys": 0,
+      "sells": 41,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "SMR",
+    "price": {
+      "price": 19.0,
+      "change": -5.894009423378954,
+      "volume": 27937300,
+      "avg_volume": 25008280,
+      "rel_volume": 1.117122009190556,
+      "float": 95631190,
+      "short_pct": 21.88
+    },
+    "news": [
+      {
+        "headline": "Comparing NuScale Power Vs. NANO Nuclear Energy, I Will Stay Away From This Industry",
+        "source": "Finnhub",
+        "time": "2026-01-19 06:00"
+      }
+    ],
+    "insider": {
+      "buys": 0,
+      "sells": 85,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "OKLO",
+    "price": {
+      "price": 89.93000030517578,
+      "change": -5.2869897887441075,
+      "volume": 12514000,
+      "avg_volume": 12370780,
+      "rel_volume": 1.0115772813032,
+      "float": 127777295,
+      "short_pct": 10.9
+    },
+    "news": [],
+    "insider": {
+      "buys": 1,
+      "sells": 153,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "GME",
+    "price": {
+      "price": 21.100000381469727,
+      "change": 0.0,
+      "volume": 6724100,
+      "avg_volume": 4736980,
+      "rel_volume": 1.4194908992649324,
+      "float": 408878952,
+      "short_pct": 16.08
+    },
+    "news": [
+      {
+        "headline": "Can GameStop\u2019s Silent Hill Tie-In Reveal the Real Potential of Its Experiential Strategy (GME)?",
+        "source": "Finnhub",
+        "time": "2026-01-20 17:10"
+      },
+      {
+        "headline": "1 Internet Stock on Our Watchlist and 2 We Turn Down",
+        "source": "Finnhub",
+        "time": "2026-01-19 23:34"
+      },
+      {
+        "headline": "How Young Traders Use Fake Money to Practice for the Real Thing",
+        "source": "Finnhub",
+        "time": "2026-01-17 20:00"
+      }
+    ],
+    "insider": {
+      "buys": 5,
+      "sells": 12,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "AMC",
+    "price": {
+      "price": 1.5700000524520874,
+      "change": -2.484469658237336,
+      "volume": 37302100,
+      "avg_volume": 36433140,
+      "rel_volume": 1.0238508127490522,
+      "float": 461438898,
+      "short_pct": 18.190001
+    },
+    "news": [],
+    "insider": {
+      "buys": 0,
+      "sells": 0,
+      "net": "NEUTRAL"
+    }
+  },
+  {
+    "ticker": "MARA",
+    "price": {
+      "price": 10.369999885559082,
+      "change": -8.714786980968405,
+      "volume": 45702800,
+      "avg_volume": 49015360,
+      "rel_volume": 0.9324179196072415,
+      "float": 372451078,
+      "short_pct": 35.259997999999996
+    },
+    "news": [
+      {
+        "headline": "Why I Am Buying IREN, The Nvidia Of Data Centers, During This Market Correction",
+        "source": "Finnhub",
+        "time": "2026-01-20 12:41"
+      },
+      {
+        "headline": "A Look At MARA Holdings (MARA) Valuation As It Expands AI Infrastructure And Power Partnerships",
+        "source": "Finnhub",
+        "time": "2026-01-19 07:09"
+      }
+    ],
+    "insider": {
+      "buys": 0,
+      "sells": 33,
+      "net": "SELLING"
+    }
+  },
+  {
+    "ticker": "RIOT",
+    "price": {
+      "price": 18.100000381469727,
+      "change": -5.925152823336986,
+      "volume": 25239600,
+      "avg_volume": 28399060,
+      "rel_volume": 0.8887477261571334,
+      "float": 340958344,
+      "short_pct": 13.99
+    },
+    "news": [
+      {
+        "headline": "Riot Platforms: Diversification Into Data Center Hosting Has Significant Upside Potential",
+        "source": "Finnhub",
+        "time": "2026-01-20 03:40"
+      },
+      {
+        "headline": "Riot Platforms, Inc. (RIOT) Discusses Transformational Milestones and Strategic Data Center Expansion - Slideshow",
+        "source": "Finnhub",
+        "time": "2026-01-16 21:31"
+      }
+    ],
+    "insider": {
+      "buys": 1,
+      "sells": 11,
+      "net": "SELLING"
+    }
+  }
+]

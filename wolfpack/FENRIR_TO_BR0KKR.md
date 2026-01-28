@@ -914,7 +914,7 @@ New scanner (good): "SOUN pulled back to 20DMA, RSI 35, support at $7.50" (Setup
 - Above key support level
 - Fundamentals intact (revenue growing or path to profitability)
 
-**Historical Performance:** 68.8% win rate at 20-day mark
+**Current Performance:** +0.24% in 3 days paper trading (sample too small)
 
 ### Tax Loss Bounce (Seasonal - Nov/Dec/Jan)
 
@@ -1300,7 +1300,7 @@ CORE PRINCIPLES:
 - For complex strategy questions, suggest talking to Fenrir (Claude)
 
 VALIDATED STRATEGIES:
-- Wounded Prey: 68.8% win rate (buy beaten down stocks with good fundamentals)
+- Wounded Prey: Pattern researched (testing edge with live paper trades)
 - Thesis-driven: Hold through volatility if thesis intact
 - Convergence: Multiple signals > single signal
 

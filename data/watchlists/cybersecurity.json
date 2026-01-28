@@ -1,0 +1,9 @@
+{
+  "name": "Cybersecurity",
+  "description": "Network security, cloud security, threat detection, identity management",
+  "created": "2026-01-27",
+  "tickers": [
+    "CRWD", "PANW", "ZS", "S", "NET", "FTNT", "OKTA", "CYBR", "TENB", "QLYS"
+  ],
+  "sectors": ["Cybersecurity", "Cloud Security", "Network Security"]
+}

@@ -6,7 +6,7 @@ Stores validated patterns, tracks win rates, learns what works.
 Provides 5th signal type for convergence engine.
 
 From THE_BIG_PICTURE.md:
-- Store validated edges (wounded prey 68.8% win rate)
+- Store researched patterns (validation through live testing)
 - Track every setup outcome
 - Calculate pattern win rates
 - Historical pattern validation

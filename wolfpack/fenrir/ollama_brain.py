@@ -10,7 +10,7 @@ from typing import Optional, Dict, List
 from config import OLLAMA_URL, OLLAMA_MODEL, HOLDINGS, WATCHLIST
 from market_data import get_stock_data, get_sector_performance
 from news_fetcher import get_company_news, format_news_for_context
-from sec_fetcher import get_8k_filings, format_filings_for_context
+from services.br0kkr_service import get_8k_filings, format_filings_for_context
 
 # WolfPack database path
 WOLFPACK_DB = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'wolfpack.db')

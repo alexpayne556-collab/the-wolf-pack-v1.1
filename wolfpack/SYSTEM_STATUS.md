@@ -25,7 +25,7 @@
 
 ### ✅ Layer 2: Market Scanning (WORKING)
 - fenrir_scanner_v2.py integrated into wolf_pack.py
-- Wounded prey pattern (68.8% win rate validated)
+- Pattern research framework (validation in progress)
 - Early momentum detection
 - RSI/MA/stops calculated
 
@@ -188,7 +188,7 @@ python wolf_pack.py brief
 
 | Edge | Win Rate | Sample Size | Status |
 |------|----------|-------------|--------|
-| Wounded Prey | 68.8% | 72 instances | ✅ VALIDATED |
+| Live Paper Trading | +0.24% | 3 days, 6 positions | ⏳ EARLY STAGE |
 | Insider Cluster Buys | 80%+ | Academic data | ✅ DOCUMENTED |
 | Activist 13D Filings | +10-26% | Academic data | ✅ DOCUMENTED |
 | Strong Thesis Hold | 100% | MU, IBRX cases | ✅ PROVEN |

@@ -263,7 +263,7 @@ You have **108 Python files** with significant overlap, duplication, and unused 
 ### services/pattern_service.py
 - **Path:** `wolfpack/services/pattern_service.py`
 - **Lines:** 512
-- **Purpose:** Pattern database - stores validated edges (wounded prey 68.8% win rate)
+- **Purpose:** Pattern database - stores researched patterns (testing for edge validation)
 - **Dependencies:** sqlite3
 - **Status:** ✅ WORKING
 - **Integrated?** PARTIAL - Database exists but may not be fully populated

@@ -1,0 +1,10 @@
+{
+  "name": "Speculative High-Risk",
+  "description": "Quantum computing, gene editing, AI moonshots, extreme volatility plays",
+  "created": "2026-01-27",
+  "tickers": [
+    "IONQ", "QBTS", "RGTI", "QUBT", "ARQQ", "LAES", "BTQ", "NTLA", "CRSP", "BEAM",
+    "DNA", "EDIT", "SANA", "RLAY", "FATE", "ALT", "KYTX", "NBIS", "SOUN"
+  ],
+  "sectors": ["Quantum Computing", "Gene Editing", "AI", "Biotech"]
+}

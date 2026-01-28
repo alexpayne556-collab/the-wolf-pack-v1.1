@@ -501,7 +501,7 @@ if result:
 
 **The formula:**
 ```
-Scanner (proven 68.8% wounded prey win rate)
+Scanner (wounded prey pattern under validation)
 +
 BR0KKR (proven 80%+ cluster buy success)
 +

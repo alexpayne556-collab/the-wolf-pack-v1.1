@@ -1,0 +1,22 @@
+[
+  {
+    "ticker": "ADVM",
+    "price": 4.36,
+    "float_m": 17.756024,
+    "volume": 576482,
+    "vol_spike": 1,
+    "mcap_m": 96.25776,
+    "name": "Adverum Biotechnologies, Inc.",
+    "score": 35
+  },
+  {
+    "ticker": "BTAI",
+    "price": 1.84,
+    "float_m": 21.302415,
+    "volume": 734290,
+    "vol_spike": 1.0670000685072276,
+    "mcap_m": 40.239868,
+    "name": "BioXcel Therapeutics, Inc.",
+    "score": 35
+  }
+]

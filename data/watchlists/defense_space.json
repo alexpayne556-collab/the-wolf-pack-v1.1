@@ -1,0 +1,12 @@
+{
+  "name": "Defense & Space",
+  "description": "Defense contractors, space exploration, satellite communications, drones",
+  "created": "2026-01-27",
+  "tickers": [
+    "KTOS", "PLTR", "RCAT", "RDW", "LUNR", "RKLB", "PL", "BKSY", "ASTS", "SPIR",
+    "GSAT", "IRDM", "VSAT", "AXON", "LMT", "NOC", "RTX", "GD", "LHX", "BAH",
+    "CACI", "LDOS", "SAIC", "MRCY", "DRS", "AVAV", "ACHR", "JOBY", "DPRO", "SIDU",
+    "BBAI", "ONDS", "UMAC"
+  ],
+  "sectors": ["Defense", "Space", "Satellites", "Drones", "Intelligence"]
+}

@@ -13,6 +13,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 from config import ALL_TICKERS, TICKER_TO_SECTOR, DB_PATH, RATE_LIMIT_DELAY
+from utils.indicators import calculate_rsi, calculate_sma
 from config import BIG_MOVE_THRESHOLD, MEDIUM_MOVE_THRESHOLD
 from wolfpack_db import init_database
 
@@ -22,18 +23,13 @@ def calculate_technicals(hist):
     try:
         close = hist['Close']
         
-        # Simple Moving Averages
-        sma_20 = close.rolling(window=20).mean().iloc[-1] if len(close) >= 20 else None
-        sma_50 = close.rolling(window=50).mean().iloc[-1] if len(close) >= 50 else None
-        sma_200 = close.rolling(window=200).mean().iloc[-1] if len(close) >= 200 else None
+        # Simple Moving Averages - using unified indicators
+        sma_20 = calculate_sma(close, 20)
+        sma_50 = calculate_sma(close, 50)
+        sma_200 = calculate_sma(close, 200)
         
-        # RSI (14-period)
-        delta = close.diff()
-        gain = (delta.where(delta > 0, 0)).rolling(window=14).mean()
-        loss = (-delta.where(delta < 0, 0)).rolling(window=14).mean()
-        rs = gain / loss
-        rsi = 100 - (100 / (1 + rs))
-        rsi_14 = rsi.iloc[-1] if len(rsi) > 0 else None
+        # RSI (14-period) - using unified indicators
+        rsi_14 = calculate_rsi(close)
         
         current_price = close.iloc[-1]
         

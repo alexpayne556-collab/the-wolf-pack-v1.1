@@ -5,13 +5,19 @@ from datetime import datetime, timedelta
 from typing import Dict, List
 import yfinance as yf
 import config
-from fenrir_memory import get_memory
+try:
+    from fenrir.fenrir_memory import get_memory
+except ImportError:
+    # Graceful fallback if memory module not available
+    def get_memory():
+        return None
 
 class SetupScorer:
     """Score trading setups on quality 1-100"""
     
     def __init__(self):
-        self.memory = get_memory()
+        memory = get_memory()
+        self.memory = memory if memory else {'stocks': {}}
     
     def score_setup(self, ticker: str, data: Dict) -> Dict:
         """
@@ -84,7 +90,11 @@ class SetupScorer:
     def _score_catalyst(self, ticker: str, data: Dict) -> tuple:
         """Score catalyst strength"""
         # Check memory for known catalysts
-        stock_history = self.memory.get_stock_history(ticker)
+        stock_history = None
+        if isinstance(self.memory, dict):
+            stock_history = self.memory.get('stocks', {}).get(ticker)
+        elif hasattr(self.memory, 'get_stock_history'):
+            stock_history = self.memory.get_stock_history(ticker)
         
         if data.get('has_earnings'):
             return (30, "Strong catalyst: earnings beat")
@@ -141,7 +151,8 @@ class SetupScorer:
         """Score sector momentum"""
         # Find ticker's sector
         sector = None
-        for s, tickers in config.WATCHLIST.items():
+        watchlist = getattr(config, 'WATCHLIST', {})
+        for s, tickers in watchlist.items():
             if ticker in tickers:
                 sector = s
                 break
@@ -184,11 +195,17 @@ class SetupScorer:
         """Bonus if it's our strong sector"""
         
         # Check memory for our edge
-        notes = self.memory.recall('edge')
+        if isinstance(self.memory, dict):
+            notes = self.memory.get('edge')
+        elif hasattr(self.memory, 'recall'):
+            notes = self.memory.recall('edge')
+        else:
+            notes = None
         
-        if ticker in config.HOLDINGS:
+        holdings = getattr(config, 'HOLDINGS', {})
+        if ticker in holdings:
             # We know this stock
-            sector = config.HOLDINGS[ticker].get('sector', '')
+            sector = holdings[ticker].get('sector', '')
             if 'defense' in sector.lower():
                 return (10, "OUR EDGE: defense")
         

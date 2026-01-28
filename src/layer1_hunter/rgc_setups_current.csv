@@ -1,0 +1,5 @@
+ticker,price,float_m,float_shares,insider_pct,volume,market_cap_m,score,why
+SNTI,1.03,9.706314,9706314,56.751996000000005,182375,27.079562,30,"Low float 9.71M, 56.8% insider - waiting for trigger"
+VRCA,7.26,3.98088,3980880,51.835995999999994,393577,116.0864,30,"Low float 3.98M, 51.8% insider - waiting for trigger"
+INAB,2.59,2.41123,2411230,24.519,236622,25.282092,20,"Low float 2.41M, 24.5% insider - waiting for trigger"
+CYCN,1.36,3.070471,3070471,26.764,83310,5.176448,10,"Low float 3.07M, 26.8% insider - waiting for trigger"

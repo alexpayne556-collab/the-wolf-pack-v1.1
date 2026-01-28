@@ -916,6 +916,120 @@ def get_company_filings(ticker: str, filing_type: str = '8-K', count: int = 10) 
 
 
 # =============================================================================
+# 8-K / 10-K / 10-Q FILINGS (Material Events & Reports)
+# =============================================================================
+
+def get_recent_filings(ticker: str, filing_type: str = '8-K', count: int = 10) -> List[Dict]:
+    """Get recent SEC filings for a ticker
+    
+    Filing types:
+    - 8-K: Material events (contracts, acquisitions, management changes)
+    - 10-K: Annual report
+    - 10-Q: Quarterly report
+    - 4: Insider trading (use Form 4 functions above instead)
+    """
+    
+    search_url = f"{SEC_BASE_URL}/cgi-bin/browse-edgar"
+    search_params = {
+        'action': 'getcompany',
+        'CIK': ticker,
+        'type': filing_type,
+        'dateb': '',
+        'owner': 'include',
+        'count': str(count),
+        'output': 'atom'
+    }
+    
+    try:
+        response = requests.get(search_url, params=search_params, headers=SEC_HEADERS, timeout=10)
+        
+        if response.status_code != 200:
+            return []
+        
+        # Parse the ATOM feed
+        filings = []
+        content = response.text
+        
+        # Find all entries
+        entries = content.split('<entry>')
+        for entry in entries[1:]:  # Skip first split (before first entry)
+            filing = {}
+            
+            # Extract title
+            if '<title>' in entry:
+                start = entry.find('<title>') + 7
+                end = entry.find('</title>', start)
+                filing['title'] = entry[start:end].strip()
+            
+            # Extract link
+            if 'href="' in entry:
+                start = entry.find('href="') + 6
+                end = entry.find('"', start)
+                filing['url'] = entry[start:end]
+            
+            # Extract date
+            if '<updated>' in entry:
+                start = entry.find('<updated>') + 9
+                end = entry.find('</updated>', start)
+                filing['date'] = entry[start:end][:10]  # Just the date part
+            
+            # Extract summary
+            if '<summary' in entry:
+                start = entry.find('>', entry.find('<summary')) + 1
+                end = entry.find('</summary>', start)
+                summary = entry[start:end].strip()
+                # Clean HTML
+                summary = summary.replace('&lt;', '<').replace('&gt;', '>')
+                summary = summary.replace('<b>', '').replace('</b>', '')
+                filing['summary'] = summary[:300] + '...' if len(summary) > 300 else summary
+            
+            if filing.get('title'):
+                filings.append(filing)
+        
+        return filings
+        
+    except Exception as e:
+        print(f"Error fetching {filing_type} filings for {ticker}: {e}")
+        return []
+
+
+def get_8k_filings(ticker: str, count: int = 5) -> List[Dict]:
+    """Get recent 8-K filings (material events)
+    
+    8-K reports major events like:
+    - M&A transactions
+    - Contract wins
+    - Management changes
+    - Bankruptcies
+    - Asset sales
+    """
+    return get_recent_filings(ticker, filing_type='8-K', count=count)
+
+
+def get_10k_filings(ticker: str, count: int = 3) -> List[Dict]:
+    """Get recent 10-K filings (annual reports)"""
+    return get_recent_filings(ticker, filing_type='10-K', count=count)
+
+
+def get_10q_filings(ticker: str, count: int = 4) -> List[Dict]:
+    """Get recent 10-Q filings (quarterly reports)"""
+    return get_recent_filings(ticker, filing_type='10-Q', count=count)
+
+
+def format_filings_for_context(filings: List[Dict]) -> str:
+    """Format filings as string for LLM context"""
+    if not filings:
+        return "No recent SEC filings found."
+    
+    lines = []
+    for f in filings[:5]:
+        line = f"[{f.get('date', 'N/A')}] {f.get('title', 'No title')}"
+        lines.append(line)
+    
+    return "\n".join(lines)
+
+
+# =============================================================================
 # TEST
 # =============================================================================
 

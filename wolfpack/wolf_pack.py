@@ -11,6 +11,7 @@ NOW CONNECTED TO:
 
 import sys
 import os
+import json
 from datetime import datetime
 from typing import Dict, List, Optional
 import sqlite3
@@ -69,6 +70,15 @@ except ImportError:
     print("⚠️  Risk manager not available")
     RISK_AVAILABLE = False
 
+# Import Danger Zone - Layer 0 trap detection
+try:
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), 'src', 'core'))
+    from danger_zone import DangerZone
+    DANGER_ZONE_AVAILABLE = True
+except ImportError:
+    print("⚠️  Danger Zone not available")
+    DANGER_ZONE_AVAILABLE = False
+
 # Import News Service
 try:
     from news_service import NewsService, format_news_report
@@ -98,6 +108,9 @@ class WolfPack:
     
     def __init__(self, account_value: float = 100000):
         self.portfolio_data = None
+        
+        # Initialize danger zone (Layer 0 - runs FIRST)
+        self.danger_zone = DangerZone() if DANGER_ZONE_AVAILABLE else None
         self.market_scan = None
         self.br0kkr_data = None  # BR0KKR institutional tracking
         self.catalyst_data = None  # Catalyst calendar
@@ -153,8 +166,29 @@ class WolfPack:
         else:
             self.earnings_service = None
         
-        # Scanner tickers (from fenrir_scanner_v2.py)
-        self.scan_universe = [
+        # Scanner tickers - Load from wounded prey universe or use defaults
+        self.scan_universe = self._load_scan_universe()
+    
+    def _load_scan_universe(self):
+        """Load scan universe from wounded prey file or use defaults"""
+        universe_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'wounded_prey_universe.json')
+        
+        if os.path.exists(universe_file):
+            try:
+                with open(universe_file, 'r') as f:
+                    data = json.load(f)
+                wounded_prey = data.get('wounded_prey', [])
+                
+                # Extract tickers, sorted by score
+                tickers = [p['ticker'] for p in wounded_prey]
+                
+                print(f"📊 Loaded {len(tickers)} wounded prey from universe scan")
+                return tickers
+            except:
+                pass
+        
+        # Default universe if file doesn't exist
+        return [
             # AI MEGA CAPS
             'NVDA', 'AMD', 'MSFT', 'GOOGL', 'META', 'TSLA', 'AAPL',
             # AI PURE PLAYS
@@ -413,8 +447,25 @@ class WolfPack:
         setups = []
         
         def analyze_ticker(ticker):
-            """Simplified scanner logic"""
+            """Simplified scanner logic with DANGER ZONE filter (Layer 0)"""
             try:
+                # LAYER 0: DANGER ZONE CHECK (RUNS FIRST!)
+                # THE WOLF DOESN'T WALK INTO TRAPS.
+                if DANGER_ZONE_AVAILABLE and self.danger_zone:
+                    danger_result = self.danger_zone.scan(ticker)
+                    
+                    if danger_result['status'] == 'BLOCKED':
+                        # Trap detected - skip this ticker
+                        print(f"   🚫 {ticker} BLOCKED: {', '.join(danger_result['dangers'])}")
+                        
+                        # Add to wounded prey watchlist for later
+                        self.danger_zone.add_to_wounded_prey_watchlist(
+                            ticker, 
+                            danger_result['dangers']
+                        )
+                        return None
+                    # If CLEAR, proceed to opportunity analysis
+                
                 stock = yf.Ticker(ticker)
                 hist = stock.history(period="6mo")
                 

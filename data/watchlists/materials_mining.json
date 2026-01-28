@@ -1,0 +1,9 @@
+{
+  "name": "Materials & Mining",
+  "description": "Rare earth metals, lithium, copper, gold, silver miners",
+  "created": "2026-01-27",
+  "tickers": [
+    "MP", "ALB", "FCX", "LAC", "AG", "HL", "KGC", "GOLD"
+  ],
+  "sectors": ["Rare Earths", "Lithium", "Copper", "Precious Metals"]
+}

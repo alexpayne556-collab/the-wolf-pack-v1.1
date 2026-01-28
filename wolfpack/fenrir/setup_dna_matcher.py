@@ -5,8 +5,15 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Tuple
 import yfinance as yf
 from collections import defaultdict
-import database
-from fenrir_memory import get_memory
+try:
+    from fenrir import database
+except ImportError:
+    import database
+try:
+    from fenrir.fenrir_memory import get_memory
+except ImportError:
+    def get_memory():
+        return {'stocks': {}}
 
 class SetupDNAMatcher:
     """
@@ -248,20 +255,24 @@ class SetupDNAMatcher:
             return []
         
         # Query historical setups from database
-        conn = database.get_connection()
-        cursor = conn.cursor()
-        
-        # Get all historical trades
-        cursor.execute('''
-            SELECT ticker, timestamp, setup_type, outcome, pnl_pct 
-            FROM trade_journal 
-            WHERE action = 'SELL' AND outcome IS NOT NULL
-            ORDER BY timestamp DESC
-            LIMIT 100
-        ''')
-        
-        historical = cursor.fetchall()
-        conn.close()
+        try:
+            conn = database.get_connection()
+            cursor = conn.cursor()
+            
+            # Get all historical trades
+            cursor.execute('''
+                SELECT ticker, timestamp, setup_type, outcome, pnl_pct 
+                FROM trade_journal 
+                WHERE action = 'SELL' AND outcome IS NOT NULL
+                ORDER BY timestamp DESC
+                LIMIT 100
+            ''')
+            
+            historical = cursor.fetchall()
+            conn.close()
+        except Exception as e:
+            # No historical data available yet - return empty list
+            return []
         
         matches = []
         

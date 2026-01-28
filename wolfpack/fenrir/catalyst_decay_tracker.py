@@ -3,7 +3,10 @@
 
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional
-import database
+try:
+    from fenrir import database
+except ImportError:
+    import database
 from collections import defaultdict
 
 class CatalystDecayTracker:

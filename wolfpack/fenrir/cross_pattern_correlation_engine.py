@@ -6,7 +6,10 @@ from typing import Dict, List, Tuple, Optional
 import yfinance as yf
 import numpy as np
 from collections import defaultdict
-import database
+try:
+    from fenrir import database
+except ImportError:
+    import database
 
 class CrossPatternCorrelationEngine:
     """
@@ -219,7 +222,8 @@ class CrossPatternCorrelationEngine:
         
         # Get ticker's sector
         ticker_sector = None
-        for sector, tickers in config.WATCHLIST.items():
+        watchlist = getattr(config, 'WATCHLIST', {})
+        for sector, tickers in watchlist.items():
             if ticker in tickers:
                 ticker_sector = sector
                 break

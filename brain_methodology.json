@@ -327,6 +327,61 @@
     ]
   },
 
+  "position_allocation_rule": {
+    "description": "The 90/10 Rule - Thesis vs Speculation",
+    "learned_from": "Jan 28, 2026 - Watching thesis positions (green) vs chasers (red)",
+    
+    "the_rule": {
+      "thesis_positions": {
+        "allocation": "90%",
+        "description": "Thesis positions are your foundation",
+        "examples": ["MU (AI/HBM)", "UUUU (uranium)", "UEC (uranium)", "RCAT (defense)"],
+        "rules": [
+          "Hold through volatility",
+          "Add on dips with declining volume",
+          "Cut only when THESIS breaks, not when price dips"
+        ]
+      },
+      "speculative_moonshots": {
+        "allocation": "10%",
+        "description": "Lottery tickets with house money",
+        "examples": ["Biotech catalysts", "Momentum runners", "Quantum/AI hype", "IPO plays"],
+        "rules": [
+          "STRICT 10% stop losses",
+          "Take profits at +20%",
+          "If you lose it, you lose it - that's the 10%",
+          "Never FOMO more than allocation"
+        ]
+      }
+    },
+    
+    "math_example": {
+      "portfolio": 1600,
+      "thesis_allocation": 1440,
+      "speculative_allocation": 160,
+      "if_moonshot_crashes_50pct": "You lose $80. Portfolio still has $1,520.",
+      "if_moonshot_runs_50pct": "You make $80. Nice bonus.",
+      "key_insight": "You don't bet the farm on lottery tickets. You BUY lottery tickets with house money."
+    },
+    
+    "mindset_shift": {
+      "before": "Let me chase this runner and make 50%!",
+      "after": "My thesis positions are my foundation. I allocate 10% to play the lottery.",
+      "this_is": "DISCIPLINE. This is what separates gamblers from traders."
+    },
+    
+    "proof_jan_28": {
+      "thesis_positions": {
+        "MU": "+5.39%",
+        "UUUU": "+11.47%",
+        "RCAT": "+3.77%",
+        "UEC": "+1.93%"
+      },
+      "the_red_boxes": "QUBT, RGTI, SOUN, RLAY, SANA - chasers, 'get rich quick' plays",
+      "lesson": "Thesis = green. Chase without thesis = red. This is real data, not opinion."
+    }
+  },
+
   "the_wolf_pack_way": {
     "description": "Our philosophy encoded",
     
@@ -338,6 +393,7 @@
     "we_demand_thesis": "No thesis, no trade. Mathematical proof: 85.7% vs 0%.",
     "we_track_ratios": "Win rate and risk/reward matter more than any single trade.",
     "we_stay_hungry": "Every day is a chance to learn. The brain never stops growing.",
+    "we_allocate_wisely": "90% thesis, 10% moonshots. Discipline over FOMO.",
     
     "llhr_applied_to_trading": {
       "love": "Care about outcomes, not just completing tasks",

@@ -1,0 +1,10 @@
+{
+  "name": "Energy & Nuclear",
+  "description": "Uranium miners, SMR tech, nuclear power plants, clean energy",
+  "created": "2026-01-27",
+  "tickers": [
+    "UEC", "UUUU", "CCJ", "DNN", "LEU", "NXE", "LTBR", "URG", "UROY", "SMR",
+    "OKLO", "BWXT", "CEG", "VST", "TLN", "NRG", "NEE"
+  ],
+  "sectors": ["Uranium", "Nuclear", "Clean Energy", "SMR Technology"]
+}

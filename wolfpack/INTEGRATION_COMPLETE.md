@@ -302,7 +302,7 @@ REASONING:
 1. Build backtesting engine
 2. Download historical data (2020-2025)
 3. Run convergence system on past data
-4. Validate wounded prey 68.8% edge
+4. Test wounded prey pattern (validation requires 30+ trades)
 5. Calculate real Sharpe ratio, max drawdown
 
 ### **Week 2: Execution**

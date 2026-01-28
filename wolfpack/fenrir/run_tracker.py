@@ -4,7 +4,10 @@
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 import yfinance as yf
-import database
+try:
+    from fenrir import database
+except ImportError:
+    import database
 
 class RunTracker:
     """Track multi-day runs and their characteristics"""

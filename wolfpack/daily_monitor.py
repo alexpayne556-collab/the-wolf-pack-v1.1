@@ -15,8 +15,9 @@ import sys
 from datetime import datetime
 from wolf_pack import WolfPack
 from services.pivotal_point_tracker import PivotalPointTracker
-from services.trade_learner import TradeLearner
+from services.learning_engine import UnifiedLearningEngine
 from wolf_pack_trader import WolfPackTrader, ALPACA_AVAILABLE
+from wolf_pack_brain import WolfPackBrain
 
 print("=" * 70)
 print(f"🐺 WOLF PACK DAILY MONITOR - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -26,8 +27,9 @@ print("=" * 70)
 print("\n🔧 Initializing systems...")
 wp = WolfPack(account_value=100000)
 pivotal_tracker = PivotalPointTracker()
-learner = TradeLearner()
+learner = UnifiedLearningEngine()
 trader = WolfPackTrader(paper_trading=True) if ALPACA_AVAILABLE else None
+brain = WolfPackBrain()
 
 # 1. System Health Check
 print("\n" + "=" * 70)
@@ -35,6 +37,7 @@ print("📊 SYSTEM HEALTH CHECK")
 print("=" * 70)
 
 health_status = {
+    'Wolf Pack Brain': brain is not None,
     'Risk Manager': wp.risk_manager is not None,
     'News Service': wp.news_service is not None,
     'Earnings Service': wp.earnings_service is not None,
@@ -57,6 +60,16 @@ print("\n" + "=" * 70)
 print("🧠 LEARNING SYSTEM STATUS")
 print("=" * 70)
 
+# CRITICAL: Update all pending trade outcomes first
+print("\n📊 Updating trade outcomes with latest prices...")
+try:
+    from services.learning_engine import LearningEngine
+    learning_engine = LearningEngine()
+    learning_engine.update_all_outcomes()
+    print("   ✅ Outcomes updated")
+except Exception as e:
+    print(f"   ⚠️ Update failed: {e}")
+
 if len(learner.trades) > 0:
     wins = [t for t in learner.trades if t.outcome == "win"]
     losses = [t for t in learner.trades if t.outcome in ["loss", "blown_up"]]
@@ -72,9 +85,56 @@ if len(learner.trades) > 0:
             print(f"   {rule}")
     else:
         print("\n⚠️  No patterns learned yet (need 10+ trades)")
+    
+    # SHOW PATTERNS FROM UNIFIED LEARNING ENGINE
+    try:
+        patterns = learning_engine.analyze_your_patterns()
+        if patterns:
+            print(f"\n📊 YOUR PATTERNS (from learning engine):")
+            print(f"   Catalyst edge: {patterns.get('catalyst_edge', 'Not enough data')}")
+            print(f"   Best entry timing: {patterns.get('best_timing', 'Not enough data')}")
+            print(f"   Best tickers: {patterns.get('best_tickers', 'Not enough data')}")
+    except Exception as e:
+        print(f"   ⚠️ Pattern analysis error: {e}")
 else:
     print("\n⚠️  No trade history yet - system will learn as it trades")
     print("   Default rules in effect until we have data")
+
+# 1.6. Morning Intelligence Briefing
+print("\n" + "=" * 70)
+print("🧠 WOLF PACK BRAIN - MORNING BRIEFING")
+print("=" * 70)
+
+try:
+    # Market regime check
+    regime_data = brain.detect_market_regime()
+    regime_info = regime_data.get('regime_info', {})
+    regime = regime_info.get('regime', 'mixed')
+    confidence = regime_info.get('confidence', 0.5)
+    strategy = regime_info.get('strategy', 'No clear regime')
+    
+    print(f"\n📊 Market Regime: {regime.upper()}")
+    print(f"   Confidence: {confidence:.0%}")
+    print(f"   Strategy: {strategy}")
+    
+    # Check liquidity for watchlist
+    print("\n💧 Liquidity Status (Watchlist):")
+    try:
+        from config import WATCHLIST
+        for ticker in list(WATCHLIST.keys())[:5]:  # Check first 5
+            try:
+                liq_score = brain.check_liquidity(ticker, 5000)
+                risk_icon = "🟢" if liq_score['risk'] == 'green' else "🟡" if liq_score['risk'] == 'yellow' else "🔴"
+                print(f"   {risk_icon} {ticker}: {liq_score['score']}/100")
+            except Exception as e:
+                print(f"   ⚠️ {ticker}: Unable to check ({str(e)[:30]}...)")
+    except ImportError:
+        print("   ⚠️ WATCHLIST not configured in config.py")
+        
+except Exception as e:
+    print(f"   ⚠️ Briefing error: {e}")
+    import traceback
+    traceback.print_exc()
 
 # 2. Run Wolf Pack Scan
 print("\n" + "=" * 70)
@@ -82,13 +142,18 @@ print("🔍 RUNNING WOLF PACK SCAN")
 print("=" * 70)
 
 try:
-    # Run the scan (brief mode to get signals)
+    # Run the scan (using scan_watchlist method)
     # This would normally capture the output
-    print("\n🐺 Scanning all signals...")
-    wp.hunt()
+    print("\n🐺 Scanning watchlist...")
+    results = wp.scan_watchlist()
+    print(f"   Found {len(results)} signals")
     
     # Get holdings for detailed analysis
-    from services.position_tracker import HOLDINGS
+    try:
+        from fenrir.position_health_checker import HOLDINGS
+    except ImportError:
+        # Fallback if position_health_checker not available
+        HOLDINGS = {}
     
     print(f"\n📊 Analyzing {len(HOLDINGS)} holdings...")
     
@@ -96,13 +161,17 @@ except Exception as e:
     print(f"❌ Scan failed: {e}")
     import traceback
     traceback.print_exc()
+    HOLDINGS = {}  # Set empty holdings on error
 
 # 3. Pivotal Point Analysis
 print("\n" + "=" * 70)
 print("🎯 LIVERMORE PIVOTAL POINT ANALYSIS")
 print("=" * 70)
 
-from services.position_tracker import HOLDINGS
+try:
+    from fenrir.position_health_checker import HOLDINGS
+except ImportError:
+    HOLDINGS = {}
 
 for ticker in HOLDINGS.keys():
     print(f"\n🔍 {ticker}...")
@@ -126,6 +195,37 @@ for ticker in HOLDINGS.keys():
             print(f"   💎 SIT TIGHT - Healthy pullback")
     else:
         print(f"   ❌ No pattern data")
+
+# 3.5. Brain Position Monitoring
+print("\n" + "=" * 70)
+print("🧠 WOLF PACK BRAIN - POSITION MONITORING")
+print("=" * 70)
+
+try:
+    if len(HOLDINGS) > 0:
+        # Monitor all positions for shifts
+        positions = []
+        for ticker, data in HOLDINGS.items():
+            entry = data.get('entry', 0)
+            shares = data.get('shares', 0)
+            if shares > 0:
+                positions.append({'ticker': ticker, 'entry': entry, 'shares': shares})
+        
+        if positions:
+            print("\n📈 Monitoring positions for momentum shifts...")
+            alerts = brain.position_monitor(positions)
+            
+            if alerts:
+                print(f"\n🚨 {len(alerts)} ALERTS:")
+                for alert in alerts[:10]:  # Show first 10
+                    severity_icon = "🔴" if alert['severity'] == 'CRITICAL' else "🚨" if alert['severity'] == 'HIGH' else "⚠️"
+                    print(f"   {severity_icon} {alert['ticker']}: {alert['type']} - {alert['message']}")
+            else:
+                print("   ✅ No shift alerts (all positions stable)")
+    else:
+        print("\n   ℹ️ No active positions to monitor")
+except Exception as e:
+    print(f"   ⚠️ Position monitoring error: {e}")
 
 # 4. Convergence Highlights
 print("\n" + "=" * 70)
@@ -192,12 +292,45 @@ else:
 
 # 7. Trade Execution (if enabled)
 print("\n" + "=" * 70)
-print("📈 TRADE EXECUTION")
+print("📈 TRADE EXECUTION (WITH PRE-TRADE INTELLIGENCE)")
 print("=" * 70)
 
 if trader and trader.client:
     print("\n🤖 Trader bot is ACTIVE")
     print("⚠️  Paper trading mode enabled")
+    
+    # Example: Pre-trade check for potential trades
+    print("\n🧠 Running pre-trade intelligence checks...")
+    print("   (Before executing any trades, Wolf Pack Brain checks:)")
+    print("   1. Market regime compatibility")
+    print("   2. Liquidity risk")
+    print("   3. Predicted mistake probability")
+    print("   4. Setup quality score")
+    print("   5. Historical DNA match")
+    
+    # Demonstrate pre-trade check (not executing, just showing process)
+    example_ticker = "AAPL"
+    example_size = 5000
+    example_context = {
+        'time': datetime.now().strftime('%H:%M'),
+        'recent_trades': 0,
+        'recent_pnl': 0
+    }
+    
+    try:
+        print(f"\n   Example: Checking {example_ticker} ($${example_size:,})...")
+        check_result = brain.pre_trade_check(example_ticker, example_size, example_context)
+        
+        if check_result.get('decision') == 'PROCEED':
+            print(f"   ✅ {example_ticker}: CLEARED for entry")
+        elif check_result.get('decision') == 'CAUTION':
+            print(f"   ⚠️ {example_ticker}: PROCEED WITH CAUTION")
+        else:
+            print(f"   🛑 {example_ticker}: BLOCKED")
+            
+    except Exception as e:
+        print(f"   ⚠️ Pre-trade check error: {e}")
+    
     print("\n(Trade execution disabled in demo mode)")
     print("To enable: Uncomment trader.run_daily_scan() below")
     # trader.run_daily_scan()

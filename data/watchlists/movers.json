@@ -1,0 +1,14 @@
+{
+  "name": "High Volatility Movers",
+  "description": "Proven volatile stocks, meme stocks, momentum plays, earnings movers",
+  "created": "2026-01-27",
+  "tickers": [
+    "AEHR", "AEVA", "ACB", "ANNX", "BTDR", "CFLT", "CURLF", "DAWN", "DVAX", "ENPH",
+    "FORM", "FSLR", "GTLB", "GPCR", "ICHR", "GTBIF", "IBRX", "IVF", "MARA", "MSTR",
+    "RGC", "RIOT", "SEDG", "SLAB", "RXRX", "SAVA", "TMDX", "OUST", "PATH", "SNDL",
+    "SNOW", "BABA", "CAVA", "GME", "JD", "NIO", "PDD", "RGR", "LCID", "LI",
+    "TSLA", "XPEV", "BKKT", "COIN", "HOOD", "RKT", "UPST", "BIDU", "BILI", "CELH",
+    "HE", "STNG", "INSW", "NVAX", "MRNA", "ATON", "SATL", "KULR"
+  ],
+  "sectors": ["High Volatility", "Meme Stocks", "Crypto-Adjacent", "Momentum", "Biotech", "EV", "Solar"]
+}

@@ -1,0 +1,248 @@
+[
+  {
+    "timestamp": "2026-01-28T01:00:00",
+    "date": "2026-01-28",
+    "type": "session_start",
+    "session_id": "JAN-27-28-OVERNIGHT",
+    "notes": "Overnight session with Fenrir. Major infrastructure and strategy work."
+  },
+  {
+    "timestamp": "2026-01-28T01:15:00",
+    "date": "2026-01-28",
+    "type": "portfolio_snapshot",
+    "robinhood_value": 795.12,
+    "fidelity_value": 760.48,
+    "total_value": 1555.6,
+    "positions": {
+      "MU": {
+        "shares": 2.5,
+        "accounts": [
+          "RH",
+          "FID"
+        ],
+        "status": "HOLD",
+        "thesis": "AI memory demand"
+      },
+      "RCAT": {
+        "shares": 6.7,
+        "account": "RH",
+        "status": "HOLD",
+        "thesis": "Defense/drones"
+      },
+      "UUUU": {
+        "shares": 6,
+        "account": "RH",
+        "status": "HOLD",
+        "thesis": "Nuclear + rare earth"
+      },
+      "MRNO": {
+        "shares": 3,
+        "account": "RH",
+        "status": "MANAGE",
+        "thesis": "Momentum play"
+      },
+      "IVF": {
+        "shares": 51,
+        "account": "RH",
+        "status": "REVIEW",
+        "thesis": "Fertility + Trump policy"
+      },
+      "NTLA": {
+        "shares": 2,
+        "account": "RH",
+        "status": "SELL_AT_OPEN",
+        "thesis": "NO THESIS - mistake"
+      },
+      "RDW": {
+        "shares": 3.583,
+        "account": "FID",
+        "status": "HOLD",
+        "thesis": "Defense contracts"
+      },
+      "UEC": {
+        "shares": 2,
+        "account": "FID",
+        "status": "HOLD",
+        "thesis": "Uranium bull run"
+      }
+    }
+  },
+  {
+    "timestamp": "2026-01-28T01:30:00",
+    "date": "2026-01-28",
+    "type": "decision",
+    "ticker": "NTLA",
+    "decision": "SELL_AT_OPEN",
+    "reasoning": "No thesis. Reactive chase. Down -11.32%. Bleeding capital with no catalyst or conviction. Cut the loser.",
+    "lesson": "Never buy without a thesis. This position should never have been opened.",
+    "rule_added": "Entry requires: thesis + catalyst + convergence >= 50"
+  },
+  {
+    "timestamp": "2026-01-28T01:35:00",
+    "date": "2026-01-28",
+    "type": "decision",
+    "ticker": "MRNO",
+    "decision": "HOLD_WITH_RULES",
+    "reasoning": "Momentum play up +111% from entry. Low float working. But need strict management rules.",
+    "management_rules": {
+      "above_2.20": "HOLD - strong, let it run",
+      "between_2.00_2.20": "HOLD - watch first 15 min",
+      "below_1.80": "CUT - take the loss"
+    },
+    "lesson": "Momentum plays require predefined exit rules before emotions take over."
+  },
+  {
+    "timestamp": "2026-01-28T01:45:00",
+    "date": "2026-01-28",
+    "type": "discovery",
+    "category": "IPO",
+    "ticker": "SPACEX",
+    "discovery": "SpaceX IPO confirmed for 2026 by Elon Musk (Dec 10, 2025)",
+    "details": {
+      "target_valuation": "1.5 trillion",
+      "expected_raise": "30+ billion",
+      "timeline": "Mid-to-late 2026",
+      "ipo_access_status": "Robinhood - FOLLOWING, Fidelity - NOT ELIGIBLE"
+    },
+    "pattern_recognition": "X TICKER THEORY - US Steel (X) delisted June 2025. SpaceX IPO 2026. Musk named son X, renamed Twitter to X, runs xAI. Theory: Musk secured ticker X for SpaceX.",
+    "lesson": "Pattern recognition across domains (M&A, ticker mechanics, personality patterns) creates unique insights."
+  },
+  {
+    "timestamp": "2026-01-28T02:00:00",
+    "date": "2026-01-28",
+    "type": "strategy",
+    "strategy_name": "DUAL_ACCOUNT_STRATEGY",
+    "description": "Separate accounts enforce separate mindsets",
+    "fidelity_purpose": "Thesis-driven, steady, show to father, hold through volatility",
+    "robinhood_purpose": "Momentum, after-hours, IPO access, risk lab, faster decisions",
+    "reasoning": "Not fighting limitations - working WITH them. Different apps = different disciplines.",
+    "lesson": "Account separation prevents strategy contamination. Thesis trades and momentum trades require different psychology."
+  },
+  {
+    "timestamp": "2026-01-28T02:15:00",
+    "date": "2026-01-28",
+    "type": "system_event",
+    "event": "API_TESTING",
+    "results": {
+      "finnhub": {
+        "status": "WORKING",
+        "rate_limit": "60/min"
+      },
+      "yfinance": {
+        "status": "WORKING",
+        "rate_limit": "unlimited"
+      },
+      "polygon": {
+        "status": "WORKING",
+        "rate_limit": "5/min"
+      },
+      "alpha_vantage": {
+        "status": "WORKING",
+        "rate_limit": "25/day"
+      },
+      "newsapi": {
+        "status": "WORKING",
+        "rate_limit": "100/day"
+      },
+      "sec_edgar": {
+        "status": "WORKING",
+        "rate_limit": "10/sec"
+      },
+      "alpaca_paper": {
+        "status": "NEEDS_LOCAL_TEST",
+        "note": "403 from cloud, fresh keys obtained"
+      }
+    },
+    "lesson": "6/7 APIs working. Finnhub is primary for real-time quotes. yfinance is backup."
+  },
+  {
+    "timestamp": "2026-01-28T02:30:00",
+    "date": "2026-01-28",
+    "type": "system_event",
+    "event": "SYSTEM_OVERLOAD",
+    "what_happened": "Running full autonomous brain crashed Tyr's computer",
+    "cause": "200+ ticker scanning + multiple concurrent API calls + heavy processing",
+    "solution": "Heavy processing = cloud only. Local machine = logging only.",
+    "rule_added": "Never run full scanner locally. br0kkr = scribe, not scanner.",
+    "lesson": "Respect hardware limitations. The system waits for proper infrastructure."
+  },
+  {
+    "timestamp": "2026-01-28T02:45:00",
+    "date": "2026-01-28",
+    "type": "learning_engine_update",
+    "trades_logged": 4,
+    "trades": [
+      "DNN",
+      "IBRX",
+      "RDW",
+      "MRNO"
+    ],
+    "patterns_validated": [
+      "High convergence (85+) + strong volume (2.0x+) = winners",
+      "Low convergence (45) + weak volume (1.2x) = losers",
+      "Thesis-driven holds outperform panic sells",
+      "Stale intel + unverified catalysts = mistakes"
+    ],
+    "rules_established": [
+      "Convergence minimum: 50",
+      "Volume minimum: 1.5x",
+      "All catalysts must be timestamped",
+      "No 'any day' language",
+      "Thesis break = sell, red candles alone != sell"
+    ]
+  },
+  {
+    "timestamp": "2026-01-28T03:00:00",
+    "date": "2026-01-28",
+    "type": "daily_summary",
+    "session_type": "overnight_planning",
+    "robinhood_value": 795.12,
+    "fidelity_value": 760.48,
+    "total_value": 1555.6,
+    "day_change_estimate": "N/A - after hours",
+    "trades_made": 0,
+    "decisions_made": 5,
+    "discoveries_made": 2,
+    "what_worked": "Thesis-driven positions all green (6/7). Systematic documentation. Pattern recognition (X ticker theory).",
+    "what_failed": "System overload crashed computer. NTLA position was a mistake from the start.",
+    "biggest_lesson": "Heavy processing belongs on cloud. Local machine is for logging and decision-making. The brain learns from documented decisions, not from running heavy scans.",
+    "tomorrow_plan": {
+      "pre_market": "Check MRNO price, apply management rules",
+      "market_open": "SELL NTLA immediately",
+      "all_day": "Hold thesis names through FOMC volatility",
+      "2pm": "Watch FOMC decision",
+      "2_30pm": "Watch Powell press conference",
+      "after_close": "Monitor MSFT, META, TSLA earnings",
+      "end_of_day": "Log everything with br0kkr"
+    },
+    "market_context": {
+      "fomc": "Jan 28 2:00 PM ET, 97.2% probability hold",
+      "powell": "Jan 28 2:30 PM ET press conference",
+      "earnings": "MSFT, META, TSLA, GEV, IBM, LRCX, NOW after close"
+    },
+    "infrastructure_updates": [
+      "Leonard File updated to v11.2",
+      "br0kkr daily workflow created",
+      "daily_journal.py ready for use",
+      "Cloud deployment roadmap documented",
+      "All API keys tested and documented"
+    ]
+  },
+  {
+    "timestamp": "2026-01-28T03:15:00",
+    "date": "2026-01-28",
+    "type": "session_end",
+    "session_id": "JAN-27-28-OVERNIGHT",
+    "duration_hours": 2.25,
+    "files_created": [
+      "LEONARD_FILE_v11.2.md",
+      "daily_journal.py",
+      "BR0KKR_DAILY_WORKFLOW.md",
+      "wolfpack_env_updated.env",
+      "test_alpaca_local.py",
+      "journal_2026-01-28.json"
+    ],
+    "intelligence_gained": "Portfolio baseline documented. Dual account strategy defined. SpaceX IPO + X ticker theory. API infrastructure validated. System limits learned. br0kkr workflow established. Brain fed 4 trades with patterns.",
+    "next_session": "Jan 28 market open - execute NTLA sell, manage MRNO, hold thesis names"
+  }
+]

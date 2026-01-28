@@ -3,7 +3,7 @@
 
 from datetime import datetime, timedelta
 from typing import Dict, List, Tuple, Optional
-import database
+from fenrir import database
 from collections import defaultdict
 import numpy as np
 
@@ -100,17 +100,6 @@ class PredictiveMistakeEngine:
         
         cursor = self.conn.cursor()
         
-        # Get all losing trades
-        cursor.execute('''
-            SELECT timestamp, ticker, pnl_pct, reason, emotions, quality_score
-            FROM trade_journal
-            WHERE outcome = 'LOSS'
-            ORDER BY timestamp DESC
-            LIMIT 100
-        ''')
-        
-        losses = cursor.fetchall()
-        
         patterns = {
             'overtrade_hours': [],
             'fomo_triggers': [],
@@ -120,6 +109,22 @@ class PredictiveMistakeEngine:
             'chase_extension_levels': [],
             'average_down_situations': []
         }
+        
+        try:
+            # Get all losing trades
+            cursor.execute('''
+                SELECT timestamp, ticker, pnl_pct, reason, emotions, quality_score
+                FROM trade_journal
+                WHERE outcome = 'LOSS'
+                ORDER BY timestamp DESC
+                LIMIT 100
+            ''')
+            
+            losses = cursor.fetchall()
+        except Exception as e:
+            # Table doesn't exist yet or other DB error - return empty patterns
+            # This is OK for new installations
+            return patterns
         
         for loss in losses:
             timestamp, ticker, pnl_pct, reason, emotions, quality_score = loss
@@ -152,25 +157,29 @@ class PredictiveMistakeEngine:
             patterns['overtrade_hours'].append(hour)
         
         # Calculate revenge trade patterns
-        cursor.execute('''
-            SELECT timestamp, outcome FROM trade_journal
-            WHERE action = 'SELL'
-            ORDER BY timestamp
-        ''')
-        
-        all_trades = cursor.fetchall()
-        consecutive_losses = 0
-        
-        for i, (timestamp, outcome) in enumerate(all_trades):
-            if outcome == 'LOSS':
-                consecutive_losses += 1
-            else:
-                if consecutive_losses > 0 and i < len(all_trades) - 1:
-                    # Check if next trade was also a loss (revenge trade indicator)
-                    next_outcome = all_trades[i + 1][1] if i + 1 < len(all_trades) else None
-                    if next_outcome == 'LOSS':
-                        patterns['revenge_trade_after_n_losses'].append(consecutive_losses)
-                consecutive_losses = 0
+        try:
+            cursor.execute('''
+                SELECT timestamp, outcome FROM trade_journal
+                WHERE action = 'SELL'
+                ORDER BY timestamp
+            ''')
+            
+            all_trades = cursor.fetchall()
+            consecutive_losses = 0
+            
+            for i, (timestamp, outcome) in enumerate(all_trades):
+                if outcome == 'LOSS':
+                    consecutive_losses += 1
+                else:
+                    if consecutive_losses > 0 and i < len(all_trades) - 1:
+                        # Check if next trade was also a loss (revenge trade indicator)
+                        next_outcome = all_trades[i + 1][1] if i + 1 < len(all_trades) else None
+                        if next_outcome == 'LOSS':
+                            patterns['revenge_trade_after_n_losses'].append(consecutive_losses)
+                    consecutive_losses = 0
+        except Exception:
+            # No trade history yet
+            pass
         
         return patterns
     
