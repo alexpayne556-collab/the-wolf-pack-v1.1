@@ -1,0 +1,400 @@
+{
+  "position_management": {
+    "version": "1.0.0",
+    "created": "2026-01-28",
+    "description": "Nuanced position management - when to add, when to hold, when to cut. Context matters. Trade type matters. Thesis status matters.",
+    "core_principle": "There is no single rule. Every decision depends on WHAT KIND OF TRADE this is and WHAT THE THESIS STATUS is.",
+    
+    "critical_distinction": {
+      "momentum_trades": {
+        "definition": "Quick plays based on price action, volume, and movement. No fundamental thesis required.",
+        "examples": ["MRNO"],
+        "time_horizon": "Hours to days",
+        "thesis_requirement": "None - momentum IS the thesis",
+        "management_style": "STRICT rules, quick decisions, no emotional attachment",
+        "loss_tolerance": "LOW - cut fast if momentum dies"
+      },
+      "thesis_trades": {
+        "definition": "Positions based on fundamental research, catalysts, and conviction.",
+        "examples": ["MU", "RCAT", "UUUU", "RDW", "UEC", "IBRX"],
+        "time_horizon": "Weeks to months",
+        "thesis_requirement": "REQUIRED - must know WHY you own this",
+        "management_style": "PATIENT, hold through volatility, trust the research",
+        "loss_tolerance": "HIGHER - red days don't mean thesis is broken"
+      }
+    }
+  },
+
+  "when_to_add_on_dips": {
+    "description": "Adding to a losing position can be smart OR stupid. Context determines which.",
+    
+    "ADD_when": {
+      "thesis_intact": {
+        "condition": "The reason you bought hasn't changed. The stock is just down.",
+        "example": "MU down 5% on market-wide selloff. AI memory demand hasn't changed. Jensen still bullish. ADD.",
+        "logic": "You liked it at $410, you should LOVE it at $390 if nothing fundamental changed."
+      },
+      "catalyst_still_coming": {
+        "condition": "The event you're waiting for hasn't happened yet.",
+        "example": "UUUU down but ASM acquisition still closing June 2026. Catalyst intact. ADD.",
+        "logic": "You're waiting for X. X hasn't happened. Price is lower. Better entry for same catalyst."
+      },
+      "sector_rotation_temporary": {
+        "condition": "Whole sector is down, not just your stock. Rotation will come back.",
+        "example": "All uranium names down 8% on profit taking. Uranium spot still $88. Sector thesis intact. ADD.",
+        "logic": "Sector rotations are temporary. When money comes back, your names run."
+      },
+      "volume_dry_on_decline": {
+        "condition": "Stock drifting down on LOW volume. No one is actually selling hard.",
+        "example": "RCAT down 3% but volume is 40% of normal. Just drift, not distribution. ADD on strength.",
+        "logic": "Low volume decline = weak hands shaking out. High volume decline = real selling."
+      },
+      "you_have_cash_and_conviction": {
+        "condition": "You have available capital AND you believe in the trade.",
+        "logic": "Adding to losers only works if you're RIGHT about the thesis. Make sure you are."
+      }
+    },
+    
+    "DO_NOT_ADD_when": {
+      "thesis_is_broken": {
+        "condition": "The reason you bought no longer exists.",
+        "example": "Bought biotech for FDA approval, FDA rejected. Thesis DEAD. Don't add, CUT.",
+        "logic": "Adding to a broken thesis is throwing money away."
+      },
+      "catalyst_failed": {
+        "condition": "The event you were waiting for happened and it was BAD.",
+        "example": "Earnings missed badly. Guidance cut. Contract lost. Don't add. Reassess.",
+        "logic": "The thing you were waiting for went wrong. Time to exit, not double down."
+      },
+      "you_dont_know_why_its_down": {
+        "condition": "Stock is tanking and you have no idea why.",
+        "example": "Down 15% and you can't find any news. DON'T ADD until you understand.",
+        "logic": "Someone knows something you don't. Find out first."
+      },
+      "its_a_momentum_trade": {
+        "condition": "This was never a thesis trade. You bought for movement, movement is gone.",
+        "example": "MRNO momentum died, now drifting down. Don't add. Momentum trades get CUT, not averaged.",
+        "logic": "Momentum trades live and die by momentum. No momentum = no trade."
+      },
+      "youre_already_overweight": {
+        "condition": "This position is already too big relative to portfolio.",
+        "logic": "Adding makes a bad situation worse. Cut before adding."
+      },
+      "youre_emotional": {
+        "condition": "You want to add because you're angry about the loss, not because the thesis is good.",
+        "logic": "Revenge trading loses money. Step back. Reassess when calm."
+      }
+    }
+  },
+
+  "when_to_hold_through_red": {
+    "description": "Red candles are not automatic sell signals. Sometimes holding is right.",
+    
+    "HOLD_when": {
+      "thesis_intact": {
+        "condition": "Nothing fundamental has changed. Just price moving.",
+        "example": "IBRX was down some days. Thesis never broke. Held. Now up 55%.",
+        "lesson": "DNN - we panic sold at -3.78%, it ran +6.49% after. HOLDING would have won."
+      },
+      "market_wide_selloff": {
+        "condition": "Everything is red. It's not your stock, it's the market.",
+        "logic": "If SPY is down 2%, your small cap being down 4% is normal. Hold."
+      },
+      "approaching_catalyst": {
+        "condition": "Your catalyst is days/weeks away. Don't sell before the event.",
+        "example": "LUNR down but Artemis II is Feb 6. Hold for the catalyst.",
+        "logic": "You bought for the event. Wait for the event."
+      },
+      "stop_loss_not_hit": {
+        "condition": "You set a stop. It hasn't been hit. Trust your plan.",
+        "logic": "You made the plan with a clear head. Trust past-you."
+      }
+    },
+    
+    "DO_NOT_HOLD_when": {
+      "thesis_broken": {
+        "condition": "The reason you bought is gone.",
+        "action": "SELL. No exceptions."
+      },
+      "stop_loss_hit": {
+        "condition": "Price hit your predetermined stop.",
+        "action": "SELL. Honor your rules. That's what stops are for."
+      },
+      "better_opportunity": {
+        "condition": "Capital tied up in a drifting position could work harder elsewhere.",
+        "logic": "Opportunity cost is real. Dead money should be redeployed."
+      }
+    }
+  },
+
+  "when_to_cut_losses": {
+    "description": "Sometimes you have to take the L. Knowing when is critical.",
+    
+    "CUT_immediately_when": {
+      "thesis_broken": {
+        "condition": "The fundamental reason for the trade no longer exists.",
+        "examples": [
+          "FDA rejection on biotech play",
+          "Contract lost on defense play", 
+          "Acquisition cancelled",
+          "Fraud discovered",
+          "CEO resigned unexpectedly"
+        ],
+        "action": "SELL AT OPEN. Don't wait. Don't hope."
+      },
+      "no_thesis_existed": {
+        "condition": "You never had a real reason. You chased without thinking.",
+        "example": "NTLA - bought on nothing, bleeding -11%, no catalyst, no thesis. CUT.",
+        "lesson": "This is the tax on undisciplined trading. Pay it and learn."
+      },
+      "momentum_trade_momentum_died": {
+        "condition": "Momentum play, momentum is gone.",
+        "example": "MRNO below $1.80 = momentum failed. CUT. Don't hold momentum trades like thesis trades.",
+        "logic": "Momentum trades have no thesis to fall back on. When movement stops, exit."
+      },
+      "stop_loss_hit": {
+        "condition": "Price hit your predetermined exit.",
+        "action": "SELL. Period. You made the rule for a reason.",
+        "warning": "Moving your stop down when losing is how small losses become big losses."
+      }
+    },
+    
+    "CUT_on_serious_bleeding_when": {
+      "down_20_plus_without_catalyst": {
+        "condition": "Position down 20%+ and there's no imminent catalyst to save it.",
+        "logic": "You need +25% just to get back to even. Is that realistic? If not, cut and redeploy."
+      },
+      "dead_money_for_weeks": {
+        "condition": "Position just sitting there, not moving, no catalyst in sight.",
+        "logic": "That capital could be making money elsewhere. Cut the dead weight."
+      },
+      "you_keep_checking_hoping": {
+        "condition": "You're checking the price 10x a day hoping it recovers.",
+        "logic": "If you're hoping instead of knowing, your thesis is already broken. Cut it."
+      }
+    },
+    
+    "DO_NOT_CUT_when": {
+      "just_because_red": {
+        "condition": "Stock is down but thesis is intact.",
+        "logic": "Red candles != sell signal. Ask: has anything CHANGED?"
+      },
+      "panic": {
+        "condition": "You're scared and want to stop the pain.",
+        "logic": "Panic selling locks in losses. Breathe. Check thesis. Then decide.",
+        "example": "DNN - panic sold, missed the recovery. Don't repeat."
+      },
+      "market_volatility": {
+        "condition": "Whole market is volatile but your thesis is solid.",
+        "logic": "Volatility is normal. Ride it if thesis intact."
+      }
+    }
+  },
+
+  "position_sizing_adjustments": {
+    "description": "How to size based on conviction and trade type",
+    
+    "initial_sizing": {
+      "high_conviction_thesis": "8-12% of portfolio",
+      "medium_conviction_thesis": "4-8% of portfolio",
+      "speculative_thesis": "2-4% of portfolio",
+      "momentum_trade": "3-5% of portfolio MAX"
+    },
+    
+    "adding_to_winners": {
+      "when": "Thesis playing out, stock confirming, want more exposure",
+      "how": "Add in smaller increments (half original size)",
+      "warning": "Don't let winners become too large a % of portfolio"
+    },
+    
+    "adding_to_losers": {
+      "when": "Thesis intact, better price, catalyst still ahead",
+      "how": "Add SMALLER than original position (quarter to half size)",
+      "rule": "Never add more than your original position to a loser",
+      "warning": "Adding to losers can be brilliant or devastating. Be honest about thesis."
+    },
+    
+    "scaling_out": {
+      "at_first_target": "Sell 1/3 to 1/2, let rest ride with trailing stop",
+      "at_second_target": "Sell another 1/3",
+      "moon_shot": "Keep small piece for potential blowoff top"
+    }
+  },
+
+  "decision_flowchart": {
+    "description": "How to decide what to do with a position",
+    
+    "position_is_red": {
+      "step_1": "What kind of trade is this?",
+      "if_momentum": {
+        "check": "Is momentum still there?",
+        "if_yes": "Hold with strict stop",
+        "if_no": "CUT immediately - momentum trades don't get averaged"
+      },
+      "if_thesis": {
+        "check": "Is thesis still intact?",
+        "if_yes": {
+          "next_check": "Is there a catalyst still coming?",
+          "if_yes": "HOLD or ADD on dip",
+          "if_no": "Consider cutting for opportunity cost"
+        },
+        "if_no": "CUT - thesis broken means exit"
+      }
+    },
+    
+    "position_is_green": {
+      "step_1": "Has it hit a target?",
+      "if_yes": "Consider scaling out, setting trailing stop",
+      "if_no": {
+        "check": "Is thesis still playing out?",
+        "if_yes": "HOLD, consider adding on pullbacks",
+        "if_no": "Take profits - if thesis is done, so is trade"
+      }
+    },
+    
+    "considering_new_entry": {
+      "step_1": "Do I have a thesis? (If no, STOP)",
+      "step_2": "Is there a catalyst? (If no, be cautious)",
+      "step_3": "Is volume confirming? (1.5x+ preferred)",
+      "step_4": "What's my stop loss? (Define before entry)",
+      "step_5": "What's my target? (Know your exit)",
+      "step_6": "How big should position be? (Size to conviction)"
+    }
+  },
+
+  "examples_from_our_trading": {
+    "IBRX_success": {
+      "type": "thesis_trade",
+      "entry": "Bought on high convergence (85) + strong volume (2.8x)",
+      "what_happened": "Had red days",
+      "decision": "HELD - thesis intact",
+      "result": "+55%",
+      "lesson": "Thesis trades get patience. Red candles aren't sell signals."
+    },
+    
+    "DNN_mistake": {
+      "type": "thesis_trade (weak)",
+      "entry": "Bought on stale catalyst info",
+      "what_happened": "Went red",
+      "decision": "PANIC SOLD at -3.78%",
+      "result": "Stock ran +6.49% after we sold",
+      "lesson": "Panic selling thesis trades = giving away gains. Should have held."
+    },
+    
+    "NTLA_mistake": {
+      "type": "no_thesis",
+      "entry": "Chased without any reasoning",
+      "what_happened": "Bleeding -11%",
+      "decision": "CUT at open Jan 28",
+      "lesson": "No thesis = no recovery path. Cut and learn."
+    },
+    
+    "MRNO_momentum": {
+      "type": "momentum_trade",
+      "entry": "Bought on volume spike + low float",
+      "rules_set": {
+        "above_2.20": "HOLD",
+        "2.00_to_2.20": "WATCH",
+        "below_1.80": "CUT"
+      },
+      "result_so_far": "+111%",
+      "lesson": "Momentum trades need STRICT rules. No thesis to fall back on."
+    },
+    
+    "thesis_names_jan_27": {
+      "trades": ["MU", "RCAT", "UUUU", "RDW", "UEC", "IBRX"],
+      "result": "6/7 green (85.7%)",
+      "lesson": "Thesis-driven trades WIN more often. This is data, not opinion."
+    },
+    
+    "non_thesis_jan_27": {
+      "trades": ["NTLA", "random momentum"],
+      "result": "0/2 green (0%)",
+      "lesson": "Non-thesis trades LOSE more often. The math is clear."
+    }
+  },
+
+  "the_evolution_principle": {
+    "description": "The brain gets smarter every single day",
+    
+    "how_it_works": {
+      "day_1": "Basic rules loaded",
+      "week_1": "First trades logged, patterns emerging",
+      "month_1": "Win/loss ratios calculated, rules refined",
+      "month_3": "Sector patterns clear, timing improving",
+      "month_6": "System has predictive capability",
+      "year_1": "Brain is a true trading edge"
+    },
+    
+    "nothing_is_lost": {
+      "wins": "Logged, analyzed, patterns extracted",
+      "losses": "Logged, analyzed, lessons learned",
+      "holds": "Logged, thesis tracking continues",
+      "passes": "Logged, know what we didn't take and why"
+    },
+    
+    "compound_learning": {
+      "principle": "Each day builds on the last. Intelligence compounds like interest.",
+      "example": "Day 1 you know nothing. Day 30 you have 30 days of decisions. Day 365 you have a year of patterns."
+    }
+  },
+
+  "father_investment_criteria": {
+    "description": "When is the system ready for outside capital?",
+    
+    "NOT_ready_when": {
+      "no_track_record": "Need months of documented trades",
+      "negative_returns": "Can't ask for investment if losing money",
+      "unproven_system": "Brain needs to show learning and improvement",
+      "infrastructure_incomplete": "Cloud not deployed, system not 24/7"
+    },
+    
+    "READY_when": {
+      "positive_track_record": "3-6 months of documented gains",
+      "clear_edge": "Win rate and ratios prove the system works",
+      "infrastructure_live": "Cloud deployed, 24/7 monitoring, alerts working",
+      "transparent_documentation": "Every trade logged, every decision explained",
+      "risk_management_proven": "Losses are controlled, no blowups"
+    },
+    
+    "the_approach": {
+      "step_1": "Trade Tyr's capital to prove the system",
+      "step_2": "Document everything - brain learns daily",
+      "step_3": "Build track record over months",
+      "step_4": "When system shows consistent edge, THEN present to father",
+      "step_5": "No lies, no hype - just data and results"
+    },
+    
+    "timeline_estimate": {
+      "now": "Building and learning",
+      "month_1_3": "Proving system with Tyr's capital",
+      "month_3_6": "Track record building, infrastructure improving",
+      "month_6_plus": "IF results are good, present to father with PROOF"
+    }
+  },
+
+  "daily_brain_growth": {
+    "description": "What the brain learns each day",
+    
+    "every_trading_day": {
+      "morning": "Market context, pre-market movers, news",
+      "during": "Trades made, decisions, observations",
+      "evening": "Summary, lessons, plan for tomorrow"
+    },
+    
+    "every_conversation": {
+      "with_fenrir": "Strategy discussions, research, analysis",
+      "logged": "Key insights, decisions, new patterns"
+    },
+    
+    "every_week": {
+      "review": "What worked, what didn't, ratios",
+      "adjust": "Rules updated if needed"
+    },
+    
+    "nothing_resets": {
+      "principle": "The brain remembers everything. Intelligence only grows.",
+      "continuity": "Leonard File + journal + brain configs = permanent memory"
+    }
+  }
+}

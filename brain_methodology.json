@@ -1,0 +1,349 @@
+{
+  "brain_methodology": {
+    "version": "1.0.0",
+    "created": "2026-01-28",
+    "description": "How the brain THINKS, LEARNS, and RESEARCHES. Not just what to track, but HOW to understand markets.",
+    "core_principle": "The brain learns from every conversation, every trade, every mistake. Nothing is wasted.",
+    "evolution_note": "This file will ALWAYS be evolved. It's a living document."
+  },
+
+  "research_methodology": {
+    "description": "Where to get research, how to get it, what matters",
+    
+    "primary_sources": {
+      "sec_edgar": {
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar",
+        "what_it_has": "All public company filings - insider buys, material events, earnings",
+        "priority_filings": {
+          "form_4": "Insider buying/selling - MOST IMPORTANT. When CEO buys, PAY ATTENTION.",
+          "form_8k": "Material events - contracts, mergers, leadership changes",
+          "form_13d": "Activist stakes over 5% - someone big is accumulating",
+          "form_s1": "IPO registration - WATCH FOR SPACEX"
+        },
+        "how_to_use": "Check daily for positions, check on volume spikes, check before any entry",
+        "api": "https://data.sec.gov/submissions/CIK{cik}.json"
+      },
+      
+      "openinsider": {
+        "url": "http://openinsider.com",
+        "what_it_has": "Parsed insider transactions, easier to scan than raw SEC",
+        "what_matters": {
+          "cluster_buys": "Multiple insiders buying same stock = SIGNAL",
+          "ceo_buys": "CEO putting their own money in = CONVICTION",
+          "size_matters": "$100k+ purchases mean more than $10k"
+        },
+        "screener_url": "http://openinsider.com/screener"
+      },
+      
+      "finviz": {
+        "url": "https://finviz.com",
+        "what_it_has": "Screeners, heatmaps, news aggregation",
+        "screener_url": "https://finviz.com/screener.ashx",
+        "how_to_use": "Scan for volume spikes, price breakouts, sector rotation"
+      },
+      
+      "yahoo_finance": {
+        "url": "https://finance.yahoo.com",
+        "what_it_has": "Analyst ratings, price targets, news, fundamentals",
+        "what_matters": {
+          "analyst_upgrades": "PT raises = institutional attention",
+          "price_targets": "Know the upside wall street sees",
+          "news_tab": "Quick news scan per ticker"
+        }
+      },
+      
+      "stockanalysis": {
+        "url": "https://stockanalysis.com",
+        "what_it_has": "After hours movers, pre-market data, clean interface",
+        "after_hours_url": "https://stockanalysis.com/markets/afterhours/",
+        "premarket_url": "https://stockanalysis.com/markets/premarket/"
+      },
+      
+      "biopharmcatalyst": {
+        "url": "https://www.biopharmcatalyst.com/calendars/fda-calendar",
+        "what_it_has": "FDA dates, PDUFA deadlines, trial readouts",
+        "when_to_use": "Before ANY biotech entry - know the catalyst dates",
+        "critical_rule": "NEVER trade biotech without checking catalyst calendar"
+      },
+      
+      "defense_contracts": {
+        "sam_gov": {
+          "url": "https://sam.gov",
+          "what_it_has": "All federal contract awards"
+        },
+        "defense_gov": {
+          "url": "https://www.defense.gov/News/Contracts/",
+          "what_it_has": "Daily Pentagon contract announcements"
+        },
+        "when_to_use": "Check when defense names spike - find out WHY"
+      },
+      
+      "nuclear_regulatory": {
+        "cnsc": "https://www.cnsc-ccsn.gc.ca/eng/",
+        "nrc": "https://www.nrc.gov/",
+        "doe": "https://www.energy.gov/",
+        "when_to_use": "For uranium plays - licensing decisions, policy changes"
+      },
+      
+      "commodity_prices": {
+        "uranium": "Check spot price correlation to UUUU/UEC",
+        "copper": "Check for FCX correlation", 
+        "lithium": "Check for LAC/ALB correlation"
+      }
+    },
+    
+    "research_process": {
+      "before_any_entry": [
+        "1. Check SEC EDGAR for recent filings (8-K, Form 4)",
+        "2. Check news - is there a catalyst? Is it FRESH or STALE?",
+        "3. Check volume - is it unusual? Why?",
+        "4. Check insider activity - anyone buying?",
+        "5. Check analyst ratings - recent upgrades?",
+        "6. Know the thesis - WHY this trade?",
+        "7. Know the exit - WHEN do you sell?"
+      ],
+      
+      "on_volume_spike": [
+        "1. Check news FIRST - what caused it?",
+        "2. Check SEC for 8-K filing",
+        "3. Check if sector is moving or just this name",
+        "4. Check short interest - squeeze potential?",
+        "5. THEN decide if entry makes sense"
+      ],
+      
+      "daily_routine": [
+        "Pre-market: Check futures, overnight news, pre-market movers",
+        "Open: Watch first 15 minutes, note what's running",
+        "Midday: Scan news, check positions",
+        "Close: Note what finished strong/weak",
+        "After hours: Check earnings, AH movers, plan tomorrow"
+      ]
+    }
+  },
+
+  "trading_truths": {
+    "description": "What the brain KNOWS to be true from experience",
+    
+    "momentum_is_real": {
+      "truth": "Momentum EXISTS. Things that are moving tend to keep moving.",
+      "nuance": "'Don't chase' is not ALWAYS right. Sometimes the chase IS the play.",
+      "the_real_rule": "Don't chase WITHOUT a thesis. Don't chase LATE. But catching a move after it starts is valid.",
+      "examples": {
+        "MRNO": "Caught after it started running. Up 111%. Chasing WORKED.",
+        "IBRX": "Entered on volume spike. Up 55%. Momentum was the signal.",
+        "RDW": "Entered on contract news. Up 30%. The news WAS the catalyst to chase."
+      },
+      "when_chasing_works": [
+        "Early in the move (day 1-2, not day 5)",
+        "Volume confirming (2x+ normal)",
+        "Catalyst is FRESH (not priced in)",
+        "Sector is hot (rotation into the space)"
+      ],
+      "when_chasing_fails": [
+        "Late in the move (already up 50%+ in a week)",
+        "No catalyst (just random pump)",
+        "Volume fading (early buyers exiting)",
+        "You don't know WHY it's running"
+      ]
+    },
+    
+    "losing_once_is_not_forever": {
+      "truth": "One loss does not predict the next trade. Each trade is independent.",
+      "danger": "Letting losses make you scared prevents winning.",
+      "example": {
+        "DNN": "Lost 3.78%, then it ran 6.49%. The loss was wrong, not the thesis.",
+        "lesson": "We panic sold. The setup was right. We just didn't hold."
+      },
+      "the_real_lesson": "Analyze WHY you lost. If the thesis was wrong, learn. If execution was wrong, fix it. Don't stop trading."
+    },
+    
+    "ratios_matter_more_than_individuals": {
+      "truth": "Win rate and risk/reward ratio matter more than any single trade.",
+      "math": {
+        "example_1": "Win 60% of trades, average win +15%, average loss -10% = PROFITABLE",
+        "example_2": "Win 40% of trades, average win +30%, average loss -10% = STILL PROFITABLE",
+        "the_point": "You can be wrong more than half the time and still make money IF your winners are bigger than losers"
+      },
+      "current_stats": {
+        "thesis_trades": "6/7 green = 85.7% win rate",
+        "non_thesis_trades": "0/2 green = 0% win rate",
+        "lesson": "Thesis-driven trading has BETTER ratios. That's math, not opinion."
+      },
+      "tracking_requirement": "Log EVERY trade with entry, exit, gain/loss to calculate real ratios over time"
+    },
+    
+    "test_everything": {
+      "truth": "Don't accept trading wisdom without testing it yourself.",
+      "examples_tested": {
+        "day_1_continuation": {
+          "claim": "76-90% of day 1 moves continue",
+          "our_test": "49.4% actually continued",
+          "lesson": "The claim was WRONG. We tested, we know."
+        },
+        "buy_after_10pct_pop": {
+          "claim": "Buy momentum after big moves",
+          "our_test": "43% win rate - LOSING strategy",
+          "lesson": "Another broken rule we now know to ignore."
+        },
+        "wounded_prey": {
+          "claim": "Stocks down 30%+ with volume spikes = opportunity",
+          "our_test": "14% became +20% winners, only 3% became -20% losers",
+          "lesson": "ASYMMETRIC - this one actually works"
+        }
+      },
+      "principle": "If someone tells you a rule, ASK: have you tested it? Show me the data."
+    },
+    
+    "conventional_wisdom_is_often_wrong": {
+      "things_people_say_that_arent_always_true": [
+        "'Never chase' - sometimes chasing works",
+        "'Cut losses fast' - sometimes the thesis needs time",
+        "'Don't fight the trend' - counter-trend can work with catalysts",
+        "'Diversify' - concentration wins when you're RIGHT"
+      ],
+      "our_approach": "Question everything. Test it. Keep what works for US."
+    }
+  },
+
+  "learning_from_conversations": {
+    "description": "The brain learns from EVERY conversation with Tyr",
+    
+    "what_to_capture": {
+      "trades": {
+        "entry": "Ticker, price, shares, account, date",
+        "thesis": "WHY this trade - the reasoning",
+        "catalyst": "What event or signal triggered it",
+        "exit": "Price, date, gain/loss",
+        "lesson": "What did we learn from this trade"
+      },
+      "decisions": {
+        "holds": "Why we held when red",
+        "passes": "Why we didn't take a trade",
+        "watches": "What we're monitoring and why"
+      },
+      "discoveries": {
+        "patterns": "New patterns we notice",
+        "connections": "How things relate (like SpaceX IPO + X ticker)",
+        "sources": "New research sources we find"
+      },
+      "mistakes": {
+        "what_happened": "What went wrong",
+        "why": "Root cause",
+        "rule_added": "New rule to prevent repeat"
+      },
+      "wins": {
+        "what_worked": "What we did right",
+        "why": "Why it worked",
+        "pattern": "Can we repeat this?"
+      }
+    },
+    
+    "how_learning_compounds": {
+      "trade_1_to_10": "Basic patterns emerge - what setups work",
+      "trade_10_to_30": "Pre-trade filters get smarter - reject bad setups faster",
+      "trade_30_to_60": "Exit rules get adaptive - know when to hold, when to fold",
+      "trade_60_to_100": "System becomes predictive - anticipate moves before they happen",
+      "trade_100_plus": "Brain becomes a digital twin of Tyr's trading edge"
+    },
+    
+    "nothing_is_wasted": {
+      "principle": "Every conversation adds intelligence. Every trade teaches something.",
+      "even_losses": "Losses teach more than wins if we analyze them.",
+      "even_passes": "Knowing what NOT to trade is as valuable as knowing what to trade."
+    }
+  },
+
+  "market_truths_learned": {
+    "description": "Hard lessons from real trading, not textbooks",
+    
+    "the_market_doesnt_care": {
+      "truth": "Your thesis can be RIGHT and you can still lose money.",
+      "reason": "Timing matters. Other factors matter. Liquidity matters.",
+      "response": "Accept this. Manage risk. Don't take it personally."
+    },
+    
+    "information_has_a_shelf_life": {
+      "truth": "Catalysts get priced in. Old news is useless.",
+      "example": "DNN - CNSC hearing was December 11. We traded on 'hearing coming' in January.",
+      "rule": "ALWAYS verify catalyst dates. 'Any day' is a red flag."
+    },
+    
+    "volume_tells_the_truth": {
+      "truth": "Price can lie. Volume doesn't.",
+      "signal": "Big move + big volume = real. Big move + no volume = fake/temporary.",
+      "our_standard": "1.5x minimum, 2x+ preferred."
+    },
+    
+    "small_accounts_have_advantages": {
+      "truth": "We can enter and exit positions institutions can't touch.",
+      "why": "A $1M fund can't buy $50 worth of a $3 stock. We can.",
+      "our_edge": "Small caps, low float, names too small for big money = our hunting ground."
+    },
+    
+    "thesis_beats_everything": {
+      "truth": "Trades with thesis: 85.7% win. Trades without: 0% win.",
+      "this_is_not_opinion": "This is our actual data from real trading.",
+      "rule": "No thesis = no trade. Period."
+    }
+  },
+
+  "continuous_improvement": {
+    "description": "How the brain gets smarter over time",
+    
+    "daily": [
+      "Log all trades with full details",
+      "Log all decisions (even holds and passes)",
+      "Note what moved and why",
+      "Capture any new discoveries or patterns"
+    ],
+    
+    "weekly": [
+      "Review win/loss ratio",
+      "Analyze best and worst trades",
+      "Look for patterns in winners",
+      "Identify repeated mistakes",
+      "Update rules if needed"
+    ],
+    
+    "monthly": [
+      "Full portfolio review",
+      "Sector performance analysis",
+      "Strategy effectiveness check",
+      "Brain intelligence assessment - what have we learned?"
+    ],
+    
+    "after_every_loss": [
+      "What was the thesis?",
+      "Was the thesis wrong or was execution wrong?",
+      "Would we take this trade again with what we know now?",
+      "What rule would have prevented this loss?"
+    ],
+    
+    "after_every_win": [
+      "What made this work?",
+      "Can we repeat this pattern?",
+      "Was it skill or luck? Be honest.",
+      "How do we find more setups like this?"
+    ]
+  },
+
+  "the_wolf_pack_way": {
+    "description": "Our philosophy encoded",
+    
+    "we_test_limits": "If conventional wisdom says X, we ask: but have you tested it?",
+    "we_learn_from_everything": "Wins, losses, holds, passes - all data.",
+    "we_dont_accept_failure_as_identity": "Losing a trade != being a loser. It's tuition.",
+    "we_build_for_ourselves": "This brain is OUR brain. Not a product. Our edge.",
+    "we_respect_momentum": "Sometimes the chase is right. Know when.",
+    "we_demand_thesis": "No thesis, no trade. Mathematical proof: 85.7% vs 0%.",
+    "we_track_ratios": "Win rate and risk/reward matter more than any single trade.",
+    "we_stay_hungry": "Every day is a chance to learn. The brain never stops growing.",
+    
+    "llhr_applied_to_trading": {
+      "love": "Care about outcomes, not just completing tasks",
+      "loyalty": "Stay loyal to thesis even when red - don't panic sell",
+      "honor": "Honor the rules we set - stops mean stops",
+      "respect": "Respect the process - document everything, no shortcuts"
+    }
+  }
+}

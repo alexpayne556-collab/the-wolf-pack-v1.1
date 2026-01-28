@@ -1,0 +1,466 @@
+{
+  "influence_map": {
+    "version": "1.0.0",
+    "created": "2026-01-28",
+    "description": "How external events, earnings, and key people INFLUENCE our positions. The brain needs to understand relationships, not just track tickers in isolation.",
+    
+    "earnings_influence": {
+      "description": "When these report, watch for signals that affect OUR names",
+      
+      "NVDA": {
+        "reports": "quarterly",
+        "why_it_matters": "Jensen sets the tone for entire AI infrastructure sector",
+        "listen_for": ["data center revenue", "HBM demand mentions", "hyperscaler orders", "capex guidance"],
+        "affects_our_positions": ["MU"],
+        "affects_our_watchlist": ["MRVL", "AMD", "AVGO", "SMCI", "DELL", "VRT", "APLD", "CORZ", "CIFR"],
+        "signal_interpretation": {
+          "strong_data_center": "BUY signal for MU, memory names",
+          "weak_guidance": "Risk off for whole AI infrastructure sector",
+          "hbm_mentions": "Direct MU catalyst"
+        }
+      },
+      
+      "MSFT": {
+        "reports": "Jan 28 after close",
+        "why_it_matters": "Azure cloud growth = AI infrastructure demand",
+        "listen_for": ["Azure growth rate", "AI revenue", "Copilot adoption", "capex spending", "OpenAI mentions"],
+        "affects_our_positions": ["MU"],
+        "affects_our_watchlist": ["NVDA", "AMD", "SMCI", "DELL", "DLR", "EQIX"],
+        "signal_interpretation": {
+          "azure_accelerating": "Cloud infra demand up, good for MU",
+          "ai_capex_increase": "More servers = more memory = MU",
+          "copilot_growing": "AI adoption real, infrastructure needed"
+        }
+      },
+      
+      "META": {
+        "reports": "Jan 28 after close",
+        "why_it_matters": "Zuck spending billions on AI infrastructure",
+        "listen_for": ["AI capex numbers", "data center buildout", "Reality Labs spend", "LLM training infrastructure"],
+        "affects_our_positions": ["MU"],
+        "affects_our_watchlist": ["NVDA", "VRT", "GEV", "PWR", "DLR", "EQIX"],
+        "signal_interpretation": {
+          "capex_up": "More data centers = more power (GEV), cooling (VRT), memory (MU)",
+          "ai_spend_up": "Thesis validated, infrastructure plays win",
+          "capex_cut": "Risk off signal for AI infrastructure"
+        }
+      },
+      
+      "TSLA": {
+        "reports": "Jan 28 after close",
+        "why_it_matters": "Musk controls narrative, mentions SpaceX, affects EV sector sentiment",
+        "listen_for": ["SpaceX references", "Starlink updates", "xAI mentions", "robotaxi timeline", "deliveries"],
+        "affects_our_positions": ["RDW", "RCAT"],
+        "affects_our_watchlist": ["RKLB", "LUNR", "ASTS", "IONQ"],
+        "affects_ipo_watch": ["SPACEX"],
+        "signal_interpretation": {
+          "spacex_ipo_hints": "CRITICAL - any IPO timing info",
+          "starlink_growth": "Space sector sentiment boost",
+          "musk_bullish": "Risk on for all Musk-adjacent plays"
+        }
+      },
+      
+      "GOOGL": {
+        "reports": "quarterly",
+        "why_it_matters": "Cloud (GCP) and AI spend signals",
+        "listen_for": ["GCP growth", "AI infrastructure spend", "TPU updates"],
+        "affects_our_positions": ["MU"],
+        "affects_our_watchlist": ["NVDA", "AMD", "SMCI"]
+      },
+      
+      "AMZN": {
+        "reports": "quarterly", 
+        "why_it_matters": "AWS is massive cloud player, Kuiper satellites",
+        "listen_for": ["AWS growth", "AI services", "Kuiper satellite progress"],
+        "affects_our_positions": ["MU"],
+        "affects_our_watchlist": ["NVDA", "RKLB", "ASTS"]
+      },
+      
+      "GEV": {
+        "reports": "Jan 28 after close",
+        "why_it_matters": "Direct power generation play for data centers",
+        "listen_for": ["data center contracts", "turbine orders", "backlog"],
+        "affects_our_positions": [],
+        "affects_our_watchlist": ["VRT", "ETN", "PWR"],
+        "signal_interpretation": {
+          "strong_orders": "Data center power demand confirmed",
+          "data_center_mentions": "Our thesis validated"
+        }
+      },
+
+      "IBM": {
+        "reports": "Jan 28 after close",
+        "why_it_matters": "Enterprise AI adoption signal",
+        "listen_for": ["watsonx adoption", "AI consulting revenue", "hybrid cloud"],
+        "affects_our_watchlist": ["NVDA", "PLTR"]
+      },
+
+      "LRCX": {
+        "reports": "Jan 28 after close",
+        "why_it_matters": "Chip equipment orders = semiconductor cycle health",
+        "listen_for": ["memory orders", "foundry spending", "backlog"],
+        "affects_our_positions": ["MU"],
+        "affects_our_watchlist": ["AMAT", "KLAC", "ASML"],
+        "signal_interpretation": {
+          "memory_orders_strong": "Memory cycle turning, MU benefits",
+          "foundry_spending_up": "AI chip demand real"
+        }
+      },
+
+      "NOW": {
+        "reports": "Jan 28 after close",
+        "why_it_matters": "Enterprise software spending indicator",
+        "listen_for": ["AI product adoption", "enterprise spending trends"],
+        "affects_our_watchlist": ["PLTR", "CRWD", "PANW"]
+      }
+    },
+    
+    "macro_events_influence": {
+      "description": "How economic events affect our sectors",
+      
+      "FOMC": {
+        "next_date": "Jan 28 2:00 PM ET",
+        "why_it_matters": "Interest rates affect all risk assets, especially small caps",
+        "affects_all_positions": true,
+        "signal_interpretation": {
+          "rates_hold_dovish": "Risk on, small caps benefit, our names run",
+          "rates_hold_hawkish": "Risk off, growth names suffer",
+          "surprise_cut": "MASSIVE risk on, everything rips",
+          "surprise_hike": "Risk off panic, sell momentum names"
+        },
+        "sector_impacts": {
+          "biotech": "Very rate sensitive - cuts help, hikes hurt",
+          "defense": "Less rate sensitive - government spending doesn't care about rates",
+          "nuclear": "Moderate sensitivity - long duration assets",
+          "ai_infrastructure": "High sensitivity - growth stocks need low rates"
+        }
+      },
+      
+      "CPI_inflation": {
+        "why_it_matters": "Inflation data drives Fed policy expectations",
+        "affects_all_positions": true,
+        "signal_interpretation": {
+          "lower_than_expected": "Rate cuts more likely, risk on",
+          "higher_than_expected": "Rates higher for longer, risk off"
+        }
+      },
+      
+      "jobs_report": {
+        "why_it_matters": "Employment strength affects Fed decisions",
+        "signal_interpretation": {
+          "strong_jobs": "Economy good but rates stay high",
+          "weak_jobs": "Rate cuts coming, risk on for growth"
+        }
+      },
+      
+      "defense_budget": {
+        "why_it_matters": "Direct impact on our defense positions",
+        "current_status": "Trump $1.5T military budget proposed",
+        "affects_our_positions": ["RCAT", "RDW"],
+        "affects_our_watchlist": ["KTOS", "PLTR", "AVAV", "LUNR", "LMT", "NOC", "RTX"],
+        "signal_interpretation": {
+          "budget_increase": "All defense names benefit",
+          "drone_funding": "RCAT, AVAV direct beneficiaries",
+          "space_funding": "RDW, LUNR, RKLB benefit"
+        }
+      },
+      
+      "uranium_spot_price": {
+        "current": "$88.40/lb",
+        "why_it_matters": "Direct correlation to our uranium positions",
+        "affects_our_positions": ["UUUU", "UEC"],
+        "affects_our_watchlist": ["CCJ", "DNN", "LEU", "NXE", "UROY"],
+        "signal_interpretation": {
+          "spot_up": "All uranium names benefit, we win",
+          "spot_down": "Pressure on uranium positions",
+          "above_90": "Breakout territory, consider adding"
+        },
+        "data_sources": ["spotprice.com", "uxc.com", "Sprott Physical Uranium Trust"]
+      },
+
+      "geopolitical_events": {
+        "russia_ukraine": {
+          "why_it_matters": "Energy prices, defense spending, uranium supply",
+          "affects_our_positions": ["UUUU", "UEC", "RCAT", "RDW"],
+          "signal_interpretation": {
+            "escalation": "Defense spending up, uranium supply concerns",
+            "de_escalation": "Risk on general markets"
+          }
+        },
+        "china_taiwan": {
+          "why_it_matters": "Semiconductor supply chain, defense readiness",
+          "affects_our_positions": ["MU", "RCAT", "RDW"],
+          "affects_our_watchlist": ["TSM", "NVDA", "AMD", "PLTR"]
+        },
+        "middle_east": {
+          "why_it_matters": "Oil prices, general market risk sentiment",
+          "affects_all_positions": true
+        }
+      }
+    },
+    
+    "key_people_influence": {
+      "description": "When these people speak or act, pay attention",
+      
+      "jensen_huang": {
+        "role": "NVIDIA CEO",
+        "why_it_matters": "His words move the entire AI sector",
+        "watch_for": ["earnings calls", "CES presentations", "product announcements", "interviews"],
+        "affects_our_positions": ["MU"],
+        "recent_action": "Mentioned HBM memory at CES - MU catalyst",
+        "signal_interpretation": {
+          "mentions_memory": "Direct MU catalyst - he mentioned HBM at CES",
+          "capex_bullish": "AI infrastructure thesis validated",
+          "supply_constraints": "Memory demand exceeds supply = MU wins"
+        }
+      },
+      
+      "elon_musk": {
+        "role": "Tesla/SpaceX/xAI CEO",
+        "why_it_matters": "Market moves on his tweets and comments",
+        "watch_for": ["TSLA earnings calls", "X posts", "SpaceX updates", "government meetings"],
+        "affects_our_positions": ["RDW"],
+        "affects_ipo_watch": ["SPACEX"],
+        "signal_interpretation": {
+          "spacex_ipo_mention": "CRITICAL - position for IPO",
+          "starlink_updates": "Space sector sentiment",
+          "doge_government": "Policy influence, defense implications"
+        }
+      },
+      
+      "nancy_pelosi": {
+        "role": "Investor/Politician",
+        "why_it_matters": "Her trades often front-run policy",
+        "recent_action": "Bought 50 VST calls $50 strike",
+        "affects_our_watchlist": ["VST", "CEG", "NRG"],
+        "tracking_source": "House stock watcher, Quiver Quantitative",
+        "signal_interpretation": {
+          "buys_calls": "She knows something, consider following",
+          "energy_plays": "Policy tailwind coming for power sector"
+        }
+      },
+      
+      "jerome_powell": {
+        "role": "Fed Chair",
+        "why_it_matters": "His words move all markets",
+        "next_speech": "Jan 28 2:30 PM ET",
+        "affects_all_positions": true,
+        "signal_interpretation": {
+          "dovish_tone": "Risk on, growth stocks benefit",
+          "hawkish_tone": "Risk off, defensive positioning",
+          "data_dependent": "Neutral, watch next data"
+        },
+        "key_phrases_to_listen_for": {
+          "patient": "Dovish - not rushing",
+          "data_dependent": "Neutral - waiting",
+          "restrictive": "Hawkish - tightening bias",
+          "inflation_progress": "Dovish - winning the fight"
+        }
+      },
+      
+      "trump_administration": {
+        "role": "Policy maker",
+        "why_it_matters": "Defense budget, rare earth policy, trade policy",
+        "affects_our_positions": ["RCAT", "RDW", "UUUU"],
+        "recent_actions": ["$1.5T defense budget", "$1.6B rare earth funding", "10% stake in MP"],
+        "signal_interpretation": {
+          "defense_spending": "Our defense names win",
+          "rare_earth_policy": "UUUU rare earth acquisition more valuable",
+          "china_tariffs": "Supply chain reshoring benefits domestic plays"
+        },
+        "key_appointments": {
+          "doge": "Musk influence on government efficiency",
+          "defense_secretary": "Defense spending priorities"
+        }
+      },
+
+      "sam_altman": {
+        "role": "OpenAI CEO",
+        "why_it_matters": "AI infrastructure demand driver, backs OKLO",
+        "watch_for": ["OpenAI funding rounds", "GPT releases", "infrastructure comments"],
+        "affects_our_watchlist": ["NVDA", "MSFT", "OKLO"],
+        "signal_interpretation": {
+          "infrastructure_needs": "Power/compute demand growing",
+          "oklo_mentions": "Nuclear power for AI thesis"
+        }
+      },
+
+      "mark_zuckerberg": {
+        "role": "META CEO",
+        "why_it_matters": "Spending billions on AI infrastructure",
+        "watch_for": ["earnings calls", "AI announcements", "capex guidance"],
+        "affects_our_positions": ["MU"],
+        "affects_our_watchlist": ["NVDA", "VRT", "GEV"]
+      }
+    },
+    
+    "sector_correlations": {
+      "description": "How sectors move together",
+      
+      "ai_infrastructure": {
+        "leader": "NVDA",
+        "when_leader_moves": "Whole sector follows within 1-2 days",
+        "our_exposure": ["MU"],
+        "correlation_strength": "HIGH",
+        "typical_lag": "0-2 days",
+        "divergence_signals": {
+          "nvda_up_sector_flat": "Skepticism, wait for confirmation",
+          "nvda_flat_sector_up": "Rotation into cheaper plays, good for MU"
+        }
+      },
+      
+      "defense": {
+        "leaders": ["LMT", "RTX", "NOC"],
+        "catalyst": "Contract announcements, budget news",
+        "our_exposure": ["RCAT", "RDW"],
+        "correlation_strength": "MEDIUM - small caps can diverge",
+        "divergence_signals": {
+          "primes_up_small_flat": "Money in large caps, wait",
+          "primes_flat_small_up": "Contract-specific, good sign"
+        }
+      },
+      
+      "uranium": {
+        "leader": "CCJ",
+        "catalyst": "Spot price, utility contracts, policy",
+        "our_exposure": ["UUUU", "UEC"],
+        "correlation_strength": "HIGH - all uranium moves together",
+        "divergence_signals": {
+          "ccj_up_sector_flat": "Rare, but CCJ-specific news",
+          "spot_up_stocks_flat": "Lag, stocks will follow"
+        }
+      },
+      
+      "biotech": {
+        "leader": "XBI ETF",
+        "catalyst": "FDA decisions, trial data, rates",
+        "our_exposure": ["IBRX", "IVF"],
+        "correlation_strength": "MEDIUM - individual catalysts matter more",
+        "note": "Biotech is most disconnected from sector - company-specific catalysts dominate"
+      },
+
+      "space": {
+        "leaders": ["RKLB", "LUNR"],
+        "catalyst": "Launch success, contract awards, SpaceX news",
+        "our_exposure": ["RDW"],
+        "correlation_strength": "MEDIUM",
+        "musk_effect": "SpaceX news moves entire space sector"
+      },
+
+      "cybersecurity": {
+        "leaders": ["CRWD", "PANW"],
+        "catalyst": "Breaches, earnings, AI security announcements",
+        "our_exposure": [],
+        "correlation_strength": "MEDIUM",
+        "note": "Sector rotates in/out based on breach news"
+      }
+    },
+    
+    "tomorrow_jan_28_briefing": {
+      "pre_market": {
+        "check": ["futures ES/NQ", "MRNO price for rules", "overnight news"],
+        "our_action": "Prepare to sell NTLA at open",
+        "watch_overnight_earnings": "React to MSFT/META/TSLA if they moved after hours"
+      },
+      "market_open_930am": {
+        "action": "SELL NTLA immediately - no hesitation",
+        "watch": "MRNO - above $2.20 hold, between $2.00-2.20 watch, below $1.80 cut",
+        "sector_check": "How are AI, defense, uranium sectors opening"
+      },
+      "fomc_2pm": {
+        "expectation": "97.2% hold rates",
+        "our_action": "NO new positions until after Powell",
+        "watch_for": "Tone - dovish vs hawkish",
+        "volatility_warning": "First 15 min after decision = noise, don't trade"
+      },
+      "powell_230pm": {
+        "our_action": "Listen for rate guidance",
+        "if_dovish": "Risk on - our growth names benefit",
+        "if_hawkish": "Caution - hold thesis names but don't add",
+        "key_phrases": ["patient", "data-dependent", "inflation progress"]
+      },
+      "after_close": {
+        "earnings": ["MSFT", "META", "TSLA", "GEV", "IBM", "LRCX", "NOW"],
+        "priority_listening": {
+          "MSFT": "Azure growth, AI capex - affects MU",
+          "META": "AI infrastructure spend - affects MU, VRT, GEV",
+          "TSLA": "SpaceX mentions - affects RDW, space sector, IPO watch",
+          "GEV": "Data center contracts - affects power thesis",
+          "LRCX": "Memory equipment orders - affects MU"
+        },
+        "our_action": "Watch calls for AI capex signals (affects MU)",
+        "tsla_watch": "Any SpaceX IPO hints - CRITICAL"
+      },
+      "wednesday_implication": {
+        "if_earnings_beat": "AI infrastructure rips, MU benefits",
+        "if_earnings_miss": "Risk off, hold thesis names, don't chase",
+        "if_capex_up": "Infrastructure thesis validated",
+        "if_capex_down": "Risk to MU thesis"
+      }
+    },
+
+    "brain_reasoning_examples": {
+      "description": "How the brain should connect dots",
+
+      "example_1_msft_earnings_to_mu": {
+        "event": "MSFT reports Azure growth accelerated to 35%",
+        "brain_reasoning": [
+          "Azure growth = more cloud servers",
+          "More servers = more GPUs (NVDA)",
+          "More GPUs = more HBM memory (MU)",
+          "MU benefits from MSFT success",
+          "Consider: Is this priced in? Check MU movement after MSFT report."
+        ],
+        "action": "If MU flat after MSFT beat, buying opportunity"
+      },
+
+      "example_2_uranium_spot_to_positions": {
+        "event": "Uranium spot jumps to $92/lb",
+        "brain_reasoning": [
+          "We own UUUU and UEC",
+          "Both leverage uranium spot",
+          "UUUU also has rare earth play (June 2026 catalyst)",
+          "UEC more pure uranium exposure",
+          "Rising spot = revenue expansion for producers"
+        ],
+        "action": "Monitor for pullback to add, or let winners run with trail stop"
+      },
+
+      "example_3_defense_contract_to_rcat": {
+        "event": "Pentagon announces $500M drone modernization contract",
+        "brain_reasoning": [
+          "We own RCAT (small drone play)",
+          "Trump $1.5T defense budget prioritizes drones",
+          "Large contract validates sector thesis",
+          "RCAT won't win this specific contract (too small)",
+          "But signals more contracts coming, sector hot"
+        ],
+        "action": "Hold RCAT, thesis validated. Watch for RCAT-specific announcements."
+      },
+
+      "example_4_pelosi_trade_to_watchlist": {
+        "event": "Pelosi buys calls on new energy stock",
+        "brain_reasoning": [
+          "Pelosi front-runs policy",
+          "Energy play = power demand or nuclear?",
+          "Could relate to AI data center power needs",
+          "Research company, check if it fits our thesis",
+          "If thesis matches, consider adding to watchlist"
+        ],
+        "action": "Research immediately, assess convergence, add if qualified"
+      },
+
+      "example_5_jensen_mentions_memory": {
+        "event": "Jensen at conference says 'HBM is the bottleneck'",
+        "brain_reasoning": [
+          "We own MU (HBM memory producer)",
+          "Jensen = oracle of AI infrastructure",
+          "Bottleneck = pricing power",
+          "MU benefits from supply constraint",
+          "This is a DIRECT catalyst"
+        ],
+        "action": "Hold MU with conviction, potentially add on pullback"
+      }
+    }
+  }
+}

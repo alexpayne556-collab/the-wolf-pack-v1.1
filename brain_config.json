@@ -1,0 +1,881 @@
+{
+  "brain_config": {
+    "version": "1.1.0",
+    "created": "2026-01-28",
+    "updated": "2026-01-28T04:00:00",
+    "description": "Complete Wolf Pack Brain Configuration - ALL watchlists, ALL tickers, ALL data sources, ALL monitoring rules. This is the DNA of the system.",
+    "owner": "Tyr (MONEY) + Fenrir + br0kkr",
+    "status": "READY_FOR_CLOUD_DEPLOYMENT",
+    "total_tickers": 205,
+    "collective_intelligence": "Three minds, one system. Tyr hunts, br0kkr documents, Fenrir executes."
+  },
+
+  "all_tickers_flat": [
+    "MU", "RCAT", "UUUU", "MRNO", "IVF", "NTLA", "RDW", "UEC", "IBRX",
+    "MRVL", "NVDA", "AMD", "INTC", "TSM", "AVGO", "AMAT", "LRCX", "KLAC", "ASML", "QCOM", "ARM", "ON", "STX", "WDC", "COHR", "CRDO", "ANET", "CSCO", "ALAB", "CDNS", "SNPS", "CEVA", "SYNA", "FN", "AMKR", "CAMT", "ONTO", "LITE", "IREN", "CORZ", "APLD", "CIFR", "VRT", "MOD", "ETN", "GEV", "PWR", "FIX", "STRL", "WLDN", "DLR", "EQIX", "AMT", "NVT", "PSTG", "SMCI", "DELL",
+    "KTOS", "PLTR", "LUNR", "RKLB", "PL", "BKSY", "ASTS", "SPIR", "GSAT", "IRDM", "VSAT", "AXON", "LMT", "NOC", "RTX", "GD", "LHX", "BAH", "CACI", "LDOS", "SAIC", "MRCY", "DRS", "AVAV", "ACHR", "JOBY", "DPRO", "SIDU", "BBAI", "ONDS", "UMAC",
+    "CCJ", "DNN", "LEU", "NXE", "LTBR", "URG", "UROY", "SMR", "OKLO", "BWXT", "CEG", "VST", "TLN", "NRG", "NEE",
+    "CRSP", "BEAM", "EDIT", "SANA", "RLAY", "DNA", "FATE", "ALT", "KYTX", "DVAX", "RXRX", "SAVA", "TMDX", "NVAX", "MRNA",
+    "MP", "ALB", "FCX", "LAC", "AG", "HL", "KGC", "GOLD", "CENX",
+    "CRWD", "PANW", "ZS", "S", "NET", "FTNT", "OKTA", "CYBR", "TENB", "QLYS",
+    "IONQ", "QBTS", "RGTI", "QUBT", "ARQQ", "LAES", "BTQ", "NBIS", "SOUN",
+    "AEHR", "AEVA", "ACB", "ANNX", "BTDR", "CFLT", "CURLF", "DAWN", "ENPH", "FORM", "FSLR", "GTLB", "GPCR", "ICHR", "GTBIF", "MARA", "MSTR", "RGC", "RIOT", "SEDG", "SLAB", "OUST", "PATH", "SNDL", "SNOW", "BABA", "CAVA", "GME", "JD", "NIO", "PDD", "RGR", "LCID", "LI", "TSLA", "XPEV", "BKKT", "COIN", "HOOD", "RKT", "UPST", "BIDU", "BILI", "CELH", "HE", "STNG", "INSW", "ATON", "SATL", "KULR"
+  ],
+
+  "data_sources": {
+    "real_time_quotes": {
+      "primary": {
+        "name": "finnhub",
+        "api_key_env": "FINNHUB_API_KEY",
+        "rate_limit": "60/min",
+        "endpoints": {
+          "quote": "https://finnhub.io/api/v1/quote?symbol={symbol}&token={key}",
+          "candles": "https://finnhub.io/api/v1/stock/candle?symbol={symbol}&resolution={res}&from={from}&to={to}&token={key}",
+          "news": "https://finnhub.io/api/v1/company-news?symbol={symbol}&from={from}&to={to}&token={key}",
+          "insider": "https://finnhub.io/api/v1/stock/insider-transactions?symbol={symbol}&token={key}",
+          "recommendations": "https://finnhub.io/api/v1/stock/recommendation?symbol={symbol}&token={key}"
+        },
+        "use_for": ["real_time_quotes", "extended_hours", "company_news", "insider_transactions", "analyst_recommendations"]
+      },
+      "backup": {
+        "name": "yfinance",
+        "api_key_env": null,
+        "rate_limit": "unlimited",
+        "use_for": ["historical_data", "fundamentals", "backup_quotes"]
+      }
+    },
+    "historical_data": {
+      "primary": {
+        "name": "polygon",
+        "api_key_env": "POLYGON_API_KEY",
+        "rate_limit": "5/min",
+        "use_for": ["historical_candles", "volume_analysis", "aggregates"]
+      }
+    },
+    "news": {
+      "primary": {
+        "name": "newsapi",
+        "api_key_env": "NEWSAPI_KEY",
+        "rate_limit": "100/day",
+        "use_for": ["general_market_news", "company_headlines"]
+      },
+      "secondary": {
+        "name": "finnhub_news",
+        "use_for": ["company_specific_news"]
+      }
+    },
+    "sec_filings": {
+      "primary": {
+        "name": "sec_edgar",
+        "api_key_env": null,
+        "user_agent": "Wolf Pack Trading alexpayne556@gmail.com",
+        "rate_limit": "10/sec",
+        "endpoints": {
+          "company_filings": "https://data.sec.gov/submissions/CIK{cik}.json",
+          "recent_filings": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&type={type}&company=&dateb=&owner=include&count={count}&output=atom"
+        },
+        "filing_types_to_monitor": {
+          "form_4": "Insider buying/selling - CRITICAL",
+          "form_8k": "Material events - mergers, contracts, leadership changes",
+          "form_13d": "Activist investor stakes > 5%",
+          "form_13f": "Institutional holdings quarterly",
+          "form_10q": "Quarterly earnings",
+          "form_10k": "Annual report",
+          "s1": "IPO registration - WATCH FOR SPACEX"
+        }
+      }
+    },
+    "insider_tracking": {
+      "primary": {
+        "name": "openinsider",
+        "url": "http://openinsider.com/screener",
+        "use_for": ["cluster_buys", "ceo_purchases", "large_transactions"]
+      },
+      "secondary": {
+        "name": "finnhub_insider",
+        "use_for": ["automated_insider_alerts"]
+      }
+    },
+    "biotech_catalysts": {
+      "primary": {
+        "name": "biopharmcatalyst",
+        "url": "https://www.biopharmcatalyst.com/calendars/fda-calendar",
+        "use_for": ["fda_dates", "pdufa_dates", "trial_readouts"]
+      }
+    },
+    "nuclear_regulatory": {
+      "cnsc": {
+        "name": "Canadian Nuclear Safety Commission",
+        "url": "https://www.cnsc-ccsn.gc.ca/eng/",
+        "use_for": ["DNN approvals", "Canadian nuclear licensing"]
+      },
+      "nrc": {
+        "name": "US Nuclear Regulatory Commission",
+        "url": "https://www.nrc.gov/",
+        "use_for": ["US nuclear licensing", "reactor approvals"]
+      },
+      "doe": {
+        "name": "Department of Energy",
+        "url": "https://www.energy.gov/",
+        "use_for": ["nuclear policy", "uranium contracts", "HALEU program"]
+      }
+    },
+    "defense_contracts": {
+      "sam_gov": {
+        "name": "SAM.gov",
+        "url": "https://sam.gov/",
+        "use_for": ["federal_contract_awards"]
+      },
+      "defense_gov": {
+        "name": "Defense.gov Contracts",
+        "url": "https://www.defense.gov/News/Contracts/",
+        "use_for": ["daily_pentagon_contracts"]
+      }
+    },
+    "paper_trading": {
+      "primary": {
+        "name": "alpaca",
+        "api_key_env": "ALPACA_API_KEY",
+        "secret_env": "ALPACA_SECRET_KEY",
+        "base_url": "https://paper-api.alpaca.markets",
+        "use_for": ["paper_trade_execution", "backtesting", "strategy_validation"]
+      }
+    }
+  },
+
+  "watchlists": {
+    "MY_POSITIONS": {
+      "description": "Currently held positions - HIGHEST PRIORITY monitoring",
+      "monitoring_frequency": "real_time",
+      "priority": 1,
+      "tickers": {
+        "MU": {
+          "shares_rh": 1,
+          "shares_fid": 1.5,
+          "total_shares": 2.5,
+          "avg_cost_rh": 404.75,
+          "avg_cost_fid": 419.05,
+          "thesis": "AI memory demand - Jensen mentioned at CES, data center buildout requires HBM",
+          "catalyst": "Earnings cycles, AI infrastructure spending, hyperscaler orders",
+          "sector": "AI_INFRASTRUCTURE",
+          "added_date": "2025-12",
+          "conviction": "HIGH",
+          "monitor": ["analyst_upgrades", "earnings", "sector_rotation", "jensen_mentions"],
+          "why_we_own": "Second derivative AI play - what NVDA needs. HBM memory bottleneck."
+        },
+        "RCAT": {
+          "shares_rh": 6.70,
+          "avg_cost_rh": 14.24,
+          "thesis": "Defense drone play - Trump $1.5T military budget, drone warfare modernization",
+          "catalyst": "Defense contracts, Pentagon spending, drone program announcements",
+          "sector": "DEFENSE_SPACE",
+          "added_date": "2025-12",
+          "conviction": "HIGH",
+          "monitor": ["defense_contracts", "sam_gov", "earnings", "insider_buying"],
+          "why_we_own": "Small cap defense modernization play. Trump priority sector."
+        },
+        "UUUU": {
+          "shares_rh": 6,
+          "avg_cost_rh": 22.90,
+          "thesis": "Uranium bull run + rare earth acquisition. A$447M ASM deal closes June 2026",
+          "catalyst": "ASM acquisition close (June 2026), uranium spot price, DOE contracts",
+          "sector": "ENERGY_NUCLEAR",
+          "added_date": "2025-12",
+          "conviction": "HIGH",
+          "monitor": ["uranium_spot_price", "sec_8k", "doe_announcements", "rare_earth_policy"],
+          "why_we_own": "Dual thesis - uranium bull run + rare earth strategic metals June 2026."
+        },
+        "MRNO": {
+          "shares_rh": 3,
+          "avg_cost_rh": 1.05,
+          "current_gain": "+111%",
+          "thesis": "Momentum play - low float, volume spike, quick trade",
+          "catalyst": "Volume and price action only - no fundamental thesis",
+          "sector": "MOMENTUM",
+          "added_date": "2026-01-27",
+          "conviction": "LOW - SPECULATIVE",
+          "management_rules": {
+            "above_2.20": "HOLD - strong, let it run",
+            "between_2.00_2.20": "HOLD - watch first 15 min",
+            "below_1.80": "CUT - take the loss"
+          },
+          "monitor": ["price_action", "volume_spikes", "support_levels"],
+          "why_we_own": "Testing momentum rules. Predefined exits. Small size. Quick trade.",
+          "lesson": "Momentum plays require strict management rules before emotions engage."
+        },
+        "IVF": {
+          "shares_rh": 51,
+          "avg_cost_rh": 1.72,
+          "thesis": "Fertility rates declining + Trump policy tailwinds for fertility industry",
+          "catalyst": "Policy announcements, earnings, sector attention",
+          "sector": "BIOTECH",
+          "added_date": "2026-01",
+          "conviction": "MEDIUM - NEEDS REVIEW",
+          "monitor": ["policy_news", "earnings", "sector_rotation"],
+          "why_we_own": "Demographic play + policy tailwinds. Thesis needs revalidation.",
+          "status": "REVIEW_THESIS"
+        },
+        "NTLA": {
+          "shares_rh": 2,
+          "avg_cost_rh": 16.71,
+          "current_loss": "-11.32%",
+          "thesis": "NO THESIS - REACTIVE CHASE - MISTAKE",
+          "catalyst": "None identified",
+          "sector": "BIOTECH",
+          "added_date": "2026-01",
+          "conviction": "ZERO",
+          "status": "SELL_AT_OPEN_JAN_28",
+          "lesson": "Never buy without thesis. This is what losing looks like.",
+          "why_selling": "No thesis, no catalyst, no conviction. Cut losers fast.",
+          "rule_reinforced": "Entry requires: thesis + catalyst + convergence >= 50"
+        },
+        "RDW": {
+          "shares_fid": 3.583,
+          "avg_cost_fid": 14.75,
+          "current_gain": "+29.56%",
+          "thesis": "Defense/space contracts - Missile Defense Agency contract, $2.4B Leidos potential",
+          "catalyst": "Defense contract awards, space missions, earnings",
+          "sector": "DEFENSE_SPACE",
+          "added_date": "2026-01",
+          "conviction": "HIGH",
+          "monitor": ["defense_contracts", "sec_8k", "earnings", "space_missions"],
+          "why_we_own": "Defense/space combo. Missile Defense contract. WORKING.",
+          "convergence_entry": 78,
+          "volume_ratio_entry": 1.8
+        },
+        "UEC": {
+          "shares_fid": 2,
+          "avg_cost_fid": 19.35,
+          "thesis": "Uranium bull run - spot at $88.40/lb (17-month high), nuclear renaissance",
+          "catalyst": "Uranium spot price, utility contracts, DOE HALEU program",
+          "sector": "ENERGY_NUCLEAR",
+          "added_date": "2025-12",
+          "conviction": "HIGH",
+          "monitor": ["uranium_spot_price", "doe_announcements", "utility_contracts"],
+          "why_we_own": "Pure play US uranium. Leveraged to spot price $88.40/lb."
+        },
+        "IBRX": {
+          "status": "HOLD",
+          "current_gain": "+55.26%",
+          "entry_price": 3.80,
+          "current_price": 5.90,
+          "thesis": "High conviction biotech play",
+          "sector": "BIOTECH",
+          "added_date": "2026-01-27",
+          "conviction": "HIGH",
+          "convergence_entry": 85,
+          "volume_ratio_entry": 2.8,
+          "why_holding": "Gold standard pattern - convergence 85+, volume 2.8x. Thesis intact.",
+          "lesson": "High convergence + strong volume + thesis hold = WINNERS",
+          "position_size": "12% (gold standard)",
+          "rule_validated": "Convergence 85+ = size up to 12%"
+        }
+      }
+    },
+
+    "AI_INFRASTRUCTURE": {
+      "description": "Second derivative AI plays - what NVDA needs to survive. Memory, power, data centers, cooling.",
+      "thesis": "Don't buy the king, buy what the king needs. NVDA at $850 means we can only buy 0.8 shares. These names can 2-5x.",
+      "reasoning": "NVDA H100/H200 needs: HBM memory (MU), power (GEV/VST), cooling (VRT), networking (ANET/MRVL), manufacturing (ASML/AMAT)",
+      "monitoring_frequency": "every_15_min",
+      "priority": 2,
+      "check_for": ["analyst_upgrades", "earnings", "hyperscaler_mentions", "jensen_nvidia_mentions", "sector_rotation"],
+      "tickers": {
+        "MU": {"sub_thesis": "HBM memory - Jensen mentioned, every AI chip needs memory", "price_target": "$480 (Mizuho)", "status": "WE_OWN"},
+        "MRVL": {"sub_thesis": "Custom AI silicon, data center networking", "price_target": "$145"},
+        "NVDA": {"sub_thesis": "The king - we don't buy, we WATCH for sector signals", "note": "Too expensive for our size"},
+        "AMD": {"sub_thesis": "AI GPU alternative, MI300 ramp", "price_target": "$310"},
+        "INTC": {"sub_thesis": "Foundry play, 18A node"},
+        "TSM": {"sub_thesis": "Foundry monopoly - makes all the chips"},
+        "AVGO": {"sub_thesis": "Networking, custom AI chips for hyperscalers"},
+        "AMAT": {"sub_thesis": "Chip manufacturing equipment"},
+        "LRCX": {"sub_thesis": "Chip manufacturing equipment - earnings Jan 28"},
+        "KLAC": {"sub_thesis": "Chip inspection equipment"},
+        "ASML": {"sub_thesis": "EUV lithography monopoly"},
+        "QCOM": {"sub_thesis": "Edge AI, mobile AI"},
+        "ARM": {"sub_thesis": "CPU architecture licensing"},
+        "ON": {"sub_thesis": "Power management for AI"},
+        "STX": {"sub_thesis": "Storage for AI workloads"},
+        "WDC": {"sub_thesis": "Storage for AI workloads"},
+        "COHR": {"sub_thesis": "Optical interconnects for AI"},
+        "CRDO": {"sub_thesis": "Optical interconnects"},
+        "ANET": {"sub_thesis": "Data center networking"},
+        "CSCO": {"sub_thesis": "Networking infrastructure"},
+        "ALAB": {"sub_thesis": "Silicon photonics"},
+        "CDNS": {"sub_thesis": "EDA tools for chip design"},
+        "SNPS": {"sub_thesis": "EDA tools for chip design"},
+        "CEVA": {"sub_thesis": "Edge AI processors"},
+        "SYNA": {"sub_thesis": "AI edge computing"},
+        "FN": {"sub_thesis": "Optical components"},
+        "AMKR": {"sub_thesis": "Chip packaging - HBM packaging critical"},
+        "CAMT": {"sub_thesis": "AI inspection equipment"},
+        "ONTO": {"sub_thesis": "Advanced packaging equipment"},
+        "LITE": {"sub_thesis": "Optical components"},
+        "IREN": {"sub_thesis": "Bitcoin mining + AI data centers"},
+        "CORZ": {"sub_thesis": "Bitcoin mining + AI infrastructure", "price_target": "$25"},
+        "APLD": {"sub_thesis": "AI data centers - CoreWeave/NVDA collab moved it +13.93%", "recent_move": "+13.93% Jan 27"},
+        "CIFR": {"sub_thesis": "Bitcoin mining + AI pivot", "price_target": "$22"},
+        "VRT": {"sub_thesis": "Data center cooling - AI generates heat"},
+        "MOD": {"sub_thesis": "Data center equipment"},
+        "ETN": {"sub_thesis": "Power management"},
+        "GEV": {"sub_thesis": "Power generation for data centers - earnings Jan 28", "catalyst": "Earnings today"},
+        "PWR": {"sub_thesis": "Power infrastructure"},
+        "FIX": {"sub_thesis": "Power solutions"},
+        "STRL": {"sub_thesis": "Cooling solutions"},
+        "WLDN": {"sub_thesis": "Cooling systems"},
+        "DLR": {"sub_thesis": "Data center REITs"},
+        "EQIX": {"sub_thesis": "Data center colocation"},
+        "AMT": {"sub_thesis": "Infrastructure REITs"},
+        "NVT": {"sub_thesis": "Storage networking"},
+        "PSTG": {"sub_thesis": "All-flash storage"},
+        "SMCI": {"sub_thesis": "AI server assembly"},
+        "DELL": {"sub_thesis": "AI server sales"}
+      }
+    },
+
+    "DEFENSE_SPACE": {
+      "description": "Defense modernization + space economy. Trump $1.5T military budget, drone warfare, hypersonics.",
+      "thesis": "Defense spending is INCREASING. Drones, space, hypersonics are priority. Small caps get contracts, big moves.",
+      "reasoning": "Trump admin priorities: 1) Drone warfare modernization, 2) Hypersonic missiles, 3) Space dominance, 4) AI-powered defense",
+      "monitoring_frequency": "every_15_min",
+      "priority": 2,
+      "check_for": ["defense_gov_contracts", "sam_gov_awards", "sec_8k", "earnings", "trump_policy"],
+      "tickers": {
+        "KTOS": {"sub_thesis": "Hypersonics, drones, target drones - new facility opened Jan 12", "price_target": "$125-150", "catalyst": "New hypersonic facility Jan 12 2026"},
+        "PLTR": {"sub_thesis": "Defense AI, government contracts", "note": "Expensive but proven defense AI platform"},
+        "RCAT": {"sub_thesis": "Small drones, defense modernization", "status": "WE_OWN"},
+        "RDW": {"sub_thesis": "Space/defense - Missile Defense Agency contract", "status": "WE_OWN"},
+        "LUNR": {"sub_thesis": "Lunar landers - Artemis II tracking Feb 6, IM-2 mission Feb 26", "price_target": "$20-25", "catalysts": ["Feb 6 Artemis II", "Feb 26 IM-2"]},
+        "RKLB": {"sub_thesis": "Small satellite launches", "note": "Proven orbital capability"},
+        "PL": {"sub_thesis": "Satellite imagery, defense data"},
+        "BKSY": {"sub_thesis": "Geospatial intelligence"},
+        "ASTS": {"sub_thesis": "Space-based cellular"},
+        "SPIR": {"sub_thesis": "Space components"},
+        "GSAT": {"sub_thesis": "Satellite communications"},
+        "IRDM": {"sub_thesis": "Satellite communications"},
+        "VSAT": {"sub_thesis": "Satellite broadband"},
+        "AXON": {"sub_thesis": "Police body cams, drones, AI"},
+        "LMT": {"sub_thesis": "Prime contractor - Norway $2B artillery", "recent_contract": "Norway $2B artillery Jan 2026"},
+        "NOC": {"sub_thesis": "Bombers, space systems"},
+        "RTX": {"sub_thesis": "Missiles, defense systems"},
+        "GD": {"sub_thesis": "Tanks, submarines, IT"},
+        "LHX": {"sub_thesis": "Defense electronics"},
+        "BAH": {"sub_thesis": "Defense consulting"},
+        "CACI": {"sub_thesis": "Defense IT - $250M Army contract Jan 27", "recent_contract": "$250M Army Jan 27"},
+        "LDOS": {"sub_thesis": "Defense IT services"},
+        "SAIC": {"sub_thesis": "Defense IT"},
+        "MRCY": {"sub_thesis": "Defense IT"},
+        "DRS": {"sub_thesis": "Defense electronics - Missile Defense subcontract"},
+        "AVAV": {"sub_thesis": "Military drones - Ohio facility + Air Force partnership"},
+        "ACHR": {"sub_thesis": "eVTOL aircraft"},
+        "JOBY": {"sub_thesis": "eVTOL air taxi"},
+        "DPRO": {"sub_thesis": "Defense electronics"},
+        "SIDU": {"sub_thesis": "Defense systems"},
+        "BBAI": {"sub_thesis": "Defense AI"},
+        "ONDS": {"sub_thesis": "Autonomous drones - Baltic Ghost Wing showcase"},
+        "UMAC": {"sub_thesis": "Defense manufacturing"}
+      }
+    },
+
+    "ENERGY_NUCLEAR": {
+      "description": "Nuclear renaissance + uranium bull run. AI data centers need power. Uranium at $88.40/lb (17-month high).",
+      "thesis": "Every new data center needs baseload power. Nuclear is the only 24/7 carbon-free option. Uranium supply constrained.",
+      "reasoning": "AI power demand: 1 ChatGPT query = 10x Google search power. MSFT/GOOGL building SMRs. Uranium supply deficit.",
+      "monitoring_frequency": "every_30_min",
+      "priority": 3,
+      "check_for": ["uranium_spot_price", "doe_gov", "nrc_gov", "utility_contracts", "earnings", "pelosi_trades"],
+      "tickers": {
+        "UEC": {"sub_thesis": "US uranium producer, leveraged to spot price", "status": "WE_OWN"},
+        "UUUU": {"sub_thesis": "Uranium + rare earth - A$447M ASM acquisition June 2026", "status": "WE_OWN", "catalyst": "June 2026 ASM close"},
+        "CCJ": {"sub_thesis": "Largest uranium producer", "note": "Most liquid uranium play"},
+        "DNN": {"sub_thesis": "Wheeler River project - CNSC hearing done Dec 11, decision Q1 2026", "risk": "We got burned with stale intel - VERIFY dates", "warning": "ALWAYS VERIFY CATALYST DATES"},
+        "LEU": {"sub_thesis": "Uranium enrichment - only US enricher", "recent_move": "+10.84% Jan 27"},
+        "NXE": {"sub_thesis": "Rook I project development"},
+        "LTBR": {"sub_thesis": "Uranium explorer"},
+        "URG": {"sub_thesis": "Lost Creek mine"},
+        "UROY": {"sub_thesis": "Uranium royalties", "recent_move": "+12.56% Jan 27"},
+        "SMR": {"sub_thesis": "NuScale small modular reactors"},
+        "OKLO": {"sub_thesis": "Advanced fission, Sam Altman backed", "note": "Altman = OpenAI CEO = AI power needs"},
+        "BWXT": {"sub_thesis": "Nuclear components, HALEU enrichment facility Tennessee"},
+        "CEG": {"sub_thesis": "Nuclear utility, Microsoft deal"},
+        "VST": {"sub_thesis": "Power generation - PELOSI BOUGHT 50 calls $50 strike", "pelosi": "50 calls $50 strike", "note": "Follow the insider"},
+        "TLN": {"sub_thesis": "Power generation"},
+        "NRG": {"sub_thesis": "Power generation"},
+        "NEE": {"sub_thesis": "Utility with nuclear exposure"}
+      },
+      "macro_indicators": {
+        "uranium_spot": {"current": "$88.40/lb", "trend": "17-month high, +8.8% January, +23% YoY"},
+        "doe_haleu": {"status": "$2.7B enrichment contracts awarded"},
+        "sprott_fund": {"status": "Buying 100,000 lbs yellowcake", "impact": "Supply removal from market"}
+      }
+    },
+
+    "BIOTECH": {
+      "description": "High risk, high reward. Binary FDA events. CRISPR/gene editing frontier.",
+      "thesis": "Biotech is BINARY. Approval = moon. Rejection = crater. Only play with catalysts and tight sizing.",
+      "reasoning": "FDA catalysts are KNOWN and DATEABLE. Unlike momentum, we can predict events. Size small, win big.",
+      "monitoring_frequency": "daily",
+      "priority": 4,
+      "check_for": ["fda_calendar", "pdufa_dates", "trial_readouts", "sec_8k", "insider_buying"],
+      "data_source": "biopharmcatalyst.com",
+      "tickers": {
+        "IBRX": {"sub_thesis": "CURRENT WINNER - up 55% from entry. Thesis hold validated.", "status": "HOLD", "gain": "+55.26%", "lesson": "This is what holding with conviction looks like"},
+        "IVF": {"sub_thesis": "Fertility industry + Trump policy", "status": "REVIEW_THESIS"},
+        "NTLA": {"sub_thesis": "NO THESIS - SELL", "status": "SELL_JAN_28", "lesson": "Never enter without thesis"},
+        "CRSP": {"sub_thesis": "CRISPR therapeutics, Casgevy approved"},
+        "BEAM": {"sub_thesis": "Base editing"},
+        "EDIT": {"sub_thesis": "Gene editing"},
+        "SANA": {"sub_thesis": "Cell engineering"},
+        "RLAY": {"sub_thesis": "Precision medicine", "recent_move": "+13.18% Jan 27"},
+        "DNA": {"sub_thesis": "Synthetic biology"},
+        "FATE": {"sub_thesis": "Cell therapy"},
+        "ALT": {"sub_thesis": "Allogeneic cell therapy"},
+        "KYTX": {"sub_thesis": "KY1044 immuno-oncology"},
+        "DVAX": {"sub_thesis": "Vaccine development"},
+        "RXRX": {"sub_thesis": "AI drug discovery"},
+        "SAVA": {"sub_thesis": "Alzheimer's treatment"},
+        "TMDX": {"sub_thesis": "Organ transplant tech"},
+        "NVAX": {"sub_thesis": "Vaccine platform"},
+        "MRNA": {"sub_thesis": "mRNA platform"},
+        "MRNO": {"sub_thesis": "Momentum play - not biotech thesis", "status": "WE_OWN", "note": "This is in biotech watchlist but is momentum trade"}
+      },
+      "upcoming_catalysts": {
+        "VNDA": {"catalyst": "FDA Bysanti decision", "date": "Feb 21, 2026"},
+        "DNLI": {"catalyst": "FDA target date", "date": "April 5, 2026"},
+        "MNMD": {"catalyst": "Phase III MDD data", "date": "Mid-2026"}
+      }
+    },
+
+    "MATERIALS_MINING": {
+      "description": "Critical minerals, rare earth, copper. Trump strategic priority, China decoupling.",
+      "thesis": "Government is FUNDING domestic critical minerals. $1.6B rare earth funding, taking stakes in companies.",
+      "reasoning": "Trump policy: Decouple from China. Strategic minerals are NATIONAL SECURITY. Government will PAY UP.",
+      "monitoring_frequency": "daily",
+      "priority": 5,
+      "check_for": ["doe_gov", "trump_policy", "sec_8k", "insider_buying", "commodity_prices"],
+      "tickers": {
+        "MP": {"sub_thesis": "Only US rare earth mine - Trump admin taking 10% stake + $1.6B funding", "catalyst": "Government 10% stake + $1.6B", "note": "ONLY US rare earth mine"},
+        "LAC": {"sub_thesis": "Lithium - government backing"},
+        "ALB": {"sub_thesis": "Lithium producer"},
+        "FCX": {"sub_thesis": "Copper - supercycle thesis, PT $70 Morgan Stanley", "price_target": "$70 MS"},
+        "AG": {"sub_thesis": "Silver miner"},
+        "HL": {"sub_thesis": "Silver miner"},
+        "KGC": {"sub_thesis": "Gold miner"},
+        "GOLD": {"sub_thesis": "Gold producer"},
+        "CENX": {"sub_thesis": "Aluminum - showed +6.41% on watchlist Jan 27", "recent_move": "+6.41% Jan 27"}
+      }
+    },
+
+    "CYBERSECURITY": {
+      "description": "AI security, autonomous agents, zero trust. Every AI system needs protection.",
+      "thesis": "AI creates new attack surfaces. Autonomous AI agents need security. Growth sector.",
+      "reasoning": "More AI agents = more attack surface. Every company deploying AI needs cybersecurity. TAM expanding.",
+      "monitoring_frequency": "daily",
+      "priority": 5,
+      "check_for": ["earnings", "analyst_upgrades", "breach_news", "ai_security_announcements"],
+      "tickers": {
+        "CRWD": {"sub_thesis": "Endpoint leader"},
+        "PANW": {"sub_thesis": "Platform consolidation"},
+        "ZS": {"sub_thesis": "Zero trust, AI Security Suite announced"},
+        "S": {"sub_thesis": "SentinelOne - Citron says autonomous agents play", "note": "Citron autonomous agents thesis"},
+        "NET": {"sub_thesis": "Edge security, AI agents - +10.98% Jan 27 on AI buzz", "warning": "Insider sold $1.78M Jan 21", "recent_move": "+10.98% Jan 27"},
+        "FTNT": {"sub_thesis": "Firewall, PT $100 TD Cowen", "price_target": "$100"},
+        "OKTA": {"sub_thesis": "Identity"},
+        "CYBR": {"sub_thesis": "Privileged access"},
+        "TENB": {"sub_thesis": "Vulnerability management"},
+        "QLYS": {"sub_thesis": "Vulnerability management"}
+      }
+    },
+
+    "MOMENTUM_WATCH": {
+      "description": "Short-term momentum plays. Volume spikes, low float, quick trades. NOT thesis-driven.",
+      "thesis": "These are TRADES not INVESTMENTS. Quick in, quick out. Strict stops. Small size.",
+      "reasoning": "High risk, high reward. Predefined rules REQUIRED. 5% max position. 10% stop.",
+      "monitoring_frequency": "real_time_during_market",
+      "priority": 6,
+      "check_for": ["volume_spikes", "price_breakouts", "float_data", "social_sentiment"],
+      "rules": {
+        "max_position_pct": 5,
+        "required_volume_ratio": 3.0,
+        "stop_loss_pct": 10,
+        "take_profit_first_target": 20
+      },
+      "tickers": {
+        "MRNO": {"sub_thesis": "Current momentum play - manage with strict rules", "status": "WE_OWN", "gain": "+111%"},
+        "IONQ": {"sub_thesis": "Quantum computing hype"},
+        "QBTS": {"sub_thesis": "Quantum computing"},
+        "RGTI": {"sub_thesis": "Quantum computing"},
+        "QUBT": {"sub_thesis": "Quantum software"},
+        "ARQQ": {"sub_thesis": "Quantum encryption"},
+        "LAES": {"sub_thesis": "Quantum"},
+        "BTQ": {"sub_thesis": "Quantum"},
+        "NBIS": {"sub_thesis": "AI healthcare"},
+        "SOUN": {"sub_thesis": "AI voice"}
+      }
+    },
+
+    "SPECULATIVE_MOVERS": {
+      "description": "Names that MOVE - crypto, China, memes, momentum. Trading vehicles not investments.",
+      "thesis": "Volume and news driven. Quick trades. Don't marry positions. Follow the action.",
+      "reasoning": "These names trade on narrative, not fundamentals. Volume = opportunity. News = volatility.",
+      "monitoring_frequency": "real_time",
+      "priority": 7,
+      "check_for": ["volume_spikes", "price_breakouts", "news", "social_sentiment"],
+      "categories": {
+        "crypto_proxy": ["MARA", "MSTR", "RIOT", "COIN", "HOOD", "BKKT"],
+        "china_adrs": ["BABA", "JD", "NIO", "PDD", "LI", "XPEV", "BIDU", "BILI"],
+        "ev_solar": ["TSLA", "LCID", "NIO", "LI", "XPEV", "ENPH", "FSLR", "SEDG"],
+        "meme_potential": ["GME", "SNDL", "RGC", "KULR"],
+        "fintech": ["HOOD", "COIN", "RKT", "UPST"]
+      },
+      "tickers": {
+        "AEHR": {"category": "semiconductor"},
+        "AEVA": {"category": "lidar"},
+        "ACB": {"category": "cannabis"},
+        "ANNX": {"category": ""},
+        "BTDR": {"category": ""},
+        "CFLT": {"category": "data observability"},
+        "CURLF": {"category": "cannabis"},
+        "DAWN": {"category": ""},
+        "ENPH": {"category": "solar inverters"},
+        "FORM": {"category": "3D printing"},
+        "FSLR": {"category": "solar panels"},
+        "GTLB": {"category": "DevOps"},
+        "GPCR": {"category": ""},
+        "ICHR": {"category": ""},
+        "GTBIF": {"category": "gaming"},
+        "MARA": {"category": "bitcoin mining", "note": "Levered bitcoin play"},
+        "MSTR": {"category": "bitcoin proxy", "note": "Michael Saylor bitcoin strategy"},
+        "RGC": {"category": "meme", "note": "20,000% gainer analysis - supply destruction model"},
+        "RIOT": {"category": "bitcoin mining"},
+        "SEDG": {"category": "solar inverters"},
+        "SLAB": {"category": "chips"},
+        "OUST": {"category": "lidar"},
+        "PATH": {"category": ""},
+        "SNDL": {"category": "cannabis"},
+        "SNOW": {"category": "data cloud"},
+        "BABA": {"category": "china ecommerce"},
+        "CAVA": {"category": "restaurant"},
+        "GME": {"category": "meme", "note": "Original meme stock - Ryan Cohen"},
+        "JD": {"category": "china ecommerce"},
+        "NIO": {"category": "china EV"},
+        "PDD": {"category": "china ecommerce"},
+        "RGR": {"category": "firearms"},
+        "LCID": {"category": "EV"},
+        "LI": {"category": "china EV"},
+        "TSLA": {"category": "EV", "note": "Musk factor - earnings Jan 28", "catalyst": "Earnings today"},
+        "XPEV": {"category": "china EV"},
+        "BKKT": {"category": "crypto"},
+        "COIN": {"category": "crypto exchange"},
+        "HOOD": {"category": "fintech", "note": "Our broker"},
+        "RKT": {"category": "fintech mortgage"},
+        "UPST": {"category": "AI lending"},
+        "BIDU": {"category": "china search"},
+        "BILI": {"category": "china video"},
+        "CELH": {"category": "energy drinks"},
+        "HE": {"category": ""},
+        "STNG": {"category": "tankers"},
+        "INSW": {"category": ""},
+        "ATON": {"category": ""},
+        "SATL": {"category": ""},
+        "KULR": {"category": "battery tech", "note": "Recent runner"}
+      },
+      "key_plays": {
+        "MSTR": "Bitcoin proxy - Michael Saylor all-in strategy",
+        "TSLA": "Musk factor - earnings Jan 28 after close, watch for FSD updates",
+        "GME": "Meme king - Ryan Cohen activism",
+        "RGC": "Study for supply destruction model - went 20,000%",
+        "HOOD": "Our broker - retail trading volume indicator"
+      }
+    },
+
+    "IPO_WATCH": {
+      "description": "Upcoming IPOs to track. SpaceX is the big one.",
+      "monitoring_frequency": "daily",
+      "priority": 8,
+      "check_for": ["sec_s1_filings", "ipo_news", "valuation_updates"],
+      "tickers": {
+        "SPACEX": {
+          "status": "CONFIRMED_2026",
+          "announced": "December 10, 2025 by Elon Musk",
+          "valuation_target": "$1.5 trillion",
+          "raise_target": "$30+ billion",
+          "timeline": "Mid-to-late 2026",
+          "ticker_theory": "May trade under 'X' - US Steel X delisted June 2025, Musk X obsession",
+          "pattern": "Musk named son X, renamed Twitter to X, runs xAI, X Æ A-12",
+          "access": {
+            "robinhood": "FOLLOWING - IPO Access enabled",
+            "fidelity": "NOT ELIGIBLE - need $100k or 36 trades/year"
+          },
+          "action": "Watch SEC EDGAR daily for S-1 filing",
+          "note": "This is the play of 2026. Request shares immediately on S-1 drop."
+        }
+      }
+    }
+  },
+
+  "monitoring_rules": {
+    "volume_spike_alert": {
+      "description": "Alert when volume exceeds threshold",
+      "threshold_ratio": 2.0,
+      "action": "Flag for review, check news, check SEC filings",
+      "why": "Volume precedes price. Unusual volume = something happening."
+    },
+    "price_breakout_alert": {
+      "description": "Alert on significant price moves",
+      "threshold_pct": 5.0,
+      "action": "Check catalyst, verify thesis, consider entry/exit",
+      "why": "5%+ moves usually have reasons. Find the reason."
+    },
+    "insider_buying_alert": {
+      "description": "Alert on insider purchases",
+      "minimum_value": 50000,
+      "cluster_threshold": 3,
+      "action": "Research why, check if cluster buy, consider entry",
+      "why": "Insiders buy for one reason - they think stock goes up."
+    },
+    "sec_8k_alert": {
+      "description": "Alert on material events",
+      "filing_types": ["8-K"],
+      "action": "Read filing, assess impact, adjust thesis if needed",
+      "why": "8-K = material event = potential thesis change."
+    },
+    "analyst_upgrade_alert": {
+      "description": "Alert on analyst actions",
+      "action": "Note new price target, assess if thesis validated",
+      "why": "Analyst upgrades move stocks. Also validates/invalidates thesis."
+    },
+    "catalyst_approaching": {
+      "description": "Alert when known catalyst is within 14 days",
+      "days_before": 14,
+      "action": "Review position size, set alerts, prepare for volatility",
+      "why": "Binary events need preparation. Size appropriately."
+    }
+  },
+
+  "position_sizing_rules": {
+    "by_convergence": {
+      "85_plus": {"position_pct": 12, "label": "IBRX standard - high conviction", "why": "85+ convergence = gold. Validated with IBRX +55% win."},
+      "70_to_84": {"position_pct": 8, "label": "RDW level - solid conviction", "why": "70-84 = solid. RDW +29% validates this tier."},
+      "50_to_69": {"position_pct": 4, "label": "Acceptable - thesis present", "why": "50-69 = minimum acceptable. MRNO +111% shows volume can compensate."},
+      "below_50": {"position_pct": 0, "label": "REJECT - DNN lesson", "why": "DNN @ 45 convergence = -3.78% loss. Below 50 = AUTO REJECT."}
+    },
+    "by_sector_risk": {
+      "large_cap": {"max_position_pct": 15, "overnight_risk": "5-10%"},
+      "mid_cap": {"max_position_pct": 12, "overnight_risk": "10-20%"},
+      "small_cap": {"max_position_pct": 10, "overnight_risk": "20-30%"},
+      "biotech": {"max_position_pct": 5, "overnight_risk": "50%+", "note": "Binary events = size SMALL"},
+      "penny_stock": {"max_position_pct": 3, "overnight_risk": "EXTREME", "note": "Momentum only, strict rules"}
+    },
+    "portfolio_rules": {
+      "max_single_position": 15,
+      "max_sector_concentration": 60,
+      "min_cash_reserve": 10,
+      "correlation_check": true
+    }
+  },
+
+  "entry_rules": {
+    "required": {
+      "thesis": true,
+      "catalyst": true,
+      "convergence_minimum": 50,
+      "volume_minimum_ratio": 1.5
+    },
+    "preferred": {
+      "convergence_optimal": 70,
+      "volume_optimal_ratio": 2.0,
+      "sector_hot": true,
+      "insider_buying": true
+    },
+    "forbidden": {
+      "no_thesis": "NEVER enter without thesis - NTLA lesson",
+      "stale_catalyst": "ALWAYS verify catalyst dates are current - DNN lesson",
+      "any_day_language": "No 'catalyst any day' - get real dates or say unknown"
+    }
+  },
+
+  "exit_rules": {
+    "thesis_break": {
+      "action": "SELL immediately",
+      "note": "Thesis break is the primary exit signal",
+      "why": "If the reason for buying changes, the position should change."
+    },
+    "stop_loss": {
+      "default_pct": 15,
+      "biotech_pct": 25,
+      "momentum_pct": 10,
+      "note": "Stops protect capital. Honor them."
+    },
+    "trailing_stop": {
+      "activation_gain_pct": 30,
+      "trail_pct": 15,
+      "why": "Lock in gains on winners. Let winners run but protect."
+    },
+    "take_profit": {
+      "first_target_pct": 30,
+      "action_at_first_target": "Sell half, trail rest",
+      "why": "Take money off the table at +30%. Let rest run with trail."
+    },
+    "not_exit_signals": {
+      "red_candles_alone": "Red candles without thesis break = HOLD",
+      "market_fear": "General market down but thesis intact = HOLD",
+      "noise": "Daily volatility without fundamental change = HOLD",
+      "note": "DNN lesson - sold on red candles, ran +6.49% after. Thesis > noise."
+    }
+  },
+
+  "lessons_learned": {
+    "DNN_MISTAKE": {
+      "date": "2026-01-27",
+      "what_happened": "Bought on 'catalyst any day' that was STALE - CNSC hearing already happened Dec 11, 2025",
+      "result": "Panic sold at -3.78%, stock ran +6.49% after",
+      "lesson": "VERIFY ALL CATALYST DATES. No 'any day' language.",
+      "rule_added": "All catalysts must be timestamped and verified fresh",
+      "convergence": 45,
+      "volume_ratio": 1.2,
+      "emotional_mistake": "Sold on red candles without thesis break"
+    },
+    "THESIS_PROOF": {
+      "date": "2026-01-27",
+      "what_happened": "Compared thesis-driven vs reactive positions",
+      "result": "Thesis names 6/7 green (85.7%), Non-thesis 0/2 green (0%)",
+      "lesson": "Thesis-driven wins. Reactive chasing loses. MATHEMATICAL PROOF.",
+      "rule_added": "Entry requires thesis + catalyst"
+    },
+    "IBRX_SUCCESS": {
+      "date": "2026-01-27",
+      "what_happened": "Held through volatility, thesis intact",
+      "result": "+55% gain",
+      "lesson": "High convergence + strong volume + thesis hold = winners",
+      "rule_added": "Convergence 85+ = gold standard, size up",
+      "convergence": 85,
+      "volume_ratio": 2.8,
+      "position_size": "12%"
+    },
+    "RDW_SUCCESS": {
+      "date": "2026-01-27",
+      "what_happened": "Defense sector + geopolitical momentum",
+      "result": "+29.56% gain",
+      "lesson": "70-84 convergence is solid conviction territory",
+      "convergence": 78,
+      "volume_ratio": 1.8,
+      "position_size": "8%"
+    },
+    "MRNO_SUCCESS": {
+      "date": "2026-01-27",
+      "what_happened": "Massive volume can overcome lower convergence",
+      "result": "+111.43% gain",
+      "lesson": "Volume 3.5x+ can compensate for 50-69 convergence. Momentum needs rules.",
+      "convergence": 55,
+      "volume_ratio": 3.5,
+      "position_size": "4%",
+      "management": "Predefined price rules REQUIRED for momentum"
+    },
+    "NTLA_MISTAKE": {
+      "date": "2026-01",
+      "what_happened": "Reactive chase with NO THESIS",
+      "result": "-11.32% loss",
+      "lesson": "Never buy without thesis. This position should never have been opened.",
+      "rule_added": "Entry requires: thesis + catalyst + convergence >= 50",
+      "status": "Selling Jan 28 at open"
+    },
+    "SYSTEM_OVERLOAD": {
+      "date": "2026-01-28",
+      "what_happened": "Running full autonomous brain crashed computer",
+      "result": "System became unusable",
+      "lesson": "Heavy processing belongs on cloud, not local machine",
+      "rule_added": "Local = logging only. Cloud = heavy processing."
+    }
+  },
+
+  "scheduled_checks": {
+    "pre_market_6am": [
+      "Check futures (ES, NQ)",
+      "Check overnight news for positions",
+      "Check pre-market prices for positions",
+      "Check SEC EDGAR for overnight 8-K filings",
+      "Review day's catalyst calendar"
+    ],
+    "market_open_930am": [
+      "Execute any planned trades (e.g., SELL NTLA)",
+      "Check sector heatmaps",
+      "Note opening volume on positions"
+    ],
+    "midday_12pm": [
+      "Review morning action",
+      "Check for news on watchlist names",
+      "Assess thesis status on positions"
+    ],
+    "afternoon_230pm": [
+      "Begin scanning for overnight setups",
+      "Check if any names closing strong (top 25% of range)",
+      "Volume check on potential entries"
+    ],
+    "market_close_4pm": [
+      "Log all trades made today",
+      "Update position values",
+      "Note after-hours news"
+    ],
+    "evening_6pm": [
+      "Full daily summary",
+      "Log lessons learned",
+      "Plan tomorrow",
+      "Check earnings after close"
+    ]
+  },
+
+  "imminent_catalysts": {
+    "2026-01-28": {
+      "FOMC": {"time": "2:00 PM ET", "expectation": "97.2% hold rates", "action": "No new positions until after Powell", "probability": "97.2% hold"},
+      "POWELL": {"time": "2:30 PM ET", "event": "Press conference", "action": "Watch for rate guidance", "listen_for": ["patient", "data-dependent", "inflation progress"]},
+      "EARNINGS_AFTER_CLOSE": ["MSFT", "META", "TSLA", "GEV", "IBM", "LRCX", "NOW"],
+      "MSFT": {"importance": "High", "watch_for": "AI/cloud commentary"},
+      "META": {"importance": "High", "watch_for": "AI spending"},
+      "TSLA": {"importance": "High", "watch_for": "FSD updates, China sales", "musk_factor": true},
+      "GEV": {"importance": "Medium", "note": "Power gen for AI - we watch sector"},
+      "LRCX": {"importance": "Medium", "note": "Chip equipment - AI infra play"}
+    },
+    "2026-02-06": {
+      "ARTEMIS_II": {"event": "Launch + LUNR tracking mission", "impact": "LUNR catalyst", "ticker": "LUNR"}
+    },
+    "2026-02-21": {
+      "VNDA_FDA": {"event": "FDA Bysanti decision", "impact": "VNDA binary event", "ticker": "VNDA"}
+    },
+    "2026-02-26": {
+      "LUNR_IM2": {"event": "LUNR's own IM-2 lunar mission", "impact": "Major LUNR catalyst", "ticker": "LUNR"}
+    },
+    "2026-Q1": {
+      "DNN_CNSC": {"event": "CNSC decision on Wheeler River", "impact": "DNN catalyst", "warning": "VERIFY date before acting - we got burned with stale intel", "ticker": "DNN"}
+    },
+    "2026-04-05": {
+      "DNLI_FDA": {"event": "FDA target date", "impact": "DNLI binary event", "ticker": "DNLI"}
+    },
+    "2026-06": {
+      "UUUU_ASM": {"event": "A$447M ASM acquisition closes", "impact": "UUUU gets rare earth assets", "value": "$447M", "ticker": "UUUU", "note": "WE OWN THIS"}
+    },
+    "2026-MID": {
+      "MNMD_TRIAL": {"event": "Phase III MDD data", "impact": "MNMD binary event", "ticker": "MNMD"}
+    },
+    "2026-MID_TO_LATE": {
+      "SPACEX_IPO": {"event": "Biggest IPO ever", "impact": "Watch for S-1 filing", "action": "Request shares via Robinhood IPO Access", "valuation": "$1.5T", "raise": "$30B+", "ticker_theory": "X"}
+    }
+  },
+
+  "dual_account_strategy": {
+    "fidelity": {
+      "purpose": "Thesis-driven, steady, show to father, hold through volatility",
+      "psychology": "Long-term conviction, ignore daily noise",
+      "positions": ["MU", "RDW", "UEC"],
+      "note": "This account proves discipline. Father sees this one."
+    },
+    "robinhood": {
+      "purpose": "Momentum, after-hours, IPO access, risk lab, faster decisions",
+      "psychology": "Active trading, capture moves, test strategies",
+      "positions": ["MU", "RCAT", "UUUU", "MRNO", "IVF", "NTLA", "IBRX"],
+      "advantages": ["after_hours_trading", "ipo_access", "instant_deposits", "crypto"],
+      "note": "This account is the laboratory. Test, learn, iterate."
+    },
+    "philosophy": "Separate accounts enforce separate mindsets. Don't fight limitations - work WITH them."
+  }
+}
