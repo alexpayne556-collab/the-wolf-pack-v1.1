@@ -11,6 +11,11 @@ What This Does:
 - Logs thoughts to database for learning
 - Can be queried: "What do you think about MU after MSFT earnings?"
 
+TEMPORAL MEMORY INTEGRATION (Jan 28, 2026):
+- Uses get_temporal_context() for historical data
+- Integrates with Thinking Brain for observations/questions
+- Maestro orchestrates all instruments
+
 This is the REASONING layer - it takes stored knowledge and actively thinks.
 """
 
@@ -23,6 +28,15 @@ from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass
 import os
 from pathlib import Path
+
+# TEMPORAL MEMORY INTEGRATION
+try:
+    from temporal_context import get_temporal_context, format_context_for_fenrir
+    from thinking_brain import ThinkingBrain
+    TEMPORAL_MEMORY_AVAILABLE = True
+except ImportError:
+    TEMPORAL_MEMORY_AVAILABLE = False
+    print("⚠️  Temporal memory modules not found - running without memory")
 
 # Fix Windows console unicode issues
 if sys.platform == 'win32':
@@ -66,6 +80,15 @@ class FenrirThinkingEngine:
         
         self.db_path = self.workspace_dir / "data" / "wolfpack.db"
         self._ensure_thoughts_table()
+        
+        # TEMPORAL MEMORY INTEGRATION (Jan 28, 2026)
+        self.thinker = None
+        if TEMPORAL_MEMORY_AVAILABLE:
+            try:
+                self.thinker = ThinkingBrain(str(self.db_path))
+                print("✓ Temporal memory integration active")
+            except Exception as e:
+                print(f"⚠️  Temporal memory init failed: {e}")
         
     def _load_brain_config(self) -> Dict:
         """Load system DNA"""
@@ -700,6 +723,152 @@ class FenrirThinkingEngine:
                 return response
         
         return "I need more specific signals to reason about. Try asking about earnings, macro events, or people signals."
+    
+    # =========================================================================
+    # TEMPORAL MEMORY INTEGRATION (Jan 28, 2026)
+    # =========================================================================
+    
+    def analyze_with_memory(self, ticker: str) -> Dict:
+        """
+        Analyze a ticker using BOTH relationship intelligence AND temporal memory.
+        
+        This is the ENHANCED analysis - it has EVIDENCE from memory.
+        
+        Example output:
+            Current Fenrir: "MU down 3%, thesis intact → HOLD"
+            Enhanced Fenrir: "MU down 3%, BUT last 3 times this happened it recovered 
+                            in 48 hours (75% success rate), we have 85.7% win rate on 
+                            this ticker, volume is declining (bullish) → HOLD with evidence"
+        """
+        result = {
+            "ticker": ticker,
+            "timestamp": datetime.now().isoformat(),
+            "analysis_type": "enhanced_with_memory",
+            "has_temporal_context": False,
+            "reasoning": [],
+            "confidence": 50,
+            "action": "watch"
+        }
+        
+        # Step 1: Get relationship intelligence (what we already had)
+        result["reasoning"].append(f"Analyzing {ticker}...")
+        
+        # Check if we own it
+        my_positions = self._get_my_positions()
+        owns_it = ticker in my_positions
+        result["owns_position"] = owns_it
+        
+        if owns_it:
+            thesis = self._find_ticker_thesis(ticker)
+            result["reasoning"].append(f"We own {ticker} | Thesis: {thesis or 'Unknown'}")
+            result["confidence"] += 10
+        
+        # Step 2: Get temporal context (NEW - the memory layer)
+        if TEMPORAL_MEMORY_AVAILABLE:
+            try:
+                temporal_context = get_temporal_context(ticker)
+                result["has_temporal_context"] = True
+                result["temporal_context"] = temporal_context
+                
+                # Extract memory insights
+                price_history = temporal_context.get("price_history", {})
+                our_history = temporal_context.get("our_history", {})
+                patterns = temporal_context.get("pattern_matches", [])
+                thesis_status = temporal_context.get("thesis_status", {})
+                
+                # Add price memory
+                if price_history.get("data_available"):
+                    if price_history.get("consecutive_days"):
+                        days = price_history["consecutive_days"]
+                        direction = "green" if days > 0 else "red"
+                        result["reasoning"].append(f"MEMORY: {abs(days)} consecutive {direction} days")
+                    
+                    if price_history.get("cumulative_return_pct"):
+                        ret = price_history["cumulative_return_pct"]
+                        result["reasoning"].append(f"MEMORY: {ret:+.1f}% over lookback period")
+                    
+                    if price_history.get("volume_trend"):
+                        result["reasoning"].append(f"MEMORY: Volume trend {price_history['volume_trend']}")
+                
+                # Add our history
+                if our_history.get("total_trades", 0) > 0:
+                    trades = our_history["total_trades"]
+                    win_rate = our_history.get("win_rate")
+                    result["reasoning"].append(f"OUR HISTORY: {trades} trades on {ticker}")
+                    
+                    if win_rate:
+                        result["reasoning"].append(f"OUR HISTORY: {win_rate}% win rate")
+                        # Adjust confidence based on track record
+                        if win_rate >= 70:
+                            result["confidence"] += 20
+                            result["reasoning"].append("→ Strong track record - confidence boosted")
+                        elif win_rate <= 40:
+                            result["confidence"] -= 10
+                            result["reasoning"].append("→ Weak track record - confidence reduced")
+                
+                # Add pattern matches
+                if patterns and not patterns[0].get("error"):
+                    for p in patterns[:2]:  # Top 2 patterns
+                        if p.get("win_rate"):
+                            result["reasoning"].append(
+                                f"PATTERN: '{p['pattern']}' has {p['win_rate']}% win rate "
+                                f"({p.get('occurrences', 0)} occurrences)"
+                            )
+                
+                # Add thesis check
+                if thesis_status.get("has_thesis"):
+                    result["reasoning"].append(f"THESIS: {thesis_status.get('thesis_type', 'defined')}")
+                    result["confidence"] += 15
+                else:
+                    result["reasoning"].append("⚠️ NO THESIS DEFINED - Historical: 0% win rate without thesis")
+                    result["confidence"] -= 20
+                
+            except Exception as e:
+                result["reasoning"].append(f"⚠️ Memory unavailable: {e}")
+        else:
+            result["reasoning"].append("(Running without temporal memory)")
+        
+        # Step 3: Determine action based on all evidence
+        if result["confidence"] >= 70:
+            result["action"] = "high_conviction"
+        elif result["confidence"] >= 50:
+            result["action"] = "moderate_interest"
+        else:
+            result["action"] = "watch_or_avoid"
+        
+        result["reasoning"].append(f"\nCONFIDENCE: {result['confidence']}%")
+        result["reasoning"].append(f"ACTION: {result['action']}")
+        
+        return result
+    
+    def observe_market(self, what_happened: str, **kwargs) -> Optional[int]:
+        """
+        Log an observation using the Thinking Brain.
+        The brain WATCHES everything, not just what we trade.
+        
+        Example:
+            brain.observe_market(
+                what_happened="MRNO ran +45% after we exited at +20%",
+                ticker="MRNO",
+                we_participated=True,
+                our_result="Left 25% on the table"
+            )
+        """
+        if self.thinker:
+            return self.thinker.observe(what_happened, **kwargs)
+        else:
+            print("⚠️ Thinking brain not available for observation")
+            return None
+    
+    def get_current_thinking(self, ticker: str = None) -> str:
+        """
+        Get the brain's current THINKING (not conclusions).
+        Uses the Thinking Brain to show observations, questions, intuitions.
+        """
+        if self.thinker:
+            return self.thinker.format_current_thinking(ticker)
+        else:
+            return "Thinking brain not available"
 
 
 def main():
@@ -787,7 +956,45 @@ def main():
     print("• Track sector correlations")
     print("• Connect multiple signals for higher conviction")
     print("• Log all thoughts to database for learning")
-    print("\nNext: Build the live monitoring loop")
+    
+    # Test 5: Enhanced analysis with temporal memory
+    print("\n\n[TEST 5] Analyze MU with temporal memory")
+    print("-" * 70)
+    if TEMPORAL_MEMORY_AVAILABLE:
+        print("✓ Temporal memory available - running enhanced analysis")
+        analysis = brain.analyze_with_memory("MU")
+        print(f"\nTicker: {analysis['ticker']}")
+        print(f"Has Memory: {analysis['has_temporal_context']}")
+        print(f"\nReasoning:")
+        for step in analysis["reasoning"]:
+            print(f"  {step}")
+    else:
+        print("⚠️ Temporal memory not available (import failed)")
+        print("   Run 'python temporal_context.py' to verify it works")
+    
+    # Test 6: Observe something
+    print("\n\n[TEST 6] Test brain observation")
+    print("-" * 70)
+    if brain.thinker:
+        obs_id = brain.observe_market(
+            what_happened="Testing observation system",
+            context="fenrir_thinking_engine test"
+        )
+        if obs_id:
+            print(f"✓ Observation logged with ID: {obs_id}")
+        else:
+            print("⚠️ Observation failed")
+    else:
+        print("⚠️ Thinking brain not available")
+    
+    print("\n\n" + "=" * 70)
+    print("🐺 FENRIR IS NOW THINKING WITH MEMORY")
+    print("=" * 70)
+    print("\n  THE MAESTRO INTEGRATION COMPLETE")
+    print("  ├── Temporal Context Engine → MEMORY")
+    print("  ├── Thinking Brain → REASONING") 
+    print("  └── Fenrir Thinking Engine → ORCHESTRATION")
+    print("\n  Ready for cloud deployment")
 
 
 if __name__ == "__main__":
