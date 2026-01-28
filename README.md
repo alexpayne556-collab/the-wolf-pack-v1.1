@@ -55,6 +55,12 @@ python safe_position_monitor.py --once
 - [SYSTEM_ARCHITECTURE_COMPLETE.md](SYSTEM_ARCHITECTURE_COMPLETE.md) - Complete architecture
 - [INTEGRATION_COMPLETE.md](INTEGRATION_COMPLETE.md) - How components connect
 
+## Community
+
+**Join the pack:** https://discord.gg/nwbRMwKjmm
+
+Have questions? Found a bug? Want to help? Join the Discord to connect with the team and community.
+
 ## Disclaimer
 
 This is not financial advice. This is an engineering project. We trade with our own small capital. Past results don't guarantee future performance.
