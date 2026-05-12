@@ -85,3 +85,4 @@ positions.json
 # Wolf Pack analysis caches (regenerable)
 data/gamma_analysis/ohlcv.pkl
 data/gamma_analysis/*.log
+data/gamma_analysis/all_panel.parquet

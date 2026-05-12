@@ -1,0 +1,14 @@
+{
+  "n_movers": 2216,
+  "gap_up_pct": 62.59025270758123,
+  "gap_flat_pct": 29.01624548736462,
+  "gap_down_pct": 8.393501805054152,
+  "of_gap_ups": {
+    "n": 1387,
+    "ran_after_open_pct": 79.74044700793078,
+    "faded_after_open_pct": 20.259552992069214
+  },
+  "open_to_close_median_gap_up": 10.953600550574846,
+  "open_to_close_median_gap_flat": 19.16168027996338,
+  "open_to_close_median_gap_down": 26.152518647614535
+}

@@ -1,0 +1,20 @@
+{
+  "n_movers": 2216,
+  "t1_close_was_15plus_pct": 7.581227436823104,
+  "t1_close_was_5plus_pct": 20.938628158844764,
+  "t1_close_was_negative_pct": 55.46028880866426,
+  "t1_open_gap_was_positive_pct": 39.07942238267148,
+  "t1_open_gap_was_5plus_pct": 12.00361010830325,
+  "median_t1_close_pct": -1.2765945790308875,
+  "median_t1_open_gap_pct": -0.14346846980899386,
+  "any_15plus_in_next_5_days_pct": 23.826714801444044,
+  "any_5plus_in_next_5_days_pct": 59.97292418772563,
+  "median_5d_forward_close_pct": -4.485257215145378,
+  "median_5d_forward_max_pct": 2.3845934706118954,
+  "baseline": {
+    "t1_close_was_15plus_pct": 0.7102698258985488,
+    "t1_open_gap_was_5plus_pct": 2.1635536481882722,
+    "median_t1_close_pct": 0.0,
+    "median_t1_open_gap_pct": 0.0
+  }
+}
