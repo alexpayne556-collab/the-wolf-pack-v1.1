@@ -1,0 +1,2377 @@
+[
+  {
+    "ticker": "AA",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "ACB",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "ACHR",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "AEHR",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "AEVA",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "AIFF",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "ALAB",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "ALB",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MINERALS"
+    ]
+  },
+  {
+    "ticker": "ALK",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "ALT",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "AMAT",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "AMD",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "AMKR",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "AMT",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "AMZN",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "ANET",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "ANNX",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "APGE",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "APLD",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "APPS",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "APTV",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "AQMS",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "ARM",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "ARQQ",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "ARTL",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "ASML",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "ASTS",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "ATPC",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "AVAV",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE",
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "AVD",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "AVGO",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "AXON",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "B",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "BA",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "BABA",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "BAC",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "BAH",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "BATL",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY NUCLEAR/ENERGY"
+    ],
+    "holding": {
+      "shares": 200,
+      "broker": "Fidelity",
+      "pl_pct": -85
+    }
+  },
+  {
+    "ticker": "BDRBF",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "BEAM",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "BEN",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "BIDU",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "BILI",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "BIOX",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "BIRD",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "BKSY",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "BMNR",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "BMNU",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "BORR",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "BOXL",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "BSX",
+    "categories": [
+      "ROBINHOOD"
+    ],
+    "holding": {
+      "shares": 3,
+      "broker": "Robinhood",
+      "pl_pct": null
+    }
+  },
+  {
+    "ticker": "BTDR",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "BTQ",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "BWXT",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "BZAI",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "CACI",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "CAMT",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "CAVA",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "CCJ",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY",
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "CDNS",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "CEG",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "CELH",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "CELU",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "CENX",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "CETY",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "CEVA",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "CF",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "CFLT",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "CGC",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "CIFR",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "CNMD",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "CNSP",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "COHR",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "COIN",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "CORZ",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "CPSH",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "CRDO",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "CRSP",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "CRWD",
+    "categories": [
+      "FIDELITY CYBERSECURITY"
+    ]
+  },
+  {
+    "ticker": "CSCO",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "CUE",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "CURLF",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "CVS",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "CVU",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "CXW",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "CYBR",
+    "categories": [
+      "FIDELITY CYBERSECURITY"
+    ]
+  },
+  {
+    "ticker": "CYPH",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "DAWN",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "DLB",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "DLR",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "DNA",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "DNN",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY",
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "DPRO",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "DRS",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "DSX",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "DVAX",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "EDIT",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "EFOI",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "ENPH",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "EOSE",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "EQIX",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "ETN",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "EVLV",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "EZGO",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "FATE",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "FC",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "FCX",
+    "categories": [
+      "FIDELITY MINERALS"
+    ]
+  },
+  {
+    "ticker": "FFAI",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "FIG",
+    "categories": [
+      "ROBINHOOD"
+    ],
+    "holding": {
+      "shares": 100,
+      "broker": "Fidelity",
+      "pl_pct": -35
+    }
+  },
+  {
+    "ticker": "FIX",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "FLNA",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "FN",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "FORM",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "FRMM",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "FRO",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "FSLR",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "FSM",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "FTNT",
+    "categories": [
+      "FIDELITY CYBERSECURITY"
+    ]
+  },
+  {
+    "ticker": "GAUZ",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "GCL",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "GD",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "GDX",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "GE",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "GEO",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "GEV",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "GHRS",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "GLD",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "GME",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "GO",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "GOOGL",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "GOOW",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "GPCR",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH",
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "GRAL",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "GRCE",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "GRRR",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "GSAT",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "GSM",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "GTBIF",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "GTLB",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "GV",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "GVH",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "HE",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "HIMS",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "HL",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "HMY",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "HOOD",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "HOWL",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "HTHIY",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "HUYA",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "IBLC",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "IBRX",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "ICHR",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "IFRX",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "IMO",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "INDO",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "INOD",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "INSG",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "INSW",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "INTC",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY SEMICONDUCTORS"
+    ],
+    "holding": {
+      "shares": 3,
+      "broker": "Fidelity",
+      "pl_pct": null
+    }
+  },
+  {
+    "ticker": "IONQ",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH",
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "IRDM",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "IREN",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "ISPR",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "ISRG",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "ISSC",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "IVF",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "IVV",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "IZM",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "JAN",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "JD",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "JOBY",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "JPM",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "KALU",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "KDK",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "KFFB",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "KLAC",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "KMTS",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "KOS",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "KRYS",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "KSS",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "KTOS",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY DEFENSE/SPACE",
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "KULR",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "KYTX",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "LAC",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MINERALS"
+    ]
+  },
+  {
+    "ticker": "LAES",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "LCID",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "LDOS",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "LEU",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY NUCLEAR/ENERGY",
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "LHX",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "LI",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "LIN",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "LITE",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS",
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "LLY",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "LMT",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "LRCX",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "LTBR",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "LUNR",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "LYFT",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "MARA",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "MCD",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "META",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "MNDY",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "MOBX",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "MOD",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "MOS",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "MP",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MINERALS"
+    ]
+  },
+  {
+    "ticker": "MPLX",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "MRCY",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "MRNA",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "MRNO",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "MRVL",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "MS",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "MSC",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "MSFT",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "MSTR",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "MTZ",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "MU",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "MUU",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "MUX",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "MVST",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "MXC",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "NAT",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "NBIS",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "NCNO",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "NEE",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "NET",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY CYBERSECURITY"
+    ]
+  },
+  {
+    "ticker": "NEXT",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "NIO",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "NNNN",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "NOC",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "NOW",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "NRG",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "NSP",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "NTLA",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "NTR",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "NTRP",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "NVAX",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "NVDA",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "NVT",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "NVTS",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "NVVE",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "NXE",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "OBAI",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "OKLO",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "OKTA",
+    "categories": [
+      "FIDELITY CYBERSECURITY"
+    ]
+  },
+  {
+    "ticker": "ON",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "ONDS",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "ONTO",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS",
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "OPEN",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "OUST",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "PALI",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "PANW",
+    "categories": [
+      "FIDELITY CYBERSECURITY"
+    ]
+  },
+  {
+    "ticker": "PATH",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "PAVM",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "PBM",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "PCAR",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "PDC",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "PDD",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "PG",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "PGEN",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "PHOE",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "PII",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "PL",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "PLAY",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "PLTR",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "PSTG",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "PWR",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "QBTS",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "QCOM",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "QLYS",
+    "categories": [
+      "FIDELITY CYBERSECURITY"
+    ]
+  },
+  {
+    "ticker": "QTUM",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "QUBT",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ],
+    "holding": {
+      "shares": 4,
+      "broker": "Fidelity",
+      "pl_pct": null
+    }
+  },
+  {
+    "ticker": "RCAT",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY DEFENSE/SPACE",
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "RCKT",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "RDW",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE",
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "RECT",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "REI",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "RGC",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "RGR",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "RGTI",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "RIG",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "RIME",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "RIOT",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "RIVN",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "RKLB",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY DEFENSE/SPACE",
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "RKT",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "RLAY",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "ROKU",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "RPAY",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "RPGL",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "RR",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "RTX",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "RXRX",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "RXT",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "S",
+    "categories": [
+      "FIDELITY CYBERSECURITY"
+    ]
+  },
+  {
+    "ticker": "SAIC",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "SANA",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "SATL",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "SAVA",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "SBSW",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "SCHA",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "SEA",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "SEDG",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "SES",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "SHPH",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "SIDU",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "SKIL",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "SKYQ",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "SLAB",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "SLV",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "SMR",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "SNAP",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "SNDL",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "SNOW",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "SNPS",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "SNYR",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "SOFI",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "SOUN",
+    "categories": [
+      "FIDELITY QUANTUM/BIOTECH"
+    ]
+  },
+  {
+    "ticker": "SPIR",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "SQFT",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "SRTA",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "SST",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "STCE",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "STNG",
+    "categories": [
+      "FIDELITY MOVERS",
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "STRL",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "STX",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "SYM",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "SYNA",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "SYRE",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "TATT",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "TDOC",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "TEM",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "TENB",
+    "categories": [
+      "FIDELITY CYBERSECURITY"
+    ]
+  },
+  {
+    "ticker": "TEVA",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "TGT",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "TIL",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "TIVC",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "TLN",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "TLRY",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "TM",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "TMDE",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY"
+    ],
+    "holding": {
+      "shares": 500,
+      "broker": "Fidelity",
+      "pl_pct": -46
+    }
+  },
+  {
+    "ticker": "TMDX",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "TNK",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "TOPS",
+    "categories": [
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "TPET",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY NUCLEAR/ENERGY"
+    ],
+    "holding": {
+      "shares": 100,
+      "broker": "Fidelity",
+      "pl_pct": -74
+    }
+  },
+  {
+    "ticker": "TSLA",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "TSM",
+    "categories": [
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "TXG",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "UA",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "UBER",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "UCAR",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "UEC",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY NUCLEAR/ENERGY",
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "UMAC",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "UNH",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "UPC",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "UPST",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "URG",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "UROY",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "UUUU",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "VELO",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "VG",
+    "categories": [
+      "ROBINHOOD"
+    ],
+    "holding": {
+      "shares": 5,
+      "broker": "Robinhood",
+      "pl_pct": 19
+    }
+  },
+  {
+    "ticker": "VRT",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "VSAT",
+    "categories": [
+      "FIDELITY DEFENSE/SPACE"
+    ]
+  },
+  {
+    "ticker": "VST",
+    "categories": [
+      "FIDELITY NUCLEAR/ENERGY"
+    ]
+  },
+  {
+    "ticker": "WDC",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY SEMICONDUCTORS"
+    ]
+  },
+  {
+    "ticker": "WKHS",
+    "categories": [
+      "FIDELITY OTHER"
+    ]
+  },
+  {
+    "ticker": "WLDN",
+    "categories": [
+      "FIDELITY AI INFRASTRUCTURE"
+    ]
+  },
+  {
+    "ticker": "WPM",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "WSHP",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "WTI",
+    "categories": [
+      "ROBINHOOD",
+      "FIDELITY WOLFPACKALL"
+    ]
+  },
+  {
+    "ticker": "WULF",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "WYY",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "XBIO",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "XME",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "XPEV",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "XPON",
+    "categories": [
+      "FIDELITY MINERALS"
+    ]
+  },
+  {
+    "ticker": "YYAI",
+    "categories": [
+      "ROBINHOOD"
+    ]
+  },
+  {
+    "ticker": "ZIM",
+    "categories": [
+      "FIDELITY MOVERS"
+    ]
+  },
+  {
+    "ticker": "ZS",
+    "categories": [
+      "FIDELITY CYBERSECURITY"
+    ]
+  }
+]
