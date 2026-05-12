@@ -80,3 +80,8 @@ secrets.yaml
 # Trading account info (NEVER commit account numbers or sensitive info)
 account_info.txt
 positions.json
+
+
+# Wolf Pack analysis caches (regenerable)
+data/gamma_analysis/ohlcv.pkl
+data/gamma_analysis/*.log
